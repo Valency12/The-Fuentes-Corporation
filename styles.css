@@ -1,0 +1,280 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+.root{
+    --blue-primary: #22479D;
+    --blue-secondary: #004482;
+    --blue-hover: #126076;
+    
+    --blue-light: #7897eb8e;
+    --color-white: white;
+    --color-dark: black;
+}
+/* Header styles */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+}
+/*Hamburger menu*/
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    z-index: 1003;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #22479D;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: #22479D;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+    left: 0;
+}
+
+.hamburger::after {
+    bottom: -8px;
+    left: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #22479D;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sign-in {
+    background-color: transparent;
+    border: 1px solid #22479D;
+    color: #22479D;
+}
+
+.sign-up {
+    background-color: #22479D;
+    border: none;
+    color: white;
+}
+
+.sign-in:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.sign-up:hover {
+    background-color: #0056b3;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 5rem;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1001;
+    padding: 2rem;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.sidebar-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animación del menú hamburguesa */
+.menu-toggle.active .hamburger {
+    background-color: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #22479D;
+}
+
+.menu-toggle.active .hamburger::after {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #22479D;
+}
+
+/* Responsive design */
+/*PENDIENTE CAMBIAR EL TAMAÑO DEL RESPONSIVE*/
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links,
+    .auth-buttons {
+        display: none;
+    }
+
+    .header-container {
+        padding: 0 1rem;
+    }
+}
+/*hero section*/
+.hero {
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('images/fondoHero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.3);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero-logo {
+    width: 200px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} 
+
