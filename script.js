@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const sidebar = document.querySelector('.sidebar');
@@ -26,3 +25,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Carrusel para la sección Nuestro Orgullo
+const slides = document.querySelectorAll('.orgullo-slide');
+const leftArrow = document.querySelector('.orgullo-arrow.left');
+const rightArrow = document.querySelector('.orgullo-arrow.right');
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
+
+leftArrow.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+});
+
+rightArrow.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+});
+
+// Inicializar
+showSlide(currentSlide);

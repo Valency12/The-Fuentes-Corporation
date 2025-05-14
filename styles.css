@@ -276,5 +276,432 @@ body {
     background-color: #f0f0f0;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-} 
+}
+
+/* Sección minimalista Sobre Nosotros */
+.about-minimal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    font-family: 'Arial', sans-serif;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 220px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #22479D;
+}
+
+.about-subtitle {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background: #ccc;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .about-minimal {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem 0.5rem;
+    }
+    .about-image img {
+        max-width: 100%;
+    }
+}
+
+/* Sección Nuestro Orgullo */
+.orgullo-section {
+    max-width: 1100px;
+    margin: 4rem auto 2rem auto;
+    padding: 2rem 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+.orgullo-title {
+    font-size: 2rem;
+    color: #22479D;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.orgullo-intro {
+    color: #444;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.orgullo-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+}
+.orgullo-arrow {
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 2;
+}
+.orgullo-arrow:hover {
+    background: #22479D;
+}
+.orgullo-slide {
+    max-width: none;
+    width: 70vw;
+    margin: 0 auto;
+}
+.orgullo-slide.active {
+    display: block;
+}
+.orgullo-img-container {
+    position: relative;
+    width: 100%;
+    background: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.orgullo-img-container img {
+    width: 100%;
+    max-width: 100%;
+    height: 45vw;
+    max-height: 70vh;
+    min-height: 250px;
+}
+.orgullo-desc {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(34, 71, 157, 0.85);
+    color: #fff;
+    padding: 1rem 1.2rem 1.2rem 1.2rem;
+    border-radius: 0 0 10px 10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.orgullo-desc h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.orgullo-desc p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+@media (max-width: 900px) {
+    .orgullo-carousel {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .orgullo-arrow {
+        position: static;
+        margin: 0.5rem 0;
+    }
+    .orgullo-slide {
+        width: 100vw;
+    }
+    .orgullo-img-container img {
+        height: 45vw;
+        min-height: 180px;
+    }
+}
+
+/* Sección Servicios */
+.servicios-section {
+    max-width: 1100px;
+    margin: 3rem auto 2rem auto;
+    padding: 2rem 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+.servicios-title {
+    font-size: 2rem;
+    color: #22479D;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+.servicios-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.servicio {
+    background: #e0e0e0;
+    border-radius: 8px;
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 140px;
+    box-sizing: border-box;
+}
+.servicio-text h3 {
+    font-size: 1.1rem;
+    color: #22479D;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.servicio-text p {
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+}
+.servicio-img {
+    padding: 0.5rem;
+    background: #bdbdbd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.servicio-img img {
+    width: 100%;
+    max-width: 320px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #888;
+}
+.servicio-img-wide img {
+    height: 140px;
+}
+@media (max-width: 900px) {
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+    .servicio-img img, .servicio-img-wide img {
+        max-width: 100%;
+        height: 160px;
+    }
+}
+
+/* Sección Nuestro Objetivo */
+.objetivo-section {
+    max-width: 1100px;
+    margin: 4rem auto 2rem auto;
+    padding: 2rem 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+.objetivo-title {
+    font-size: 2rem;
+    color: #22479D;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+.objetivo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    position: relative;
+}
+.objetivo-box {
+    background: #bdbdbd;
+    border-radius: 10px;
+    padding: 2rem 2.2rem;
+    min-width: 220px;
+    max-width: 320px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.objetivo-box h3 {
+    color: #22479D;
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    font-weight: 700;
+}
+.objetivo-box p {
+    color: #222;
+    font-size: 1rem;
+    margin: 0;
+}
+.objetivo-center {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    min-height: 180px;
+}
+.objetivo-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #22479D;
+    background: #ccc;
+    z-index: 1;
+}
+.objetivo-arrow {
+    position: absolute;
+    pointer-events: none;
+}
+.vision-arrow {
+    left: -120px;
+    top: 40px;
+}
+.mision-arrow {
+    right: -120px;
+    top: 40px;
+}
+@media (max-width: 900px) {
+    .objetivo-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .objetivo-center {
+        min-width: 120px;
+        min-height: 120px;
+    }
+    .objetivo-img {
+        width: 110px;
+        height: 110px;
+    }
+    .vision-arrow, .mision-arrow {
+        position: static;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Sección Nuestros Valores */
+.valores-section {
+    max-width: 1100px;
+    margin: 4rem auto 2rem auto;
+    padding: 2rem 1rem 2.5rem 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+.valores-title {
+    font-size: 2rem;
+    color: #22479D;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+.valores-banner {
+    width: 100%;
+    height: 90px;
+    background: #c4c4c4;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+}
+.valores-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+.valor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+    max-width: 200px;
+}
+.valor-icon {
+    width: 64px;
+    height: 64px;
+    background: #bdbdbd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.7rem;
+    overflow: hidden;
+}
+.valor-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.valor-text {
+    background: #d6d6d6;
+    border-radius: 6px;
+    padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1rem;
+    color: #222;
+    margin-top: 0;
+    width: 100%;
+    font-weight: 600;
+}
+.valor-text span {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #444;
+    margin-top: 0.2rem;
+}
+@media (max-width: 900px) {
+    .valores-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .valores-banner {
+        height: 60px;
+    }
+}
 
