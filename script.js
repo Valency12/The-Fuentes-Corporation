@@ -50,3 +50,49 @@ rightArrow.addEventListener('click', () => {
 
 // Inicializar
 showSlide(currentSlide);
+
+// Carrusel de opiniones
+const opinionSlides = document.querySelectorAll('.opiniones-slide');
+const opinionLeft = document.querySelector('.opiniones-arrow.left');
+const opinionRight = document.querySelector('.opiniones-arrow.right');
+let opinionIndex = 0;
+let opinionInterval;
+
+function showOpinion(index) {
+    opinionSlides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
+
+function nextOpinion() {
+    opinionIndex = (opinionIndex + 1) % opinionSlides.length;
+    showOpinion(opinionIndex);
+}
+
+function prevOpinion() {
+    opinionIndex = (opinionIndex - 1 + opinionSlides.length) % opinionSlides.length;
+    showOpinion(opinionIndex);
+}
+
+opinionLeft.addEventListener('click', () => {
+    prevOpinion();
+    resetOpinionInterval();
+});
+
+opinionRight.addEventListener('click', () => {
+    nextOpinion();
+    resetOpinionInterval();
+});
+
+function startOpinionInterval() {
+    opinionInterval = setInterval(nextOpinion, 5000); // Cambia cada 5 segundos
+}
+
+function resetOpinionInterval() {
+    clearInterval(opinionInterval);
+    startOpinionInterval();
+}
+
+// Inicializar
+showOpinion(opinionIndex);
+startOpinionInterval();
