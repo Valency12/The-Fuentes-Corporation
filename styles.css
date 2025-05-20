@@ -239,7 +239,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 255, 0.3);
+    background-color: rgba(6, 42, 161, 0.603);
     z-index: 1;
 }
 
@@ -478,12 +478,12 @@ body {
 .servicios-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    /*gap: 1.5rem;*/
 }
 .servicio {
-    background: #e0e0e0;
+    /*background: #e0e0e0;*/
     border-radius: 8px;
-    padding: 1.2rem 1rem;
+    /*padding: 1.2rem 1rem;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -491,6 +491,17 @@ body {
     min-height: 140px;
     box-sizing: border-box;
 }
+/*.servicio-text{
+    background-color: #0056b3;
+}*/
+
+.servicioA{
+    text-align: right;
+}
+.servicioB{
+    text-align: left;
+}
+
 .servicio-text h3 {
     font-size: 1.1rem;
     color: #22479D;
@@ -504,7 +515,7 @@ body {
 }
 .servicio-img {
     padding: 0.5rem;
-    background: #bdbdbd;
+    /*background: #bdbdbd;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -527,6 +538,31 @@ body {
     .servicio-img img, .servicio-img-wide img {
         max-width: 100%;
         height: 160px;
+    }
+}
+@media (max-width: 600px) {
+    .servicios-section {
+        padding: 1.2rem 0.2rem;
+    }
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+        position: relative;
+    }
+    .servicio {
+        margin: 0 0.5rem;
+        border-radius: 10px;
+        background: #e0e0e0;
+        position: relative;
+    }
+    .servicio:not(:last-child)::after {
+        content: '';
+        display: block;
+        width: 60%;
+        height: 3px;
+        background: #22479D;
+        margin: 1.2rem auto 0 auto;
+        border-radius: 2px;
     }
 }
 
@@ -969,6 +1005,43 @@ body {
     }
     .footer {
         padding: 28px 0 12px 0;
+    }
+}
+
+.objetivo-dos-columnas {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+}
+.objetivo-dos-columnas .objetivo-box {
+    flex: 1 1 0;
+    max-width: 100%;
+    border-radius: 0 0 10px 10px;
+    text-align: left;
+    background: #bdbdbd;
+    padding: 2rem 2.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.objetivo-divisor {
+    width: 2px;
+    background: #22479D;
+    margin: 0 0.5rem;
+    border-radius: 2px;
+}
+@media (max-width: 900px) {
+    .objetivo-dos-columnas {
+        flex-direction: column;
+    }
+    .objetivo-divisor {
+        width: 100%;
+        height: 2px;
+        margin: 1.5rem 0;
+    }
+    .objetivo-dos-columnas .objetivo-box {
+        border-radius: 10px;
+        text-align: left;
     }
 }
 
