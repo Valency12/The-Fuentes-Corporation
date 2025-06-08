@@ -466,10 +466,9 @@ body {
 .servicios-section {
     max-width: 1200px;
     margin: 3rem auto 2rem auto;
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     font-family: 'Arial', sans-serif;
     text-align: center;
 }
@@ -484,8 +483,7 @@ body {
 .servicios-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    padding: 0 1rem;
+    /*padding: 0 1rem;*/
 }
 
 .servicio {
@@ -497,11 +495,17 @@ body {
     border-radius: 12px;
 }
 
-
+.servicioA{
+    text-align: right;
+}
+.servicioB{
+    text-align: left;
+}
 
 .servicio-text {
-    text-align: left;
-    padding: 0 1rem;
+    padding: 3rem 1rem;
+    
+    margin-bottom: 20px;
 }
 
 .servicio-text h3 {
@@ -528,7 +532,9 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-bottom: 20px;
 }
+
 
 
 @media (max-width: 900px) {
