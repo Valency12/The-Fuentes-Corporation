@@ -490,28 +490,31 @@ body {
     display: flex;
     flex-direction: column;
     /*gap: 1.5rem;*/
-    /*padding: 2rem;*/
-    background: #0b6cd3;
+    background: #0056b3;
     /*border-radius: 12px;*/
     
 }
 
 .servicioA{
     text-align: right;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    margin: 0 0 0 30px;
 }
 .servicioB{
     text-align: left;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    margin: 0 30px 0 0;
 }
 
 .servicio-text {
-    padding: 3rem 1rem;
+    padding: 3rem 2rem;
   
 }
 
 .servicio-text h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color:#ffffff;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -519,7 +522,7 @@ body {
 
 .servicio-text p {
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.6;
 }
 
