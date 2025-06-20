@@ -96,3 +96,20 @@ function resetOpinionInterval() {
 // Inicializar
 showOpinion(opinionIndex);
 startOpinionInterval();
+
+// Valores acordeón autocerrable
+const valorMenus = document.querySelectorAll('.valor-menu');
+valorMenus.forEach(menu => {
+    menu.addEventListener('click', function() {
+        if (this.classList.contains('active')) {
+            this.classList.remove('active'); // Cierra si ya está abierto
+        } else {
+            valorMenus.forEach(m => m.classList.remove('active'));
+            this.classList.add('active');
+        }
+    });
+});
+// Abrir el primero por defecto
+if (valorMenus.length) {
+    valorMenus[0].classList.add('active');
+}

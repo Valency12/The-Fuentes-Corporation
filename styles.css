@@ -610,7 +610,7 @@ body {
 /* Sección Nuestro Objetivo */
 .objetivo-section {
     /*max-width: 1100px;*/
-    margin: 4rem auto 2rem auto;
+    margin: 2rem auto 2rem auto;
     padding: 2rem 1rem;
     background: #fff;
     border-radius: 12px;
@@ -637,8 +637,8 @@ body {
     padding: 2rem 2.2rem;
     min-width: 220px;
     max-width: 320px;
-    text-align: left;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    text-align: center;
+    /*box-shadow: 0 2px 8px rgba(0,0,0,0.03);*/
 }
 .objetivo-box h3 {
     color: #22479D;
@@ -683,10 +683,7 @@ body {
 }
 
 
-.mision{
-    text-align: left;
-    
-}
+
 
 @media (max-width: 900px) {
     .objetivo-container {
@@ -711,11 +708,11 @@ body {
 /* Sección Nuestros Valores */
 .valores-section {
     max-width: 1100px;
-    margin: 4rem auto 2rem auto;
-    padding: 2rem 1rem 2.5rem 1rem;
+    margin: 1rem auto 2rem auto;
+    padding: 0rem 1rem 2.5rem 1rem;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    /*box-shadow: 0 2px 12px rgba(0,0,0,0.04);*/
     font-family: 'Arial', sans-serif;
     text-align: center;
 }
@@ -1069,9 +1066,10 @@ body {
     max-width: 100%;
     /*text-align: left;*/
     /*background: #bdbdbd;*/
-    padding: 2rem 2.2rem;
-    background-color: #004482;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    margin-bottom: 5px;
+    padding: 1.0rem 2.2rem;
+    /*background-color: #004482;*/
+    /*box-shadow: 0 2px 8px rgba(0,0,0,0.03);*/
 }
 @media (max-width: 900px) {
     .objetivo-dos-columnas {
@@ -1085,6 +1083,114 @@ body {
     .objetivo-dos-columnas .objetivo-box {
         border-radius: 10px;
         text-align: left;
+    }
+}
+
+/* NUEVA SECCIÓN VALORES FLEX Y ACORDEÓN */
+.valores-flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-top: 2.5rem;
+}
+.valores-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    min-width: 320px;
+    max-width: 400px;
+}
+.valor-menu {
+    background: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    overflow: hidden;
+}
+.valor-menu.active {
+    box-shadow: 0 4px 16px rgba(34,71,157,0.10);
+    background: #e6eaff;
+}
+.valor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.valor-icon {
+    width: 38px;
+    height: 38px;
+    margin-right: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.valor-title {
+    flex: 1;
+    text-align: left;
+}
+.valor-arrow {
+    font-size: 1.3rem;
+    margin-left: 1.2rem;
+    transition: transform 0.3s;
+}
+.valor-menu.active .valor-arrow {
+    transform: rotate(180deg);
+}
+.valor-desc {
+    display: none;
+    padding: 0 1.2rem 1.2rem 4.2rem;
+    font-size: 1.05rem;
+    color: #22479D;
+    text-align: left;
+    animation: fadeIn 0.3s;
+}
+.valor-menu.active .valor-desc {
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.valores-img-container {
+    min-width: 320px;
+    max-width: 70px;
+    /*width: 100%;*/
+    display: flex;
+    width: 50px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.valores-img-container img {
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+@media (max-width: 900px) {
+    .valores-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .valores-img-container {
+        min-width: 220px;
+        max-width: 90vw;
+        padding: 1rem;
+    }
+    .valores-accordion {
+        min-width: 220px;
+        max-width: 90vw;
     }
 }
 
