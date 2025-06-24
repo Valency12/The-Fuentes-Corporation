@@ -113,3 +113,40 @@ valorMenus.forEach(menu => {
 if (valorMenus.length) {
     valorMenus[0].classList.add('active');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Efecto de aparición al hacer scroll
+    const valorCards = document.querySelectorAll('.valor-card');
+    
+    const observerOptions = {
+        threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    valorCards.forEach(card => {
+        observer.observe(card);
+        // Resetear la opacidad para que funcione la animación
+        card.style.opacity = 0;
+    });
+    
+    // Efecto hover para dispositivos táctiles
+    valorCards.forEach(card => {
+        card.addEventListener('touchstart', function() {
+            this.classList.add('hover-effect');
+        });
+        
+        card.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.classList.remove('hover-effect');
+            }, 300);
+        });
+    });
+});
