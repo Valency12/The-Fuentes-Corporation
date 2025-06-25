@@ -610,7 +610,7 @@ body {
 /* Sección Nuestro Objetivo */
 .objetivo-section {
     /*max-width: 1100px;*/
-    margin: 2rem auto 2rem auto;
+    margin: 2rem auto 0 auto;
     padding: 2rem 1rem;
     background: #ffffff;
     border-radius: 12px;
@@ -641,12 +641,20 @@ body {
     text-align: center;
     /*box-shadow: 0 2px 8px rgba(0,0,0,0.03);*/
 }
-.objetivo-box h3 {
+.objetivo-box h3{
     color: #22479D;
     font-size: 1.5rem;
     margin-bottom: 0.7rem;
     font-weight: 700;
     text-align: center;
+}
+.valores{
+    color: #22479D;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+
 }
 .objetivo-box p {
     color: #222;
@@ -812,12 +820,15 @@ body {
 
 .opiniones-section {
     width: 100vw;
-    background: #222;
+    background: #004482;
     color: #fff;
-    padding: 60px 0 40px 0;
+    padding: 60px 0 65px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
+}
+.comillas{
+    font-size: 2rem;
 }
 
 .opiniones-title {
@@ -856,13 +867,14 @@ body {
 }
 
 .opinion-text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-style: italic;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
+    padding: 20px 0;
 }
 
 .opinion-author {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #aaa;
 }
 
@@ -879,6 +891,13 @@ body {
 
 .opiniones-arrow:hover {
     color: #22479D;
+}
+
+.opinion-avatar{
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
 }
 
 /* Sección de Contacto */
@@ -1118,26 +1137,19 @@ body {
 }
 
 .valores-section {
-    padding: 30px 0;
+    padding: 0 0 6.5rem 0;
     background-color: #ffffff;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    position: relative;
-    margin-bottom: 25px;
-}
 
-.section-title::after {
+/*.section-title::after {
     content: '';
     display: block;
     width: 80px;
     height: 4px;
     background-color: var(--secondary-color);
     margin: 20px auto;
-}
+}*/
 
 .section-subtitle {
     text-align: center;
@@ -1209,9 +1221,6 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
     
     .section-subtitle {
         font-size: 1rem;
@@ -1232,14 +1241,10 @@ body {
     .valores-section {
         padding: 60px 0;
     }
-    
-    .section-title {
-        font-size: 1.8rem;
-    }
 }
 
 /* Estilos para líneas decorativas debajo de títulos */
-.section-title-line {
+/*.section-title-line {
     position: relative;
     display: inline-block;
 }
@@ -1253,7 +1258,7 @@ body {
     border-radius: 2px;
     transition: width 0.3s ease;
 }
-
+*/
 /* Línea que sale del lado izquierdo */
 .section-title-line.left-line::after {
     left: -100vw;
@@ -1274,7 +1279,6 @@ body {
 .orgullo-title,
 .objetivo-title,
 .valores-title,
-.section-title,
 .opiniones-title,
 .contacto-title {
     position: relative;
@@ -1286,7 +1290,6 @@ body {
 .orgullo-title::after,
 .objetivo-title::after,
 .valores-title::after,
-.section-title::after,
 .opiniones-title::after,
 .contacto-title::after {
     content: '';
@@ -1311,7 +1314,6 @@ body {
 /* Líneas que salen del lado derecho */
 .orgullo-title::after,
 .valores-title::after,
-.section-title::after,
 .contacto-title::after {
     right: -100vw;
     left: 0;
@@ -1325,7 +1327,6 @@ body {
     .orgullo-title::after,
     .objetivo-title::after,
     .valores-title::after,
-    .section-title::after,
     .opiniones-title::after,
     .contacto-title::after {
         height: 2px;
@@ -1339,7 +1340,6 @@ body {
     .orgullo-title::after,
     .objetivo-title::after,
     .valores-title::after,
-    .section-title::after,
     .opiniones-title::after,
     .contacto-title::after {
         height: 2px;
@@ -1352,10 +1352,9 @@ body {
     flex-wrap: wrap;
     gap: 1.2rem;
     justify-content: center;
-    margin-top: 2.2rem;
 }
 .valor-chip {
-    background: #181818;
+    background: #004482;
     color: #f5f5c6;
     border-radius: 2rem;
     padding: 0.7rem 2.2rem;
@@ -1370,7 +1369,7 @@ body {
     z-index: 1;
 }
 .valor-chip:hover, .valor-chip:focus {
-    background: #22479D;
+    background: #2288e7;
     color: #fff;
 }
 .valor-chip::after {
@@ -1378,11 +1377,11 @@ body {
     display: block;
     position: absolute;
     left: 50%;
-    bottom: calc(-2.5rem - 32px);
+    top: calc(100% + 15px);
     transform: translateX(-50%) scale(0.95);
-    background: #22479D;
+    background: #2288e7;
     color: #fff;
-    padding: 0.7rem 1.2rem;
+    padding: 1rem 1.5rem;
     border-radius: 10px;
     font-size: 1rem;
     font-weight: 400;
@@ -1391,44 +1390,34 @@ body {
     pointer-events: none;
     box-shadow: 0 4px 16px rgba(34,71,157,0.13);
     transition: opacity 0.2s, transform 0.2s;
-    min-width: 220px;
-    max-width: 320px;
+    width: 280px;
+    min-height: 80px;
     z-index: 10;
-    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .valor-chip:hover::after, .valor-chip:focus::after {
     opacity: 1;
     transform: translateX(-50%) scale(1);
 }
 @media (max-width: 700px) {
-    .valores-chips-grid {
-        gap: 0.7rem;
-    }
-    .valor-chip {
-        font-size: 1rem;
-        padding: 0.6rem 1.2rem;
-    }
     .valor-chip::after {
         font-size: 0.95rem;
-        min-width: 140px;
-        max-width: 90vw;
-        padding: 0.5rem 0.7rem;
-        bottom: calc(-2.5rem - 24px);
+        width: 240px;
+        min-height: 70px;
+        padding: 0.8rem 1.2rem;
+        top: calc(100% + 12px);
     }
 }
 @media (max-width: 480px) {
-    .valores-chips-grid {
-        gap: 0.4rem;
-    }
-    .valor-chip {
-        font-size: 0.95rem;
-        padding: 0.5rem 0.7rem;
-    }
     .valor-chip::after {
         font-size: 0.9rem;
-        min-width: 100px;
-        padding: 0.4rem 0.5rem;
-        bottom: calc(-2.5rem - 18px);
+        width: 200px;
+        min-height: 60px;
+        padding: 0.6rem 1rem;
+        top: calc(100% + 10px);
     }
 }
 

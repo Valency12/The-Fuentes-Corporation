@@ -23,8 +23,9 @@
 
             <nav class="nav-links">
                 <a href="#inicio" class="nav-link">Inicio</a>
-                <a href="#servicios" class="nav-link">Servicios</a>
                 <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
             </nav>
 
@@ -38,8 +39,9 @@
     <div class="sidebar">
         <nav class="sidebar-nav">
             <a href="#inicio" class="nav-link">Inicio</a>
-            <a href="#servicios" class="nav-link">Servicios</a>
             <a href="#nosotros" class="nav-link">Nosotros</a>
+            <a href="#servicios" class="nav-link">Servicios</a>
+            <a href="#proyectos" class="nav-link">Proyectos</a>
             <a href="#contacto" class="nav-link">Contacto</a>
             <div class="sidebar-auth">
                 <button class="btn sign-in">Iniciar Sesión</button>
@@ -51,7 +53,7 @@
     <div class="overlay"></div>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="inicio">
             <div class="hero-content">
                 <img src="images/LogoLight.png" alt="The Fuentes Corp Logo" class="hero-logo">
                 <h1>Creciendo juntos</h1>
@@ -59,7 +61,7 @@
             </div>
         </section>
         <!-- Contenido principal -->
-        <section class="about-minimal">
+        <section class="about-minimal" id="nosotros">
             
             <div class="about-text">
                 <h2>Quienes somos?</h2>
@@ -73,7 +75,7 @@
         <!-- Fin sección minimalista -->
 
         <!-- Sección Servicios -->
-        <section class="servicios-section">
+        <section class="servicios-section" id="servicios">
             <h2 class="servicios-title">Servicios</h2>
             <div class="servicios-grid">
                 <div class="servicio servicio-text servicioA">
@@ -109,7 +111,7 @@
         <!-- Fin sección Servicios -->
 
         <!-- Sección Nuestro Orgullo -->
-        <section class="orgullo-section">
+        <section class="orgullo-section" id="proyectos">
             <h2 class="orgullo-title">Nuestro Orgullo</h2>
             <p class="orgullo-intro">Algunos de los proyectos que hemos realizado con pasión y dedicación.</p>
             <div class="orgullo-carousel">
@@ -151,15 +153,15 @@
         <!-- Fin sección Nuestro Objetivo -->
 
         <!-- Sección Nuestros Valores -->
-        <section class="valores-section">
+        <section class="valores-section" id="valores">
             <div class="container">
-                <h2 class="section-title">Nuestros Valores</h2>
+                <h3 class="valores">Nuestros Valores</h3>
                 <div class="valores-chips-grid">
-                    <div class="valor-chip" data-desc="Estructuramos cada proyecto con una hoja de ruta clara y eficiente, anticipando riesgos y optimizando recursos.">Planificación</div>
-                    <div class="valor-chip" data-desc="Creamos soluciones innovadoras y funcionales, cuidando la estética y la viabilidad técnica de cada obra.">Diseño</div>
-                    <div class="valor-chip" data-desc="Ejecutamos con calidad y precisión, cumpliendo los más altos estándares y garantizando resultados duraderos.">Construcción</div>
-                    <div class="valor-chip" data-desc="Transformamos espacios existentes, aportando valor, funcionalidad y modernidad a cada proyecto.">Remodelación</div>
-                    <div class="valor-chip" data-desc="Nos dedicamos con pasión y responsabilidad, cumpliendo siempre con nuestros clientes y la sociedad.">Compromiso</div>
+                    <div class="valor-chip" data-desc="Estructuramos cada proyecto con una hoja de ruta clara y eficiente, anticipando riesgos y optimizando recursos.">Compromiso</div>
+                    <div class="valor-chip" data-desc="Creamos soluciones innovadoras y funcionales, cuidando la estética y la viabilidad técnica de cada obra.">Innovación</div>
+                    <div class="valor-chip" data-desc="Ejecutamos con calidad y precisión, cumpliendo los más altos estándares y garantizando resultados duraderos.">Trabajo en Equipo</div>
+                    <div class="valor-chip" data-desc="Transformamos espacios existentes, aportando valor, funcionalidad y modernidad a cada proyecto.">Responsabilidad</div>
+                    <div class="valor-chip" data-desc="Nos dedicamos con pasión y responsabilidad, cumpliendo siempre con nuestros clientes y la sociedad.">Transparencia</div>
                 </div>
             </div>
         </section>
@@ -171,17 +173,17 @@
                 <button class="opiniones-arrow left" aria-label="Anterior">&#8592;</button>
                 <div class="opiniones-slide active">
                     <img class="opinion-avatar" src="images/toychiquito.jpg" alt="Foto de perfil">
-                    <p class="opinion-text">"Excelente servicio y atención personalizada. ¡Muy recomendados!"</p>
+                    <p class="opinion-text"><span class="comillas">"</span>Superaron nuestras expectativas; el proyecto se completó a tiempo y con una calidad excepcional. ¡Absolutamente recomendados!<span class="comillas">"</span></p>
                     <span class="opinion-author">- Juan Pérez</span>
                 </div>
                 <div class="opiniones-slide">
                     <img class="opinion-avatar" src="images/toychiquito.jpg" alt="Foto de perfil">
-                    <p class="opinion-text">"El equipo demostró gran profesionalismo y compromiso en todo momento."</p>
+                    <p class="opinion-text"><span class="comillas">"</span>Desde la planificación hasta la entrega, su equipo mostró una profesionalidad increíble y una atención al detalle impecable.<span class="comillas">"</span></p>
                     <span class="opinion-author">- María López</span>
                 </div>
                 <div class="opiniones-slide">
                     <img class="opinion-avatar" src="images/toychiquito.jpg" alt="Foto de perfil">
-                    <p class="opinion-text">"Soluciones innovadoras y resultados sobresalientes. Volvería a elegirlos."</p>
+                    <p class="opinion-text"><span class="comillas">"</span>Transformaron nuestra visión en realidad sin ningún estrés. La comunicación fue constante y el resultado final, perfecto.<span class="comillas">"</span></p>
                     <span class="opinion-author">- Carlos Ramírez</span>
                 </div>
                 <button class="opiniones-arrow right" aria-label="Siguiente">&#8594;</button>
