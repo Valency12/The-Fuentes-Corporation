@@ -11,13 +11,15 @@ body {
 }
 
 :root{
-    --blue-primary: #0e509b;
+    --blue-primary: #004e98;
+    /*--blue-primary: #0e509b;*/
     --blue-secondary: #13315c;
     --blue-third: #0b2545;
     --blue-light: #8da9c4;
     --blue-lightes: #eef4ed;
     --blue-purple: #22479D;
     --blue-purple-hover:  #0056b3;
+    --blue-skyblue:  #2288e7;
     --white: #FFFFFF;
     --black: #000000; 
 }
@@ -102,7 +104,7 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--blue-purple);
+    color: var(--blue-primary);
 }
 
 .auth-buttons {
@@ -120,23 +122,23 @@ body {
 
 .sign-in {
     background-color: transparent;
-    border: 1px solid var(--blue-purple);
-    color: var(--blue-purple);
+    border: 1px solid var(--blue-primary);
+    color: var(--blue-primary);
 }
 
 .sign-up {
-    background-color: var(--blue-purple);
+    background-color: var(--blue-primary);
     border: none;
     color: white;
 }
 
 .sign-in:hover {
-    background-color: var(--blue-purple-hover);
+    background-color: var(--blue-purple);
     color: white;
 }
 
 .sign-up:hover {
-    background-color: var(--blue-purple-hover);
+    background-color: var(--blue-purple);
 }
 
 /* Sidebar styles */
@@ -195,12 +197,12 @@ body {
 
 .menu-toggle.active .hamburger::before {
     transform: translateY(8px) rotate(45deg);
-    background-color: var(--blue-purple);
+    background-color: var(--blue-primary);
 }
 
 .menu-toggle.active .hamburger::after {
     transform: translateY(-8px) rotate(-45deg);
-    background-color: var(--blue-purple);
+    background-color: var(--blue-primary);
 }
 
 /* Responsive design */
@@ -266,7 +268,7 @@ body {
 .cta-button {
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    background-color: var(--blue-primary);
+    background-color: var(--blue-lightes);
     color: #000000;
     border: none;
     border-radius: 5px;
@@ -388,7 +390,8 @@ body {
     padding: 0;
 }
 .orgullo-arrow {
-    background: rgba(34, 39, 157, 0.8);
+    /*background: rgba(34, 39, 157, 0.8);*/
+    background: #004482;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -445,7 +448,8 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: rgba(34, 71, 157, 0.85);
+    background: #13315cc2;
+    /*background: rgba(34, 71, 157, 0.85);*/
     color: #fff;
     padding: 2.5rem 0.5rem 2.0rem 2.5rem;
     border-radius: 0;
@@ -455,12 +459,12 @@ body {
 }
 .orgullo-desc h3 {
     margin: 0 0 0.3rem 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 .orgullo-desc p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
 }
 @media (max-width: 900px) {
@@ -523,7 +527,7 @@ body {
     display: flex;
     flex-direction: column;
     /*gap: 1.5rem;*/
-    background: #0056b3;
+    background: var(--blue-secondary);
     /*border-radius: 12px;*/
     
 }
@@ -609,11 +613,10 @@ body {
 /* Sección Nuestro Objetivo */
 .objetivo-section {
     /*max-width: 1100px;*/
-    margin: 2rem auto 0 auto;
-    padding: 2rem 1rem;
+    margin: 2rem auto 2rem auto;
+    /*padding: 2rem 1rem;*/
     background: #ffffff;
     border-radius: 12px;
-    /*box-shadow: 0 2px 12px rgba(0,0,0,0.04);*/
     font-family: 'Arial', sans-serif;
     text-align: center;
 }
@@ -641,14 +644,14 @@ body {
     /*box-shadow: 0 2px 8px rgba(0,0,0,0.03);*/
 }
 .objetivo-box h3{
-    color: #22479D;
+    color: var(--blue-third);
     font-size: 1.5rem;
     margin-bottom: 0.7rem;
     font-weight: 700;
     text-align: center;
 }
 .valores{
-    color: #22479D;
+    color: var(--blue-third);
     font-size: 1.5rem;
     margin-bottom: 2rem;
     font-weight: 700;
@@ -691,10 +694,11 @@ body {
     top: 40px;
 }
 .mision{
-    background-color: #2288e7;
+    background-color: var(--blue-light);
 }
 .vision{
-    background-color: #1a66ad;
+    /*background-color: #1a66ad;*/
+    background-color: var(--blue-light);
 }
 
 @media (max-width: 900px) {
@@ -816,7 +820,7 @@ body {
 
 .opiniones-section {
     width: 100vw;
-    background: #004482;
+    background: var(--blue-third);
     color: #fff;
     padding: 60px 0 65px 0;
     text-align: center;
@@ -828,8 +832,9 @@ body {
 }
 
 .opiniones-title {
+    color: #ffffff;
     font-size: 2.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
     letter-spacing: 1px;
 }
 
@@ -1011,7 +1016,7 @@ body {
     margin-bottom: 0;
 }
 .contacto-form-btn {
-    background: #a6d8b8;
+    background: #004e98;
     color: #fff;
     font-weight: 700;
     font-size: 1.1rem;
@@ -1024,7 +1029,7 @@ body {
     letter-spacing: 1px;
 }
 .contacto-form-btn:hover {
-    background: #7fc29b;
+    background: var(--blue-purple);
 }
 @media (max-width: 900px) {
     .contacto-container {
@@ -1045,7 +1050,7 @@ body {
 
 /* Footer */
 .footer {
-    background: #22479D;
+    background: var(--blue-secondary);
     color: #fff;
     padding: 50px 0 20px 0;
     text-align: center;
@@ -1160,7 +1165,7 @@ body {
     max-width: 100%;
     /*text-align: left;*/
     /*background: #bdbdbd;*/
-    margin-bottom: 5px;
+    margin-bottom: 1.2rem;
     padding: 2rem 2.2rem;
     /*background-color: #004482;*/
     /*box-shadow: 0 2px 8px rgba(0,0,0,0.03);*/
@@ -1192,16 +1197,6 @@ body {
     padding: 0 0 6.5rem 0;
     background-color: #ffffff;
 }
-
-
-/*.section-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: var(--secondary-color);
-    margin: 20px auto;
-}*/
 
 .section-subtitle {
     text-align: center;
@@ -1295,22 +1290,6 @@ body {
     }
 }
 
-/* Estilos para líneas decorativas debajo de títulos */
-/*.section-title-line {
-    position: relative;
-    display: inline-block;
-}
-
-.section-title-line::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    height: 3px;
-    background: linear-gradient(90deg, #22479D, #126076);
-    border-radius: 2px;
-    transition: width 0.3s ease;
-}
-*/
 /* Línea que sale del lado izquierdo */
 .section-title-line.left-line::after {
     left: -100vw;
@@ -1331,72 +1310,10 @@ body {
 .orgullo-title,
 .objetivo-title,
 .valores-title,
-.opiniones-title,
 .contacto-title {
     position: relative;
     display: inline-block;
-}
-
-.about-text h2::after,
-.servicios-title::after,
-.orgullo-title::after,
-.objetivo-title::after,
-.valores-title::after,
-.opiniones-title::after,
-.contacto-title::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    height: 3px;
-    background: linear-gradient(90deg, #22479D, #126076);
-    border-radius: 2px;
-    transition: width 0.3s ease;
-}
-
-/* Líneas que salen del lado izquierdo */
-.about-text h2::after,
-.servicios-title::after,
-.objetivo-title::after,
-.opiniones-title::after {
-    left: -100vw;
-    right: 0;
-    width: calc(100vw + 100%);
-}
-
-/* Líneas que salen del lado derecho */
-.orgullo-title::after,
-.valores-title::after,
-.contacto-title::after {
-    right: -100vw;
-    left: 0;
-    width: calc(100vw + 100%);
-}
-
-/* Responsive para las líneas */
-@media (max-width: 768px) {
-    .about-text h2::after,
-    .servicios-title::after,
-    .orgullo-title::after,
-    .objetivo-title::after,
-    .valores-title::after,
-    .opiniones-title::after,
-    .contacto-title::after {
-        height: 2px;
-        bottom: -6px;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-text h2::after,
-    .servicios-title::after,
-    .orgullo-title::after,
-    .objetivo-title::after,
-    .valores-title::after,
-    .opiniones-title::after,
-    .contacto-title::after {
-        height: 2px;
-        bottom: -4px;
-    }
+    color: var(--blue-primary);
 }
 
 .valores-chips-grid {
@@ -1406,7 +1323,7 @@ body {
     justify-content: center;
 }
 .valor-chip {
-    background: #004482;
+    background: var(--blue-secondary);
     color: #f5f5c6;
     border-radius: 2rem;
     padding: 0.7rem 2.2rem;
@@ -1421,7 +1338,8 @@ body {
     z-index: 1;
 }
 .valor-chip:hover, .valor-chip:focus {
-    background: #2288e7;
+    /*background: #2288e7;*/
+    background: var(--blue-primary);
     color: #fff;
 }
 .valor-chip::after {
@@ -1431,7 +1349,8 @@ body {
     left: 50%;
     top: calc(100% + 15px);
     transform: translateX(-50%) scale(0.95);
-    background: #2288e7;
+    /*background: #2288e7;*/
+    background: var(--blue-primary);
     color: #fff;
     padding: 1rem 1.5rem;
     border-radius: 10px;
