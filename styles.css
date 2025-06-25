@@ -10,18 +10,20 @@ body {
     overflow-x: hidden;
 }
 
-.root{
-    --blue-primary: #22479D;
-    --blue-secondary: #004482;
-    --blue-hover: #126076;
-    
-    --blue-light: #7897eb8e;
-    --color-white: white;
-    --color-dark: black;
+:root{
+    --blue-primary: #0e509b;
+    --blue-secondary: #13315c;
+    --blue-third: #0b2545;
+    --blue-light: #8da9c4;
+    --blue-lightes: #eef4ed;
+    --blue-purple: #22479D;
+    --blue-purple-hover:  #0056b3;
+    --white: #FFFFFF;
+    --black: #000000; 
 }
 /* Header styles */
 .header {
-    background-color: #ffffff;
+    background-color: var(--white);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
     position: relative;
@@ -59,7 +61,7 @@ body {
     display: block;
     width: 25px;
     height: 2px;
-    background-color: #22479D;
+    background-color: var(--blue-primary);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -73,7 +75,7 @@ body {
     position: absolute;
     width: 25px;
     height: 2px;
-    background-color: #22479D;
+    background-color: var(--blue-purple);
     transition: all 0.3s ease;
 }
 
@@ -94,13 +96,13 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #22479D;
+    color: var(--blue-purple);
 }
 
 .auth-buttons {
@@ -118,23 +120,23 @@ body {
 
 .sign-in {
     background-color: transparent;
-    border: 1px solid #22479D;
-    color: #22479D;
+    border: 1px solid var(--blue-purple);
+    color: var(--blue-purple);
 }
 
 .sign-up {
-    background-color: #22479D;
+    background-color: var(--blue-purple);
     border: none;
     color: white;
 }
 
 .sign-in:hover {
-    background-color: #0056b3;
+    background-color: var(--blue-purple-hover);
     color: white;
 }
 
 .sign-up:hover {
-    background-color: #0056b3;
+    background-color: var(--blue-purple-hover);
 }
 
 /* Sidebar styles */
@@ -145,7 +147,6 @@ body {
     width: 300px;
     height: 100vh;
     background-color: white;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 1001;
     padding: 2rem;
@@ -194,12 +195,12 @@ body {
 
 .menu-toggle.active .hamburger::before {
     transform: translateY(8px) rotate(45deg);
-    background-color: #22479D;
+    background-color: var(--blue-purple);
 }
 
 .menu-toggle.active .hamburger::after {
     transform: translateY(-8px) rotate(-45deg);
-    background-color: #22479D;
+    background-color: var(--blue-purple);
 }
 
 /* Responsive design */
@@ -239,7 +240,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 33, 143, 0.555);
+    background-color: #004382ab;
     z-index: 1;
 }
 
@@ -265,7 +266,7 @@ body {
 .cta-button {
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    background-color: #ffffff;
+    background-color: var(--blue-primary);
     color: #000000;
     border: none;
     border-radius: 5px;
