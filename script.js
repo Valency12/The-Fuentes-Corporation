@@ -24,97 +24,99 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.classList.remove('active');
         });
     });
-});
 
-// Carrusel para la sección Nuestro Orgullo
-const slides = document.querySelectorAll('.orgullo-slide');
-const leftArrow = document.querySelector('.orgullo-arrow.left');
-const rightArrow = document.querySelector('.orgullo-arrow.right');
-let currentSlide = 0;
+    // Carrusel para la sección Nuestro Orgullo
+    const slides = document.querySelectorAll('.orgullo-slide');
+    const leftArrow = document.querySelector('.orgullo-arrow.left');
+    const rightArrow = document.querySelector('.orgullo-arrow.right');
+    let currentSlide = 0;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-    });
-}
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+    }
 
-leftArrow.addEventListener('click', () => {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-});
+    if (leftArrow && rightArrow) {
+        leftArrow.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
 
-rightArrow.addEventListener('click', () => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-});
+        rightArrow.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
 
-// Inicializar
-showSlide(currentSlide);
+        // Inicializar
+        showSlide(currentSlide);
+    }
 
-// Carrusel de opiniones
-const opinionSlides = document.querySelectorAll('.opiniones-slide');
-const opinionLeft = document.querySelector('.opiniones-arrow.left');
-const opinionRight = document.querySelector('.opiniones-arrow.right');
-let opinionIndex = 0;
-let opinionInterval;
+    // Carrusel de opiniones
+    const opinionSlides = document.querySelectorAll('.opiniones-slide');
+    const opinionLeft = document.querySelector('.opiniones-arrow.left');
+    const opinionRight = document.querySelector('.opiniones-arrow.right');
+    let opinionIndex = 0;
+    let opinionInterval;
 
-function showOpinion(index) {
-    opinionSlides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-    });
-}
+    function showOpinion(index) {
+        opinionSlides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+    }
 
-function nextOpinion() {
-    opinionIndex = (opinionIndex + 1) % opinionSlides.length;
-    showOpinion(opinionIndex);
-}
+    function nextOpinion() {
+        opinionIndex = (opinionIndex + 1) % opinionSlides.length;
+        showOpinion(opinionIndex);
+    }
 
-function prevOpinion() {
-    opinionIndex = (opinionIndex - 1 + opinionSlides.length) % opinionSlides.length;
-    showOpinion(opinionIndex);
-}
+    function prevOpinion() {
+        opinionIndex = (opinionIndex - 1 + opinionSlides.length) % opinionSlides.length;
+        showOpinion(opinionIndex);
+    }
 
-opinionLeft.addEventListener('click', () => {
-    prevOpinion();
-    resetOpinionInterval();
-});
+    if (opinionLeft && opinionRight) {
+        opinionLeft.addEventListener('click', () => {
+            prevOpinion();
+            resetOpinionInterval();
+        });
 
-opinionRight.addEventListener('click', () => {
-    nextOpinion();
-    resetOpinionInterval();
-});
+        opinionRight.addEventListener('click', () => {
+            nextOpinion();
+            resetOpinionInterval();
+        });
 
-function startOpinionInterval() {
-    opinionInterval = setInterval(nextOpinion, 5000); // Cambia cada 5 segundos
-}
-
-function resetOpinionInterval() {
-    clearInterval(opinionInterval);
-    startOpinionInterval();
-}
-
-// Inicializar
-showOpinion(opinionIndex);
-startOpinionInterval();
-
-// Valores acordeón autocerrable
-const valorMenus = document.querySelectorAll('.valor-menu');
-valorMenus.forEach(menu => {
-    menu.addEventListener('click', function() {
-        if (this.classList.contains('active')) {
-            this.classList.remove('active'); // Cierra si ya está abierto
-        } else {
-            valorMenus.forEach(m => m.classList.remove('active'));
-            this.classList.add('active');
+        function startOpinionInterval() {
+            opinionInterval = setInterval(nextOpinion, 5000); // Cambia cada 5 segundos
         }
-    });
-});
-// Abrir el primero por defecto
-if (valorMenus.length) {
-    valorMenus[0].classList.add('active');
-}
 
-document.addEventListener('DOMContentLoaded', function() {
+        function resetOpinionInterval() {
+            clearInterval(opinionInterval);
+            startOpinionInterval();
+        }
+
+        // Inicializar
+        showOpinion(opinionIndex);
+        startOpinionInterval();
+    }
+
+    // Valores acordeón autocerrable
+    const valorMenus = document.querySelectorAll('.valor-menu');
+    valorMenus.forEach(menu => {
+        menu.addEventListener('click', function() {
+            if (this.classList.contains('active')) {
+                this.classList.remove('active'); // Cierra si ya está abierto
+            } else {
+                valorMenus.forEach(m => m.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
+    });
+    // Abrir el primero por defecto
+    if (valorMenus.length) {
+        valorMenus[0].classList.add('active');
+    }
+
     // Efecto de aparición al hacer scroll
     const valorCards = document.querySelectorAll('.valor-card');
     

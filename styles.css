@@ -418,9 +418,7 @@ body {
     right: 20px;
 }
 .orgullo-slide {
-    max-width: none;
-    width: 100vw;
-    margin: 0;
+    display: none;
 }
 .orgullo-slide.active {
     display: block;
@@ -820,8 +818,10 @@ body {
 
 .opiniones-section {
     width: 100vw;
-    background: var(--blue-third);
+    background-image: url(images/fond0.png);
+    object-fit: cover;
     color: #fff;
+    background-color: #0b2545;
     padding: 60px 0 65px 0;
     text-align: center;
     position: relative;
@@ -1069,12 +1069,13 @@ body {
 }
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     align-items: start;
+    justify-items: center;
 }
 .footer-section {
     display: flex;
@@ -1119,7 +1120,7 @@ body {
 
 @media (max-width: 900px) {
     .footer-content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
         padding: 0 1rem;
     }
