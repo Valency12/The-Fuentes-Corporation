@@ -31,10 +31,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightArrow = document.querySelector('.orgullo-arrow.right');
     let currentSlide = 0;
 
+    function renderOrgulloIndicadores() {
+        slides.forEach((slide, idx) => {
+            const indicador = slide.querySelector('.orgullo-indicadores');
+            if (!indicador) return;
+            indicador.innerHTML = '';
+            if (idx === currentSlide) {
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.className = 'orgullo-dot' + (i === currentSlide ? ' active' : '');
+                    dot.addEventListener('click', () => {
+                        currentSlide = i;
+                        showSlide(currentSlide);
+                    });
+                    indicador.appendChild(dot);
+                });
+                indicador.style.display = 'flex';
+            } else {
+                indicador.style.display = 'none';
+            }
+        });
+    }
+
     function showSlide(index) {
         slides.forEach((slide, i) => {
             slide.classList.toggle('active', i === index);
         });
+        renderOrgulloIndicadores();
     }
 
     if (leftArrow && rightArrow) {
