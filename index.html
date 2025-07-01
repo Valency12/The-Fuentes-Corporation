@@ -54,6 +54,9 @@
 
     <main>
         <section class="hero" id="inicio">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="images/videoHero.mp4" type="video/mp4">
+            </video>
             <div class="hero-content">
                 <img src="images/LogoLight.png" alt="The Fuentes Corp Logo" class="hero-logo">
                 <h1>Creciendo juntos</h1>
@@ -183,7 +186,6 @@
         </section>
         <!-- Fin sección Nuestro Orgullo -->
 
-        <div class="porque-diferencia-text">porque la gente ve la diferencia...</div>
         <div class="video-full-container">
             <video src="images/ahualulco.mp4" controls playsinline style="width:100%;height:auto;display:block;"></video>
         </div>
@@ -256,7 +258,8 @@
                         <div class="contacto-icon contacto-icon-ubicacion"></div>
                         <div>
                             <strong>Ubicacion:</strong><br>
-                            AV. CHAPULTEPEC, EDIF.1385, 3A PISO. PRIVADAS DEL PEDREGAL, SAN LUIS POTOSI
+                            Av. Chapultepec, Edif. 1385, 3A piso. <br>
+                            Privadas del Pedregal, San Luis Potosí
                         </div>
                     </div>
                     <div class="contacto-info-item">
@@ -299,8 +302,8 @@
         
         <div class="footer-content">
             <div class="footer-section">
+                <h4 class="footer-title">The Fuentes Corporation</h4>
                 <div class="footer-text">
-                    <strong>The Fuentes Corporation</strong><br>
                     Construyendo el futuro con excelencia y compromiso.
                 </div>
             </div>
@@ -308,8 +311,8 @@
             <div class="footer-section">
                 <h4 class="footer-title">Ubicación</h4>
                 <p class="footer-address">
-                    AV. CHAPULTEPEC, EDIF.1385, 3A PISO. <br>
-                    PRIVADAS DEL PEDREGAL, SAN LUIS POTOSI
+                    Av. Chapultepec, Edif. 1385, 3A PISO. <br>
+                    Privadas del Pedregal, San Luis Potosí
                 </p>
             </div>
             
@@ -324,7 +327,7 @@
         
         <div class="footer-bottom">
             <div class="footer-copy">
-                © 2024 <strong>The Fuentes Corporation</strong>. Todos los derechos reservados.
+                © 2024 <h4 class="footer-title">The Fuentes Corporation</h4>. Todos los derechos reservados.
             </div>
         </div>
     </footer>
@@ -334,3 +337,28 @@
 </html>
 
 <!--Falta arreglar seccion valores, ademas de seccion por que elegirnos, y terminar lo ultimo-->
+
+<style>
+.video-full-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100vw;
+}
+
+.video-full-container video {
+    display: block;
+    width: 100vw;
+    height: auto;
+    margin: 60px 0 40px 0;
+    background: #000;
+}
+
+@media (max-width: 900px) {
+    .video-full-container video {
+        width: 100vw;
+        margin: 24px 0 32px 0;
+    }
+}
+</style>
