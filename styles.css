@@ -321,7 +321,7 @@ body {
 }
 
 .about-text p {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-size: clamp(0.8rem, 2vw, 1.3rem);
     color: #000000;
     line-height: 1.6;
 }
@@ -348,15 +348,17 @@ body {
         flex-direction: column;
     }
     .about-image img {
-        /*max-width: 100%;*/
-        border-top-left-radius: 100px;
-        border-bottom-left-radius: 100px;
-        border-top-right-radius: 100px;
-        border-bottom-right-radius: 100px;
-        /*width: 100%;*/
+        width: 100vw;
+        max-width: 100vw;
+        height: 380px;
+        border-radius: 0;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        border-bottom-left-radius: 20%;
+        border-top-right-radius: 20%;
     }
     .about-text{
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -526,6 +528,7 @@ body {
 .servicios-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.1rem;
 }
 
 .servicio {
@@ -536,21 +539,22 @@ body {
 
 .servicioA{
     text-align: right;
-    border-top-left-radius: 80px;
-    border-bottom-left-radius: 80px;
+    /*border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;*/
     margin: 0 0 0 30px;
     float: right;
 }
 .servicioB{
     text-align: left;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
+    /*border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;*/
     margin: 0 30px 0 0;
     float: left;
 }
 
 .servicio-text {
-    padding: 3rem 2rem;
+    padding: 1.8rem 1.5rem;
+    border-radius: 5%;
 }
 
 .servicio-text h3 {
@@ -562,7 +566,7 @@ body {
 
 .servicio-text p {
     color: #fff;
-    font-size: 1.3rem;
+    font-size: clamp(0.8rem, 2vw, 1.3rem);
     line-height: 1.6;
 }
 
@@ -584,9 +588,9 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .servicio {
+    /*.servicio {
         padding: 1.5rem;
-    }
+    }*/
     
     .servicio-img {
         height: 200px;
@@ -600,8 +604,6 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
-}
-@media (max-width: 600px) {
     .servicios-section {
         padding: 2rem 1rem;
     }
@@ -623,8 +625,8 @@ body {
         height: 36px;
         margin-bottom: 0.6rem;
     }
-}
 
+}
 /* Sección Nuestro Objetivo */
 .objetivo-section {
     margin: 2rem auto 2rem auto;
@@ -1337,6 +1339,7 @@ body {
 .objetivo-title,
 .valores-title,
 .contacto-title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     position: relative;
     display: inline-block;
     color: var(--blue-primary);
