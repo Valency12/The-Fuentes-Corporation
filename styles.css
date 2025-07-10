@@ -306,7 +306,7 @@ body {
     padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
 }
 
-.about-text h2 {
+.about-text .title-who {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin-bottom: 2rem;
     font-weight: 700;
@@ -511,7 +511,129 @@ body {
 }
 
 /* Sección Servicios */
-.servicios-section {
+.title-servicios{
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #22479D;
+    text-align: center;
+}
+.seccion-service{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centra las cards horizontalmente */
+    gap: 2rem; /* Espacio entre las cards, puedes ajustar el valor */
+    /*margin: 2rem; /* Espacio arriba y abajo de la sección */
+}
+.flip-card {
+    width: 250px; /* Ajusta el ancho según tu diseño */
+    height: 300px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+
+/*.flip-card-front, .img1{
+    background-image: url("images/remodelacion.jpg");
+}*/
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /*border: 1px solid #0b2545;*/
+    border-radius: 1rem;
+  }
+  
+  /*.flip-card-front {
+    position: relative;
+}*/
+
+.flip-card-front .title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0.7em;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.85) 100%);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    z-index: 2;
+}
+
+.flip-card-front p:not(.title) {
+    /* Para que el texto normal no se superponga al título */
+    margin-bottom: 2.5em;
+}
+  
+  .flip-card-front {
+    background-image: url("images/planificacion.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+  
+  .flip-card-back {
+    background-color: #13315c;
+    transform: rotateY(180deg);
+    z-index: 1;
+  }
+.flip-card-front.img1 {
+    background-image: url("images/planificacion.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.flip-card-front.img2 {
+    background-image: url("images/diseño.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.flip-card-front.img3 {
+    background-image: url("images/construccion.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.flip-card-front.img4 {
+    background-image: url("images/remodelacion.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*.servicios-section {
     margin: 3rem auto 2rem auto;
     border-radius: 12px;
     font-family: 'Arial', sans-serif;
@@ -538,23 +660,26 @@ body {
 }
 
 .servicioA{
-    text-align: right;
-    /*border-top-left-radius: 80px;
-    border-bottom-left-radius: 80px;*/
-    /*margin: 0 0 0 30px;*/
+    text-align: left;
     float: right;
 }
 .servicioB{
     text-align: left;
-    /*border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;*/
-    /*margin: 0 30px 0 0;*/
     float: left;
 }
 
 .servicio-text {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     padding: 1.8rem 1.5rem;
-    /*border-radius: 5%;*/
+}
+
+.servicio-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 1rem;
+    flex-shrink: 0;
 }
 
 .servicio-text h3 {
@@ -583,29 +708,25 @@ body {
     object-fit: cover;
 }
 .text-info{
-    margin-bottom: 1rem;
-}
+    /*margin-bottom: 1rem;
+}*/
 
-@media (max-width: 900px) {
+/*@media (max-width: 900px) {
     .servicios-grid {
         grid-template-columns: 1fr;
     }
     
     /*.servicio {
         padding: 1.5rem;
-    }*/
+    }
     
     .servicio-img {
         height: 200px;
     }
     .servicio-icon {
-        width: 48px;
-        height: 48px;
-        margin-bottom: 0.8rem;
-        float: none !important;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        width: 28px;
+        height: 28px;
+        margin-right: 0.7rem;
     }
     .servicios-section {
         padding: 2rem 1rem;
@@ -624,12 +745,12 @@ body {
         font-size: 1rem;
     }
     .servicio-icon {
-        width: 36px;
-        height: 36px;
-        margin-bottom: 0.6rem;
+        width: 22px;
+        height: 22px;
+        margin-right: 0.5rem;
     }
 
-}
+}*/
 /* Sección Nuestro Objetivo */
 .objetivo-section {
     margin: 2rem auto 2rem auto;
@@ -1491,5 +1612,13 @@ body {
         margin: 0;
         border-radius: 0;
     }
+}
+
+.seccion-services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
 }
 

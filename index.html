@@ -6,6 +6,7 @@
 
     <meta name="description" content="Sitio web de The Fuentes Corp">
     <title>The Fuentes Corp</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.cs">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -67,7 +68,7 @@
         <section class="about-minimal" id="nosotros">
             
             <div class="about-text">
-                <h2>¿Quiénes somos?</h2>
+                <h2 class="title-who">¿Quiénes somos?</h2>
                 <h3 class="about-subtitle">Nuestro Compromiso</h3>
                 <p class="about-us">
                     Somos una empresa en expansión, dedicada a la <strong>construcción de obras de ingeniería civil</strong>, tanto en el sector público como en el privado. Nuestro mayor fuerte son la <strong>construcción de carreteras y puentes</strong>. Nos caracterizamos por brindar <strong>oportunidades a jóvenes ingenieros residentes</strong> que buscan su primera experiencia laboral, para formar su camino hacia la excelencia profesional.
@@ -80,50 +81,53 @@
         <!-- Fin sección minimalista -->
 
         <!-- Sección Servicios -->
-        <section class="servicios-section" id="servicios">
-            <h2 class="servicios-title">Servicios</h2>
-            <div class="servicios-grid">
-                <div class="servicio servicio-text servicioA">
-                    <div class="text-info">
-                    <h3>Planificación</h3>
-                    <p>Te ayudamos a conceptualizar y estructurar tu proyecto desde cero, garantizando una hoja de ruta clara y eficiente.</p>
+        <h2 class="title-servicios">Servicios</h2>
+        <div class="seccion-services">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front img1">
+                        <p class="title">Planificacion</p>
                     </div>
-                    <div class="servicio servicio-img imgA ">
-                        <img src="images/planificacion.png" alt="Servicio 1">
-                    </div>
-                </div>
-                
-                
-                <div class="servicio servicio-text servicioB">
-                    <div class="text-info">
-                    <h3>Diseño</h3>
-                    <p>Convertimos tus ideas en planos innovadores y estéticos, creando espacios funcionales y visualmente atractivos que superen tus expectativas.</p>
-                    </div>
-                    <div class="servicio servicio-img servicio-img-wide imgB">
-                        <img src="images/diseño.jpg" alt="Servicio 2">
-                    </div>
-                </div>
-                <div class="servicio servicio-text servicioA">
-                    <div class="text-info">
-                    <h3>Construcción</h3>
-                    <p>Ejecutamos tu proyecto con calidad y precisión, construyendo estructuras sólidas y duraderas que cumplen con los más altos estándares.</p>
-                    </div>
-                    <div class="servicio servicio-img imgA">
-                        <img src="images/construccion.jpg " alt="Servicio 3">
-                    </div>
-                </div>
-                
-                <div class="servicio servicio-text servicioB">
-                    <div class="text-info">
-                    <h3>Remodelación</h3>
-                    <p>Transformamos y modernizamos tus espacios existentes, aportando frescura, funcionalidad y valor a tu propiedad.</p>
-                    </div>
-                    <div class="servicio servicio-img imgB">
-                        <img src="images/remodelacion.jpg" alt="Servicio 4">
+                    <div class="flip-card-back">
+                        <p class="title">BACK</p>
+                        <p>Leave Me</p>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front img2">
+                        <p class="title">Diseño</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">BACK</p>
+                        <p>Leave Me</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front img3">
+                        <p class="title">Construccion</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">BACK</p>
+                        <p>Leave Me</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front img4">
+                        <p class="title">Remodelacion</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">BACK</p>
+                        <p>Leave Me</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Fin sección Servicios -->
 
         <!-- Sección Nuestro Orgullo -->
