@@ -30,8 +30,8 @@
             <nav class="nav-links">
                 <a href="#inicio" class="nav-link">Inicio</a>
                 <a href="#nosotros" class="nav-link">Nosotros</a>
-                <a href="#servicios" class="nav-link">Servicios</a>
                 <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
             </nav>
 
@@ -41,6 +41,7 @@
             </div>
         </div>
     </header>
+    
 
     <div class="sidebar">
         <nav class="sidebar-nav">
@@ -66,7 +67,7 @@
             <div class="hero-content">
                 <img src="images/LogoLight.png" alt="The Fuentes Corp Logo" class="hero-logo">
                 <h1>CRECIENDO JUNTOS</h1>
-                <button class="btn cta-button">Conoce más</button>
+                <a href="#inicio" class="btn cta-button">Iniciar</a>
             </div>
         </section>
         <!-- Contenido principal -->
@@ -98,10 +99,14 @@
         <!-- Fin sección minimalista -->
 
         <!--Nuestro Orgullo-->
-        <section class="section-proyectos">
+        <section class="section-proyectos" id="proyectos">
             <div class="proyectos-text">
                 <h2 class="proyectos-title">Nuestros Proyectos, Nuestro Orgullo</h2>
-                <p class="proyectos-subtitle">Cada proyecto
+                <p class="proyectos-subtitle">En The Fuentes Corporation,
+                    no hay mejor testimonio de
+                    nuestra calidad y experiencia
+                    que nuestras obras
+                    emblemáticas. Cada proyecto
                     es un reflejo de nuestro
                     compromiso con la
                     excelencia, la innovación y el
@@ -109,7 +114,7 @@
                     estándares. Al construir
                     juntos, dejamos una huella
                     duradera que habla por sí
-                    sola</p>
+                    sola.</p>
             </div>
 
             <div class="album py-5 bg-body-tertiary">
@@ -180,7 +185,7 @@
             <div class="section-video">
                 <div class="proyectos-text">
                     <h2 class="proyectos-title">Nuestras obras Hablan</h2>
-                    <p class="proyectos-subtitle">Conoce un poco de lo que fue el antes y despues en la obra de Ahualulco</p>
+                    <p class="proyectos-subtitle">Testigo de la transformación: Un video te lleva por la impactante construcción de un extenso tramo de calle en Ahualulco, revelando el asombroso antes y después que maravilló a todos.</p>
                 </div>
                 <div class="container-video">
                     <video class="section-video-file" controls style="width:100%; border-radius: 20px;">
@@ -190,7 +195,7 @@
             </div>   
             <!--<script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>-->
         </section>
-        <section class="section-servicios">
+        <section class="section-servicios" id="servicios">
             <p class="servicios-title">Ofrecemos lo Mejor</p>
             <div class="container px-4 py-5" id="icon-grid">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
@@ -320,6 +325,12 @@
             </div>
         </div>
     </section>
+    <!-- Sección Mapa Ubicación -->
+    <section class="mapa-section">
+        <div class="mapa-container">
+            <iframe class="mapa-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.019393698614!2d-101.020981!3d22.1207189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a99004cb45f71%3A0x372797b3ff633e73!2sTHE%20FUENTES%20CORPORATION!5e0!3m2!1ses-419!2smx!4v1718040000000!5m2!1ses-419!2smx" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
     
     
 
@@ -343,7 +354,6 @@
 
         <!--Seccion opiniones-->
         <section class="opiniones-section">
-            <h2 class="opiniones-title">Opiniones</h2>
             <div class="opiniones-carrusel">
                 <button class="opiniones-arrow left" aria-label="Anterior">&#8592;</button>
                 <div class="opiniones-slide active">
