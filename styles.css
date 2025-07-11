@@ -359,16 +359,17 @@ body {
 .section-proyectos{
     background-color: #ffb703;
     align-items: center;
-    padding: 2rem 0;
+    padding-top: 3rem;
 }
 .proyectos-text{
     align-items: center;
     text-align: center;
-    margin: 5rem 3rem 0 3rem;
+    /*margin: 5rem 3rem 0 3rem;*/
 }
 
 .proyectos-subtitle{
     font-size: clamp(0.5rem, 2vw, 1.5rem);
+    color: #ffffff;
 }
 
 .proyectos-title{
@@ -575,7 +576,7 @@ body {
     text-align: center;
     padding: 2rem 0 1rem 0;
     /*color: #444;*/
-    color: #ffe299; 
+    color: #ffb703; 
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-weight: 900;
     /*background-color: #ffe299;*/
@@ -593,7 +594,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     margin: 2rem;
-    border: solid 2px #ffe299;
+    border: solid 2px #ffb703;
     border-top: transparent; 
     border-right: transparent;
 }
@@ -609,7 +610,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     margin: 2rem;
-    border: solid 2px #ffe299;
+    border: solid 2px #ffb703;
     border-top: transparent; 
     border-left: transparent;
 }
@@ -728,11 +729,11 @@ body {
 
 /*Seccion video*/
 .section-video {
-    background-color: #ffb703;
-    border-radius: 20px;
+    background-color: #004e98;
     align-items: center;
     position: relative;
-    padding: 0;
+    padding: 3rem 0 1rem 0;
+    margin: 2rem 0 0 0;
 }
 
 .container-video {
@@ -758,7 +759,7 @@ body {
     width: 100vw;
     overflow: hidden;
     background: #ffffff;
-    padding: 4rem 0;
+    padding: 2rem 0 4rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -766,6 +767,10 @@ body {
 
 .aliados-title{
     color: #004e98 !important;
+    text-align: center;
+}
+.aliados-text{
+    margin: 2rem;
     text-align: center;
 }
 
@@ -1253,11 +1258,18 @@ body {
     color: #fff;
 }
 
+.icon-flecha {
+    width: clamp(1rem, 2vw, 1.5rem);
+    height: clamp(1rem, 2vw, 1.5rem);
+    color: #004e98;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
 @media (max-width: 900px) {
     .oficinas-container {
         flex-direction: column;
         min-height: unset;
-        border-radius: 20px;
     }
     .oficinas-title-col, .oficinas-list-col {
         padding: 2rem 1rem;
