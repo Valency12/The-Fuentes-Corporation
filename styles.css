@@ -316,7 +316,7 @@ body {
     padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
 }
 
-.about-text, .about-title, .proyectos-title{
+.about-text, .about-title, .proyectos-title, .servicios-title, .misionvision-title, .mision-title, .vision-title{
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
@@ -546,8 +546,150 @@ body {
     }
 }
 
+/*Seccion Servicios*/
 
+.section-servicios{
+    padding: 3rem 2rem;
+}
+.servicios-title{
+    margin: 0 0 1.5rem 2rem;
+    color: #004e98;
+}
+.services-icon{
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+}
 
+/*Seccion Mision y Vision*/
+.container-mision, .container-vision{
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    margin: 0;
+    min-height: 300px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.misionvision-title{
+    text-align: center;
+    padding: 4rem 0 0 0;
+    color: #ffffff;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 900;
+}
+
+.container-mision{
+    background-image: url('images/mision.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: left;
+    flex-direction: row;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container-vision{
+    background-image: url('images/vision.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: right;
+    flex-direction: row-reverse;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container-mision::before,
+.container-vision::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.container-mision > *,
+.container-vision > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Contenedor interno para centrar el contenido */
+.container-mision .col-lg-6,
+.container-vision .col-lg-6 {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.div-mision, .div-vision{
+    flex-shrink: 0;
+    min-width: 200px;
+}
+
+.mision-title, .vision-title{
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.mision-title{
+    margin: 0 0 0 3rem;
+}
+
+.vision-title{
+    margin: 0 3rem 0 0;
+}
+.col-lg-6{
+    flex: 1;
+}
+.bg-dark{
+    padding: 0 0 2rem 0; 
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container-mision, .container-vision{
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 3rem 1rem;
+        min-height: 250px;
+    }
+    
+    .container-vision{
+        flex-direction: column;
+    }
+    
+    .div-mision, .div-vision{
+        min-width: auto;
+        order: 2; /* El título aparece después del texto */
+    }
+    
+    .col-lg-6{
+        order: 1; /* El texto aparece primero */
+    }
+    
+    .container-mision .col-lg-6,
+    .container-vision .col-lg-6 {
+        padding: 0 1rem;
+    }
+}
 
 
 
