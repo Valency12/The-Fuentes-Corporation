@@ -76,7 +76,7 @@
             <div class="about-text">
                 <h2 class="about-title">Mas que una Constructora</h2>
                 <h3 class="about-subtitle">Nuestro Compromiso</h3>
-                <p class="about-us">
+                <p class="about-paragraph">
                     En The Fuentes Corporation, construimos más que
                     infraestructuras: construimos relaciones, innovación y
                     valor humano. Nuestro eslogan, “Creciendo Juntos”,
@@ -102,7 +102,7 @@
         <section class="section-proyectos" id="proyectos">
             <div class="proyectos-text">
                 <h2 class="proyectos-title">Nuestros Proyectos, Nuestro Orgullo</h2>
-                <p class="proyectos-subtitle">En The Fuentes Corporation,
+                <p class="proyectos-paragraph">En The Fuentes Corporation,
                     no hay mejor testimonio de
                     nuestra calidad y experiencia
                     que nuestras obras
@@ -119,7 +119,7 @@
 
             <div class="album py-5 bg-body-tertiary">
                 <div class="container">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="row proyectos-cards-container">
                         <div class="col">
                             <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
                                     class="bd-placeholder-img card-img-top" height="225"
@@ -132,7 +132,7 @@
                                 <div class="card-body">
                                     <span class="card-title">Matias Romero</span>
                                     <p class="card-subtitle">Oaxaca</p>
-                                    <p class="card-subtext">
+                                    <p class="card-paragraph">
                                         Construcción de un cuerpo nuevo a 12 m de ancho de corona del km 195+180 al km 199+760 mediante trabajos de terracerías, obras de drenaje, obra complementaria y pavimentación con base hidráulica, base asfáltica y carpeta de concreto asfáltico, riego de sello y señalamiento del libramiento Matías Romero de la carretera Acayucan – La Ventosa.</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         
@@ -152,7 +152,7 @@
                                 <div class="card-body">
                                     <span class="card-title">Cactus</span>
                                     <p class="card-subtitle">San Luis Potosi</p>
-                                        <p class="card-subtext">Construcción de terracerías, obras de drenaje, pavimento de concreto asfáltico y señalamiento. Construcción de 2 PIP's, ampliación de un puente vehicular y construcción de un PSV, "Entronque Ahualulco - Entronque La Bonita", tramo "E.C. (SLPZAC) - Ahualulco - Charcas" 0+200 al 14+600, ubicación Ahualulco - Charcas, S.L.P.</p>
+                                        <p class="card-paragraph">Construcción de terracerías, obras de drenaje, pavimento de concreto asfáltico y señalamiento. Construcción de 2 PIP's, ampliación de un puente vehicular y construcción de un PSV, "Entronque Ahualulco - Entronque La Bonita", tramo "E.C. (SLPZAC) - Ahualulco - Charcas" 0+200 al 14+600, ubicación Ahualulco - Charcas, S.L.P.</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                          
                                     </div>
@@ -171,7 +171,7 @@
                                 <div class="card-body">
                                     <span class="card-title">Ahualulco</span>
                                     <p class="card-subtitle">San Luis Potosi</p>
-                                    <p class="card-subtext">Construcción de terracerías, obras de drenaje, pavimento de concreto asfáltico y señalamiento. Construcción de 2 PIP's, ampliación de un puente vehicular y construcción de un PSV, "Entronque Ahualulco - Entronque La Bonita", tramo "E.C. (SLP-ZAC) - Ahualulco - Charcas" 0+200 al 14+600, ubicación Ahualulco - Charcas, S.L.P.</p>
+                                    <p class="card-paragraph">Construcción de terracerías, obras de drenaje, pavimento de concreto asfáltico y señalamiento. Construcción de 2 PIP's, ampliación de un puente vehicular y construcción de un PSV, "Entronque Ahualulco - Entronque La Bonita", tramo "E.C. (SLP-ZAC) - Ahualulco - Charcas" 0+200 al 14+600, ubicación Ahualulco - Charcas, S.L.P.</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                                                            </div>
                                 </div>
@@ -183,14 +183,16 @@
                 </div>
             </div> 
             <div class="section-video">
-                <div class="proyectos-text">
-                    <h2 class="proyectos-title">Nuestras obras Hablan</h2>
-                    <p class="proyectos-subtitle">Testigo de la transformación: Un video te lleva por la impactante construcción de un extenso tramo de calle en Ahualulco, revelando el asombroso antes y después que maravilló a todos.</p>
-                </div>
-                <div class="container-video">
-                    <video class="section-video-file" controls style="width:100%; border-radius: 20px;">
-                        <source src="images/ahualulco.mp4" type="video/mp4">
-                    </video>
+                <div class="video-flex-container">
+                    <div class="container-video">
+                        <video class="section-video-file" controls style="width:100%; border-radius: 20px;">
+                            <source src="images/ahualulco.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="proyectos-text">
+                        <h2 class="proyectos-title">Nuestras <br>obras Hablan</h2>
+                        <p class="proyectos-paragraph"><span class="negrita">Testigo de la transformación:</span> Un video te lleva por la impactante construcción de un extenso tramo de calle en Ahualulco, revelando el asombroso antes y después que maravilló a todos.</p>
+                    </div>
                 </div>
             </div>   
             <!--<script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>-->
@@ -237,7 +239,7 @@
         <!--Seccion de aliados-->
         <section class="aliados-section">
             <h2 class="aliados-title">"Creciendo Juntos"<br>con Nuestros Aliados de Confianza</h2>
-            <p class="aliados-text">En The Fuentes Corporation,
+            <p class="aliados-paragraph">En The Fuentes Corporation,
                 nuestro compromiso y calidad
                 nos han permitido colaborar
                 con algunos de los nombres
@@ -281,7 +283,7 @@
         <div class="container-mision">
             <div class="div-mision"><h1 class="mision-title">Mision</h1></div>
             <div class="col-lg-6 mx-auto">
-                <p class="misionvision-text">Quickly design and customize responsive mobile-first sites with Bootstrap, the
+                <p class="misionvision-paragraph">Quickly design and customize responsive mobile-first sites with Bootstrap, the
                     world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
                     responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
             </div>
@@ -289,7 +291,7 @@
         <div class="container-vision">
             <div class="div-vision"><h1 class="vision-title">Vision</h1></div>
             <div class="col-lg-6 mx-auto">
-                <p class="misionvision-text">Quickly design and customize responsive mobile-first sites with Bootstrap, the
+                <p class="misionvision-paragraph">Quickly design and customize responsive mobile-first sites with Bootstrap, the
                     world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
                     responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
             </div>
@@ -333,25 +335,6 @@
     </section>
     
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!--Seccion opiniones-->
         <section class="opiniones-section">
             <div class="opiniones-carrusel">
@@ -377,12 +360,12 @@
         <!-- Sección de Contacto -->
         <section class="contacto-section" id="contacto">
             <h2 class="contacto-title">CONTACTANOS</h2>
-            <p class="contacto-subtitle">"¡Contáctanos y hagamos realidad tus proyectos de construcción! Estamos aquí para escucharte y brindarte un servicio personalizado de calidad."</p>
+            <p class="contacto-paragraph">"¡Contáctanos y hagamos realidad tus proyectos de construcción! Estamos aquí para escucharte y brindarte un servicio personalizado de calidad."</p>
             <div class="contacto-container">
                 <div class="contacto-info">
                     <div class="contacto-info-item">
                         <div class="contacto-icon contacto-icon-ubicacion"></div>
-                        <div>
+                        <div class="contacto-paragraph">
                             <strong>Ubicacion:</strong><br>
                             Av. Chapultepec, Edif. 1385, 3A piso. <br>
                             Privadas del Pedregal, San Luis Potosí
@@ -390,14 +373,14 @@
                     </div>
                     <div class="contacto-info-item">
                         <div class="contacto-icon contacto-icon-correo"></div>
-                        <div>
+                        <div class="contacto-paragraph">
                             <strong>Correo:</strong><br>
                             info@thefuentescorp.com
                         </div>
                     </div>
                     <div class="contacto-info-item">
                         <div class="contacto-icon contacto-icon-telefono"></div>
-                        <div>
+                        <div class="contacto-paragraph">
                             <strong>Telefono:</strong><br>
                             +52-961-2070662
                         </div>
@@ -431,14 +414,14 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4 class="footer-title">The Fuentes Corporation</h4>
-                <div class="footer-text">
+                <div class="footer-paragraph">
                     Construyendo el futuro con excelencia y compromiso.
                 </div>
             </div>
             
             <div class="footer-section">
                 <h4 class="footer-title">Ubicación</h4>
-                <p class="footer-address">
+                <p class="footer-paragraph">
                     Av. Chapultepec, Edif. 1385, 3A PISO. <br>
                     Privadas del Pedregal, San Luis Potosí
                 </p>
@@ -446,7 +429,7 @@
             
             <div class="footer-section">
                 <h4 class="footer-title">Contacto</h4>
-                <p class="footer-contact">
+                <p class="footer-paragraph">
                     <strong>Email:</strong> info@thefuentescorp.com<br>
                     <strong>Teléfono:</strong> +52-961-2070662
                 </p>
