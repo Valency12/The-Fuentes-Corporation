@@ -121,13 +121,13 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #000000;
+    color: #004e98;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--blue-primary);
+    color: #ffb703;
 }
 
 .auth-buttons {
@@ -328,14 +328,14 @@ body {
     padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
 }
 
-.about-text, .about-title, .proyectos-title, .servicios-title, .misionvision-title, .mision-title, .vision-title, .aliados-title, .oficinas-title{
+.about-text, .about-title, .proyectos-title, .servicios-title, .misionvision-title, .mision-title, .vision-title, .aliados-title, .oficinas-title, .opiniones-title, .contacto-title{
     font-weight: 900;
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     /*margin-bottom: 0.6rem;*/
 }
 
 .about-paragraph, .card-paragraph, .proyectos-paragraph, .aliados-paragraph, .misionvision-paragraph, .footer-paragraph, .contacto-paragraph{
-    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
     /*line-height: 1.6;*/
     font-weight: 400;
     font-family: "Roboto", sans-serif;
@@ -359,6 +359,10 @@ body {
     margin: 0 !important;
 }
 
+.big-title-three{
+    color: #004e98;
+}
+
 .about-image {
     flex: 1;
     display: flex;
@@ -368,7 +372,7 @@ body {
 
 .about-image img {
     width: 100%;
-    height: 450px;
+    height: 550px;
     background: #ccc;
     object-fit: cover;
     box-shadow: 0 15px 30px rgba(34, 71, 157, 0.4), 0 8px 20px rgba(34, 71, 157, 0.3);
@@ -393,7 +397,7 @@ body {
 
 .proyectos-title{
     /*font-size: 60px !important;*/
-    font-size: clamp(3rem, 5vw, 6rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     color:#ffffff;
 }
 .negrita{
@@ -606,6 +610,10 @@ body {
     margin: 0 0 2rem 2rem;
     color: #004e98;
 }
+.big-title{
+    font-size:clamp(2rem, 5vw, 4rem);
+}
+
 .services-icon{
     width: 90px;
     height: 90px;
@@ -624,10 +632,10 @@ body {
 
 .misionvision-title{
     text-align: center;
-    padding: 2rem 0 1rem 0;
+    padding: 2rem 0 0 0;
     /*color: #444;*/
     color: #ffb703; 
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 900;
     /*background-color: #ffe299;*/
 }
@@ -704,12 +712,13 @@ body {
     margin: 0;
 }
 
-.mision-title{
-    margin: 0 0 0 5rem;
+.mision-title, .vision-title{
+    text-align: center;
 }
 
-.vision-title{
-    margin: 0 5rem 0 0;
+p {
+    margin-top: 0;
+    margin-bottom: 0 !important; 
 }
 .col-lg-6{
     flex: 1;
@@ -741,11 +750,11 @@ body {
     
     .div-mision, .div-vision{
         min-width: auto;
-        order: 2; /* El título aparece después del texto */
+        order: 1; /* El título aparece primero */
     }
     
     .col-lg-6{
-        order: 1; /* El texto aparece primero */
+        order: 2; /* El texto aparece después */
     }
     
     .container-mision .col-lg-6,
@@ -818,13 +827,22 @@ body {
 }
 
 .aliados-title{
-    color: #004e98 !important;
+    color: #004e98;
     text-align: center;
 }
 .aliados-paragraph{
     margin: 2rem;
     text-align: center;
 }
+.big-title-two{
+    font-size: clamp(2rem, 6vw, 6rem);
+    color: #ffb703;
+}
+.big-title-four{
+    font-size: clamp(2rem, 4vw, 4rem);
+    color: #ffb703;
+}
+
 
 .logos-carousel-track {
     display: flex;
@@ -886,7 +904,9 @@ body {
 .comillas{
     font-size: 2rem;
 }
-
+.opiniones-title{
+    color: #fff;
+}
 
 
 .opiniones-carrusel {
@@ -919,15 +939,25 @@ body {
 }
 
 .opinion-text {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 5vw, 1.5rem);
     font-style: italic;
-    margin: 0 0 10px 0;
-    padding: 20px 0;
+    font-weight: 500;
+    margin: 10px 0 20px 0 !important;
+    line-height: 2rem;
+    padding: 0;
+}
+.opinion-cargo{
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
 .opinion-author {
+    font-style: italic;
+    font-weight: bold;
     font-size: 1.3rem;
-    color: #aaa;
+    color: #ffb703;
+    font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
 .opiniones-arrow {
@@ -942,7 +972,7 @@ body {
 }
 
 .opiniones-arrow:hover {
-    color: #22479D;
+    color: #ffb703;
 }
 
 .opinion-avatar{
@@ -950,6 +980,7 @@ body {
     height: 150px;
     width: 150px;
     object-fit: cover;
+    border: solid 2px #ffb703;
 }
 
 /* Sección de Contacto */
@@ -960,11 +991,11 @@ body {
     text-align: center;
 }
 .contacto-title {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
     font-weight: 700;
     margin-bottom: 10px;
     letter-spacing: 1px;
-    color: #222;
+    color: #004e98;
 }
 .contacto-subtitle {
     color: #a0a0a0;
@@ -977,7 +1008,7 @@ body {
     align-items: flex-start;
     gap: 40px;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 1rem auto;
     flex-wrap: wrap;
 }
 .contacto-info {
@@ -1000,28 +1031,26 @@ body {
 .contacto-icon {
     width: 38px;
     height: 38px;
-    border-radius: 50%;
-    background: #e6f4ea;
+    /*background: #e6f4ea;*/
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    margin-top: 2px;
 }
 .contacto-icon-ubicacion::before {
     content: '\1F4CD';
-    font-size: 1.5rem;
-    color: #7fc29b;
+    font-size: 2rem;
+    /*color: #7fc29b;*/
 }
 .contacto-icon-correo::before {
     content: '\2709';
-    font-size: 1.5rem;
-    color: #7fc29b;
+    font-size: 2rem;
+    /*color: #7fc29b;*/
 }
 .contacto-icon-telefono::before {
     content: '\1F4F1';
-    font-size: 1.5rem;
-    color: #7fc29b;
+    font-size: 2rem;
+    /*color: #7fc29b;*/
 }
 .contacto-info strong {
     font-size: 1.15rem;
@@ -1240,6 +1269,19 @@ body {
     margin: 0;
 }
 
+.big-title-five, .big-title-five-one, .big-title-five-two{
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+.big-title-six{
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: #fff;
+}
+.big-title-five-one{
+    color: #fff;
+}
+.big-title-five-two{
+    color: #ffb703;
+}
 .oficinas-list-col {
     flex: 1;
     display: flex;
@@ -1347,7 +1389,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 1rem;
 }
 
 @media (min-width: 900px) {
@@ -1375,7 +1416,6 @@ body {
   }
   .video-flex-container .proyectos-text {
     order: 1;
-    margin-bottom: 1rem;
     margin-top: 0;
     text-align: center;
   }
