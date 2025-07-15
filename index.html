@@ -331,19 +331,20 @@
                         </div>
                     </div>
                 </div>
-                <form class="contacto-form">
+                <form class="contacto-form" id="contacto-form">
                     <div class="contacto-form-row">
-                        <input type="text" placeholder="Nombre" required>
-                        <input type="text" placeholder="Apellido" required>
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="text" name="apellido" placeholder="Apellido" required>
                     </div>
                     <div class="contacto-form-row">
-                        <input type="text" placeholder="Telefono" required>
-                        <input type="email" placeholder="Correo" required>
+                        <input type="text" name="telefono" placeholder="Telefono" required>
+                        <input type="email" name="correo" placeholder="Correo" required>
                     </div>
-                    <input type="text" placeholder="Asunto" class="contacto-form-asunto" required>
-                    <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    <input type="text" name="asunto" placeholder="Asunto" class="contacto-form-asunto" required>
+                    <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
                     <button type="submit" class="contacto-form-btn">ENVIAR MENSAJE</button>
                 </form>
+                <div id="contacto-form-msg"></div>
             </div>
         </section>
         <!-- Fin sección de Contacto -->
@@ -816,6 +817,41 @@
 
         // Iniciar chat
     </script>
+
+    <script>
+document.getElementById('contacto-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = {
+    nombre: form.nombre.value,
+    apellido: form.apellido.value,
+    telefono: form.telefono.value,
+    correo: form.correo.value,
+    asunto: form.asunto.value,
+    mensaje: form.mensaje.value
+  };
+
+  const msgDiv = document.getElementById('contacto-form-msg');
+  msgDiv.textContent = 'Enviando...';
+
+  try {
+    const res = await fetch('http://localhost:3001/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    if (result.ok) {
+      msgDiv.textContent = '¡Mensaje enviado correctamente!';
+      form.reset();
+    } else {
+      msgDiv.textContent = 'Error al enviar el mensaje. Intenta de nuevo.';
+    }
+  } catch (err) {
+    msgDiv.textContent = 'Error de conexión. Intenta más tarde.';
+  }
+});
+</script>
 
 </body>
 </html>
