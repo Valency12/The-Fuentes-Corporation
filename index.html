@@ -248,7 +248,7 @@
                 <ul class="oficinas-list">
                     <li>
                         <span class="nombre-oficinas"><img src="images/iconflecha.png" class="icon-flecha" alt="Flecha"> Oficina Central, San Luis Potosí</span>
-                        <a href="https://maps.google.com/?q=San+Luis+Potosi" target="_blank" class="oficinas-link">Ver ubicación</a>
+                        <a href="https://maps.app.goo.gl/oiTWpAACE9hYQn9q9" target="_blank" class="oficinas-link">Ver ubicación</a>
                     </li>
                     <li>
                         <span class="nombre-oficinas"><img src="images/iconflecha.png" class="icon-flecha" alt="Flecha"> Sucursal, Ciudad de México</span>
@@ -502,12 +502,10 @@
             messageDiv.classList.add('message', 'bot-message');
             messageDiv.innerHTML = text;
             chatMessages.appendChild(messageDiv);
-            
             if (isQuestion) {
                 userInput.focus();
             }
-            
-            chatMessages.scrollTop = 0;
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
 
         // Mostrar mensaje del usuario
@@ -516,7 +514,7 @@
             messageDiv.classList.add('message', 'user-message');
             messageDiv.textContent = text;
             chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = 0;
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
 
         // Mostrar opciones de categorías principales
