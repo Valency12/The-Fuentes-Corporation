@@ -67,7 +67,7 @@
             <div class="hero-content">
                 <img src="images/LogoLight.png" alt="The Fuentes Corp Logo" class="hero-logo">
                 <h1>CRECIENDO JUNTOS</h1>
-                <a href="#inicio" class="btn cta-button">Iniciar</a>
+                <a href="#nosotros" class="btn cta-button">Iniciar</a>
             </div>
         </section>
         <!-- Contenido principal -->
@@ -89,7 +89,7 @@
         <!--Nuestro Orgullo-->
         <section class="section-proyectos" id="proyectos">
             <div class="proyectos-text">
-                <h2 class="proyectos-title">Nuestros Proyectos, <span class="big-title-three">Nuestro Orgullo</span></h2>
+                <h2 class="proyectos-title">Nuestros Proyectos,<br> <span class="big-title-three">Nuestro Orgullo</span></h2>
                 <p class="proyectos-paragraph">En The Fuentes Corporation, no hay mejor testimonio de nuestra <b>calidad</b> y <i>experiencia</i> que nuestras <b>obras emblemáticas</b>. Cada proyecto es un reflejo de nuestro compromiso con la <i>excelencia</i>, la <b>innovación</b> y el cumplimiento de los <i>más altos estándares</i>. Al construir juntos, dejamos una <b>huella duradera</b> que habla por sí sola.</p>
             </div>
 
@@ -103,7 +103,8 @@
                                     <span class="card-title">Matias Romero</span>
                                     <p class="card-subtitle">Oaxaca</p>
                                     <p class="card-paragraph">
-                                        Construcción de un cuerpo nuevo a 12 m de ancho de corona del km 195+180 al km 199+760 mediante trabajos de terracerías, obras de drenaje, obra complementaria y pavimentación con base hidráulica, base asfáltica y carpeta de concreto asfáltico, riego de sello y señalamiento del libramiento Matías Romero de la carretera Acayucan – La Ventosa.</p>
+                                        Construcción de un nuevo cuerpo carretero, terracerías, drenaje y pavimentación en Matías Romero, Oaxaca.
+                                    </p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         
                                     </div>
@@ -116,7 +117,7 @@
                                 <div class="card-body">
                                     <span class="card-title">Cactus</span>
                                     <p class="card-subtitle">San Luis Potosí</p>
-                                        <p class="card-paragraph">Construcción de terracerías, obras de drenaje, pavimento de concreto asfáltico y señalamiento. Construcción de 2 PIP's, ampliación de un puente vehicular y construcción de un PSV, "Entronque Ahualulco - Entronque La Bonita", tramo "E.C. (SLPZAC) - Ahualulco - Charcas" 0+200 al 14+600, ubicación Ahualulco - Charcas, S.L.P.</p>
+                                        <p class="card-paragraph">Construcción de terracerías, drenaje, pavimento asfáltico y señalamiento. Ampliación de puente y PSV en Cactus, SLP.</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                          
                                     </div>
@@ -129,7 +130,7 @@
                                 <div class="card-body">
                                     <span class="card-title">Ahualulco</span>
                                     <p class="card-subtitle">San Luis Potosí</p>
-                                    <p class="card-paragraph">Construcción de terracerías, obras de drenaje, pavimento de concreto asfáltico y señalamiento. Construcción de 2 PIP's, ampliación de un puente vehicular y construcción de un PSV, "Entronque Ahualulco - Entronque La Bonita", tramo "E.C. (SLP-ZAC) - Ahualulco - Charcas" 0+200 al 14+600, ubicación Ahualulco - Charcas, S.L.P.</p>
+                                    <p class="card-paragraph">Obras de terracería, drenaje, pavimento y señalamiento. Ampliación de puente y PSV en Ahualulco, SLP.</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                                                            </div>
                                 </div>
@@ -308,23 +309,23 @@
             <div class="contacto-container">
                 <div class="contacto-info">
                     <div class="contacto-info-item">
-                        <div class="contacto-icon contacto-icon-ubicacion"></div>
-                        <div class="contacto-paragraph">
+                        <span class="contacto-icon contacto-icon-ubicacion"></span>
+                        <div class="contacto-info-item-text">
                             <strong>Ubicacion:</strong><br>
-                            Av. Chapultepec, Edif. 1385, 3A piso. <br>
+                            Av. Chapultepec, Edif. 1385, <br>3A piso.
                             Privadas del Pedregal, San Luis Potosí
                         </div>
                     </div>
                     <div class="contacto-info-item">
-                        <div class="contacto-icon contacto-icon-correo"></div>
-                        <div class="contacto-paragraph">
+                        <span class="contacto-icon contacto-icon-correo"></span>
+                        <div class="contacto-info-item-text">
                             <strong>Correo:</strong><br>
                             direccion@thefuentescorp.com.mx
                         </div>
                     </div>
                     <div class="contacto-info-item">
-                        <div class="contacto-icon contacto-icon-telefono"></div>
-                        <div class="contacto-paragraph">
+                        <span class="contacto-icon contacto-icon-telefono"></span>
+                        <div class="contacto-info-item-text">
                             <strong>Telefono:</strong><br>
                             +52-961-2070662
                         </div>
@@ -816,12 +817,6 @@
         });
 
         // Iniciar chat
-        setTimeout(() => {
-            chatIcon.classList.add('hidden');
-            chatContainer.classList.remove('hidden');
-            addBotMessage("¡Hola! Soy Step, el asistente virtual de The Fuentes Corporation.");
-            showMainMenu();
-        }, 1000);
     </script>
 
 </body>
