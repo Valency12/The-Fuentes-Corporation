@@ -256,24 +256,6 @@ if (sectionVideoFile) {
     }, { threshold: 0.5 });
     observerVideo.observe(sectionVideoFile);
 }
-const proyectosCards = document.querySelectorAll('.proyectos-cards-container .card');
-proyectosCards.forEach(card => {
-    card.classList.remove('animate-paragraph-zoom');
-    card.style.opacity = "0";
-    card.style.transform = "translateY(60px)";
-    const observerCard = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                card.classList.add('animate-paragraph-zoom');
-            } else {
-                card.classList.remove('animate-paragraph-zoom');
-                card.style.opacity = "0";
-                card.style.transform = "translateY(60px)";
-            }
-        });
-    }, { threshold: 0.5 });
-    observerCard.observe(card);
-});
 
 const heroContent = document.querySelector('.hero-content');
 if (heroContent) {

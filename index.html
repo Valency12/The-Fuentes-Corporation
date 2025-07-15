@@ -817,7 +817,6 @@
 
         // Iniciar chat
     </script>
-
     <script>
 document.getElementById('contacto-form').addEventListener('submit', async function(e) {
   e.preventDefault();
@@ -835,24 +834,23 @@ document.getElementById('contacto-form').addEventListener('submit', async functi
   msgDiv.textContent = 'Enviando...';
 
   try {
-    const res = await fetch('http://localhost:3001/api/contact', {
+    const res = await fetch('http://localhost:3001/api/contacto', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     });
     const result = await res.json();
-    if (result.ok) {
+    if (result.success) {
       msgDiv.textContent = '¡Mensaje enviado correctamente!';
       form.reset();
     } else {
-      msgDiv.textContent = 'Error al enviar el mensaje. Intenta de nuevo.';
+      msgDiv.textContent = result.error || 'Error al enviar el mensaje. Intenta de nuevo.';
     }
   } catch (err) {
     msgDiv.textContent = 'Error de conexión. Intenta más tarde.';
   }
 });
 </script>
-
 </body>
 </html>
 
