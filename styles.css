@@ -130,6 +130,14 @@ body {
     padding: 0.1rem;
     background-color: #44444428;
 }
+
+
+/* Variables para colores (opcional pero buena práctica) */
+:root {
+    --blue-primary: #004e98;
+    --yellow-accent: #ffb703;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -140,76 +148,101 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     transition: box-shadow 0.2s;
 }
-.mb-4 {
-    margin-bottom: 0 !important;
-}
+
+/* El contenedor principal del header, debe ser flex para alinear logo y nav */
 .header-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Empuja el logo a un extremo y la nav al otro */
+    align-items: center; /* Centra verticalmente los elementos */
     width: 100%;
     margin: 0 auto;
     padding: 0.9rem 1.4rem;
 }
-@media (max-width: 900px) {
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+
+/* header-container-three contiene solo el logo y el botón hamburguesa (cuando visible) */
+/* En desktop, este div solo contiene el logo */
+.header-container-three {
+    display: flex; /* Para que el logo y el botón hamburguesa (si visible) estén en línea */
+    align-items: center; /* Centra verticalmente el logo y el botón */
+    /* No necesitamos justify-content aquí en desktop, ya que el botón hamburguesa está oculto.
+       En móvil, el media query lo ajustará. */
 }
+
+
 .logo img {
-    width: clamp(150px, 20vW, 210px);
+    width: clamp(150px, 20vw, 210px);
 }
-.nav-links {
-    display: flex;
-    gap: 2rem;
+
+/* Estilos para el navbar principal (desktop) */
+/* Queremos que este 'nav' sea un flex container para sus elementos 'ul' */
+nav.d-none.d-lg-block {
+    display: block !important; /* Asegura que la navegación de escritorio se muestre en desktop */
 }
+
+nav .nav { /* Seleccionamos específicamente el ul dentro de la nav */
+    display: flex; /* Hace que los 'li' y el div de botones se alineen horizontalmente */
+    gap: 2rem; /* Espacio entre los elementos de la navegación */
+    align-items: center;
+    padding: 0; /* Asegura que no haya padding extra que afecte la alineación */
+    margin: 0; /* Asegura que no haya margin extra */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
 .nav-link {
     text-decoration: none;
-    color: #004e98;
+    color: var(--blue-primary);
     font-weight: 500;
     transition: color 0.3s ease;
 }
+
 .nav-link:hover {
-    color: #ffb703;
+    color: var(--yellow-accent);
 }
-.auth-buttons {
-    display: flex;
+
+.sidebar-auth { /* Contenedor de los botones de autenticación */
+    /*display: flex;*/ /* Para que los botones se alineen horizontalmente */
     gap: 1rem;
 }
+
 .btn {
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid transparent; /* Para evitar saltos visuales en hover */
 }
+
 .sign-in {
     background-color: transparent;
-    border: 1px solid var(--blue-primary);
+    border-color: var(--blue-primary); /* Usar border-color con la variable */
     color: var(--blue-primary);
 }
+
 .contactanos {
     background-color: var(--blue-primary);
-    border: none;
+    border-color: var(--blue-primary); /* También usar border-color aquí */
     color: white;
 }
+
 .contactanos:hover,
 .sign-in:hover {
-    background-color: #ffb703;
-    color: #004e98;
+    background-color: var(--yellow-accent);
+    color: var(--blue-primary);
+    border-color: var(--yellow-accent); /* Cambiar también el color del borde en hover */
 }
-/* Estilos para el navbar y sidebar */
+
+/* Navbar Toggler (Botón Hamburguesa) */
 .navbar-toggler {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    display: none;
-    margin-left: 0 !important;
-    order: 2;
+    display: none; /* Oculto por defecto en desktop */
 }
+
 .navbar-toggler-icon {
     display: inline-block;
     width: 1.5em;
@@ -221,18 +254,20 @@ body {
     background-size: 100%;
     transition: transform 0.3s ease;
 }
+
 /* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
-    right: -280px;
+    right: -280px; /* Oculto por defecto */
     width: 280px;
     height: 100vh;
     background-color: white;
     z-index: 1050;
-    transition: left 0.3s ease;
+    transition: right 0.3s ease;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .sidebar-overlay {
     position: fixed;
     top: 0;
@@ -245,13 +280,16 @@ body {
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
 .sidebar.show {
-    right: 0;
+    right: 0; /* Muestra el sidebar */
 }
+
 .sidebar-overlay.show {
     opacity: 1;
     visibility: visible;
 }
+
 .close-sidebar {
     background: none;
     border: none;
@@ -261,22 +299,48 @@ body {
     line-height: 1;
     padding: 0 0.5rem;
 }
-.logo {
-    width: clamp(9rem, 20vw, 10rem);
+
+.header-container-three .logo {
+    width: clamp(120px, 15vw, 150px);
 }
+
+.sidebar-auth .btn {
+    padding: 0.75rem 1rem;
+}
+
 /* Responsive */
-@media (max-width: 1000px) {
+@media (max-width: 991.98px) {
+    /* En dispositivos pequeños */
+
+    .header-container {
+        /* Asegura que el contenedor principal esté listo para manejar solo el logo y el botón */
+        justify-content: space-between; /* Mantén el logo a la izquierda y el botón a la derecha */
+    }
+
+    /* El header-container-three ahora sí distribuye los elementos internamente */
+    .header-container-three {
+        width: auto; /* Permite que ocupe solo el espacio necesario */
+        flex-grow: 1; /* Permite que crezca para empujar el botón hamburguesa a la derecha */
+        justify-content: space-between; /* Distribuye el logo y el botón en extremos */
+    }
+
+    /* Mostrar el botón hamburguesa */
     .navbar-toggler {
         display: block;
+        margin-left: 1rem; /* Pequeño margen entre el logo y el botón */
     }
+
+    /* Ocultar la navegación principal de escritorio */
     nav.d-none.d-lg-block {
         display: none !important;
     }
-    .container {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+
+    /* Ajustes para el logo en móvil dentro del header principal */
+    .logo img {
+        width: clamp(100px, 15vw, 120px); /* Ajusta el tamaño del logo en móvil */
     }
 }
+
 /*hero section*/
 .hero {
     position: relative;
@@ -330,11 +394,12 @@ body {
     }
 }
 .hero-logo {
-    width: clamp(160px, 20vw, 250px);
+    width: clamp(200px, 22vw, 330px);
 }
 .hero h1 {
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .cta-button {
@@ -424,7 +489,7 @@ body {
     box-shadow: 0 15px 30px rgba(34, 71, 157, 0.4), 0 8px 20px rgba(34, 71, 157, 0.3);
     opacity: 0;
     transform: translateX(60px);
-    border-radius: 10%;
+    border-radius: 10px;
 }
 /*Fin seccion sobre nosotros*/
 /*Proyectos seccion*/
@@ -502,7 +567,7 @@ body {
     gap: 1rem;
 }
 .col {
-    border-radius: 5% !important;
+    border-radius: 10px !important;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .col:hover {
@@ -517,7 +582,7 @@ body {
     bottom: 0;
     top: 0;
     right: 0;
-    border-radius: 5% !important;
+    /*border-radius: 10px; !important;*/
     left: 0;
     padding: 1.25rem;
     color: var(--bs-card-text-color);
@@ -549,7 +614,7 @@ body {
     width: 100%;
 }
 .card-img-top {
-    border-radius: 5% !important;
+    border-radius: 10px !important;
     object-fit: cover;
     height: 200px;
     width: 100%;
@@ -610,7 +675,7 @@ body {
 .section-video-file {
     width: 100%;
     height: auto;
-    border-radius: 10%;
+    border-radius: 10px;;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     opacity: 0;
     transform: translateX(-60px);
@@ -687,9 +752,8 @@ body {
 }
 
 .planta-titulo {
-    background-color: #222;
-    
     color: white;
+    background-color: #222;
     text-align: right;
     padding-right: 4rem;
 }
@@ -766,6 +830,7 @@ body {
     padding: clamp(1rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
 }
 .logos-carousel-section {
+    margin: 2rem auto 0 auto;
     width: 100%;
     overflow: hidden;
     background: #ffffff;
@@ -779,7 +844,7 @@ body {
     text-align: center;
 }
 .aliados-paragraph {
-    margin: 0 3rem 1.5rem 3rem !important;
+    /*margin: 0 3rem 1.5rem 3rem !important;*/
     text-align: justify;
 }
 .big-title-two {
@@ -846,7 +911,7 @@ body {
     text-align: left;
     flex-direction: row;
     position: relative;
-    border-radius: 10%;
+    border-radius: 10px;;
     overflow: hidden;
     margin: 2rem;
     border: solid 2px #ffb703;
@@ -861,7 +926,7 @@ body {
     text-align: right;
     flex-direction: row-reverse;
     position: relative;
-    border-radius: 10%;
+    border-radius: 10px;;
     overflow: hidden;
     margin: 2rem 2rem 0 2rem;
     border: solid 2px #ffb703;
@@ -1275,45 +1340,118 @@ p {
     }
 }
 /* Footer */
+.container-footer {
+    width: 100%;
+    overflow: hidden;
+}
+
 .footer {
-    /*Falta agregarle el after*/
+    position: relative;
     background-image: url('Imagenes/lasFlores/img1.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
     text-align: center;
+    padding: 2rem 1rem;
 }
-.container-icons{
-    padding: 3rem 0 1rem 0;
+
+/* Overlay oscuro para mejorar legibilidad */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Sombra en la imagen de fondo */
+.footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.footer > * {
+    position: relative;
+    z-index: 2;
+}
+
+.container-icons {
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin: 0 auto;
+    max-width: 90%;
 }
-.text-center{
+
+.text-center {
     padding: 1rem 0;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin: 0;
 }
-.logo-container{
-    display: block;
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1rem 0;
+    /*padding: 1rem 0;*/
+    max-width: 800px;
+    margin: 0 auto;
 }
+
 .logo-footer {
-    margin: 2rem auto 3rem auto;
-    width: 400px;
+    margin: 1rem auto 2rem auto;
+    width: 100%;
+    max-width: 200px;
     height: auto;
 }
+
 .icon-footer {
-    width: 3rem;
-    height: 3rem;
-    white-space: nowrap;
-    display: inline;
+    width: clamp(2rem, 5vw, 3rem);
+    height: clamp(2rem, 5vw, 3rem);
+    transition: transform 0.3s ease;
 }
 
+.icon-footer:hover {
+    transform: scale(1.1);
+}
 
+/* Texto responsive */
+.footer h3 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    /*margin: 0.5rem 0;*/
+}
+
+.footer h4 {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+    /*margin: 0.5rem 0 1.5rem 0;*/
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .logo-footer {
+        max-width: 150px;
+    }
+    
+    .container-icons {
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+}
 /*Seccion oficinas*/
 /* Sección Oficinas */
 .oficinas-section {
@@ -1358,7 +1496,22 @@ p {
     height: 100%;
     min-height: 400px;
     border: none;
-    border-radius: 10%;
+    border-radius: 10px;;
+}
+/* Animación para mapa */
+.animate-map-fadeInUp {
+    animation: fadeInRight 1.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 /* Responsive: Apila texto arriba del mapa */
 @media (max-width: 768px) {
@@ -1380,7 +1533,7 @@ p {
     min-height: clamp(350px, 40vw, 480px);
     max-height: 600px;
     height: 100%;
-    border-radius: 10% !important;
+    border-radius: 10px !important;
 }
 .card-content {
     flex: 1 1 auto;
