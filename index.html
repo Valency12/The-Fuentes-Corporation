@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Sitio web de The Fuentes Corp">
     <title>The Fuentes Corp</title>
-
     <script src="../assets/js/color-modes.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -25,13 +23,11 @@
             <a href="/" class="d-flex align-items-center text-decoration-none">
                 <img src="Imagenes/LogoHB.png" alt="The Fuentes Corp Logo" width="150" height="auto" class="logo">
             </a>
-
             <!-- Botón Hamburguesa (visible solo en móvil) -->
             <button class="navbar-toggler d-lg-none ms-3" type="button" id="sidebarToggle">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-
         <!-- Navbar principal (oculto en móvil) -->
         <nav class="d-none d-lg-block">
             <ul class="nav nav-pills align-items-center">
@@ -46,7 +42,6 @@
         </nav>
         <!--</header>-->
     </div>
-
     <!-- Sidebar móvil (oculto por defecto) -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <aside class="sidebar" id="sidebar">
@@ -56,23 +51,18 @@
             </a>
             <button class="close-sidebar" id="closeSidebar">&times;</button>
         </div>
-
         <hr class="m-0">
-
         <ul class="nav nav-pills flex-column p-3">
             <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
             <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
             <li class="nav-item"><a href="#proyectos" class="nav-link">Proyectos</a></li>
         </ul>
-
         <div class="sidebar-auth p-3">
             <button href="#contacto" class="btn contactanos w-100 mb-2">Contáctanos</button>
             <button class="btn sign-in w-100">Iniciar Sesión</button>
         </div>
     </aside>
-
     <!--<div class="overlay"></div>-->
-
     <main>
         <section class="hero" id="inicio">
             <video class="hero-video" autoplay muted loop playsinline>
@@ -84,10 +74,8 @@
                 <a href="#nosotros" class="btn cta-button">Iniciar</a>
             </div>
         </section>
-
         <!-- Seccion nosotros -->
         <section class="about-minimal" id="nosotros">
-
             <div class="about-text">
                 <h2 class="about-title"><span class="big-title">Más</span> que una <br><span
                         class="big-title">Constructora</span></h2>
@@ -108,11 +96,7 @@
             </div>
         </section>
         <!-- Fin sección nosotros -->
-
-
         <div class="space"></div>
-
-
         <!--Seccion proyectos-->
         <section class="section-proyectos" id="proyectos">
             <div class="proyectos-text">
@@ -125,7 +109,6 @@
                     por sí sola.
                 </p>
             </div>
-
             <!-- Proyectos -->
             <div class="album py-5 bg-body-tertiary">
                 <div class="container">
@@ -155,10 +138,8 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Proyecto TAMAZUNCHALE-->
                         <div class="col">
-
                             <div class="card shadow-sm">
                                 <img src="Imagenes/tamazunchale/img1.jpeg" class="card-img-top"
                                     alt="Tamazunchale - img1">
@@ -181,7 +162,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Proyecto CACTUS -->
                         <div class="col">
                             <div class="card shadow-sm">
@@ -257,7 +237,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Proyecto LAS FLORES-->
                         <div class="col">
                             <div class="card shadow-sm">
@@ -285,7 +264,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Modal para el carrusel -->
             <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel"
                 aria-hidden="true">
@@ -316,7 +294,6 @@
                                             <span class="visually-hidden">Next</span>
                                         </button>
                                     </div>
-
                                     <div class="card-img-overlay card-img-overlay-custom">
                                         <div class="card-text-content">
                                             <h5 class="card-title" id="modalProjectTitle">Título del Proyecto</h5>
@@ -333,12 +310,9 @@
             </div>
         </section>
         <!-- Fin sección proyectos -->
-
         <div class="space"></div>
-
         <!-- Sección Video -->
         <section class="section-video">
-
             <div class="video-flex-container">
                 <div class="container-video">
                     <video class="section-video-file" controls>
@@ -354,9 +328,7 @@
             </div>
         </section>
         <!-- Fin sección video -->
-
         <div class="space"></div>
-
         <!--Seccion Servicios-->
         <section class="section-servicios" id="servicios">
             <p class="servicios-title">Ofrecemos lo <span class="big-title">Mejor</span></p>
@@ -400,8 +372,28 @@
             </div>
         </section>
         <!--Fin servicicos-->
-
         <div class="space"></div>
+        <section class="planta-asfalto">
+            <div class="planta-grid">
+                <!-- Fila 1 -->
+                <div class="planta-item planta-titulo">
+                    <h2>Tu proyecto. <span class="big-title-five-two">Nuestro Asfalto.</span></h2>
+                </div>
+                <div class="planta-item planta-imagen-1">
+                    <img src="Imagenes/plantaAsfalto/img1.jpeg" alt="Planta de asfalto moderna">
+                </div>
+
+                <!-- Fila 2 -->
+                <div class="planta-item planta-imagen-2">
+                    <img src="Imagenes/plantaAsfalto/img2.jpeg" alt="Proceso de producción de asfalto">
+                </div>
+                <div class="planta-item planta-texto">
+                    <p>Desde nuestra planta, <strong>suministramos asfalto con la máxima precisión y calidad</strong>. Cada mezcla está
+                        diseñada para ofrecer la <strong>durabilidad y estabilidad</strong> que tus obras merecen.</p>
+                </div>
+               
+            </div>
+        </section>
 
         <!--Seccion de aliados-->
         <section class="aliados-section">
@@ -433,9 +425,7 @@
             </div>
         </section>
         <!--Fin seccion aliados-->
-
         <div class="space"></div>
-
         <!--Seccion Mision y vision-->
         <section class="mision-vision-section">
             <p class="misionvision-title">Nuestros Cimientos</p>
@@ -467,63 +457,34 @@
             </div>
         </section>
         <!-- Fin sección Misión y Visión -->
-
         <div class="space"></div>
+        <!-- Sección Oficinas -->
         <!-- Sección Oficinas -->
         <section class="oficinas-section">
             <div class="oficinas-container">
-                <div class="oficinas-title-col">
-                    <h2 class="oficinas-title"><span class="big-title-six">Siempre</span> <br><span
-                            class="big-title-five">Cerca de Ti </span>donde <br>nos <span
-                            class="big-title-five-one">Necesites</span></h2>
-                </div>
-                <div class="oficinas-list-col">
-                    <ul class="oficinas-list">
-                        <li>
-                            <span class="nombre-oficinas"><img src="Imagenes/iconflecha.png" class="icon-flecha"
-                                    alt="Flecha"> Oficina Central, San Luis Potosí</span>
-                            <a href="https://maps.app.goo.gl/oiTWpAACE9hYQn9q9" target="_blank"
-                                class="oficinas-link">Ver ubicación</a>
-                        </li>
-                        <li>
-                            <span class="nombre-oficinas"><img src="Imagenes/iconflecha.png" class="icon-flecha"
-                                    alt="Flecha"> Sucursal, Ciudad de México</span>
-                            <a href="https://maps.google.com/?q=CDMX" target="_blank" class="oficinas-link">Ver
-                                ubicación</a>
-                        </li>
-                        <li>
-                            <span class="nombre-oficinas"><img src="Imagenes/iconflecha.png" class="icon-flecha"
-                                    alt="Flecha"> Sucursal Hermosillo, Sonora</span>
-                            <a href="https://maps.google.com/?q=Monterrey" target="_blank" class="oficinas-link">Ver
-                                ubicación</a>
-                        </li>
-                        <li>
-                            <span class="nombre-oficinas"><img src="Imagenes/iconflecha.png" class="icon-flecha"
-                                    alt="Flecha"> Sucursal Tuxla Gutiérrez, Chiapas</span>
-                            <a href="https://maps.google.com/?q=Guadalajara" target="_blank" class="oficinas-link">Ver
-                                ubicación</a>
-                        </li>
-                    </ul>
+                <div class="oficinas-content">
+                    <div class="oficinas-text">
+                        <h2 class="oficinas-title">
+                            <span class="big-title-six">Siempre</span><br>
+                            <span class="big-title-five">Cerca de Ti</span> donde<br>
+                            nos <span class="big-title-five-one">Necesites</span>
+                        </h2>
+                        <p class="oficinas-subtitle">
+                            Pregunta por nuestres sucursales en:<br>
+                            <strong>Chiapas</strong>, <strong>Ciudad de México</strong> y <strong>Sonora</strong>.
+                        </p>
+                    </div>
+                    <div class="mapa-wrapper">
+                        <iframe class="mapa-iframe"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.019393698614!2d-101.020981!3d22.1207189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a99004cb45f71%3A0x372797b3ff633e73!2sTHE%20FUENTES%20CORPORATION!5e0!3m2!1ses-419!2smx!4v1718040000000!5m2!1ses-419!2smx"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Fin sección Oficinas -->
-
         <div class="space"></div>
-
-        <!-- Sección Mapa Ubicación -->
-        <section class="mapa-section">
-            <div class="mapa-container">
-                <iframe class="mapa-iframe"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.019393698614!2d-101.020981!3d22.1207189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a99004cb45f71%3A0x372797b3ff633e73!2sTHE%20FUENTES%20CORPORATION!5e0!3m2!1ses-419!2smx!4v1718040000000!5m2!1ses-419!2smx"
-                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-        <!-- Fin sección Mapa Ubicación -->
-
-        <div class="space"></div>
-
         <!--Seccion opiniones-->
         <section class="opiniones-section">
             <p class="opiniones-title"><span class="big-title-five">Lo dicen <span
@@ -539,7 +500,6 @@
                     <img class="opinion-avatar" src="Imagenes/toychiquito.jpg" alt="Foto de perfil">
                 </div>
                 <div class="opiniones-slide">
-
                     <p class="opinion-text"><span class="comillas">"</span>Desde la planificación hasta la entrega, su
                         equipo mostró una profesionalidad increíble y una atención al detalle impecable.<span
                             class="comillas">"</span></p>
@@ -548,7 +508,6 @@
                     <img class="opinion-avatar" src="Imagenes/toychiquito.jpg" alt="Foto de perfil">
                 </div>
                 <div class="opiniones-slide">
-
                     <p class="opinion-text"><span class="comillas">"</span>Transformaron nuestra visión en realidad sin
                         ningún estrés. La comunicación fue constante y el resultado final, perfecto.<span
                             class="comillas">"</span></p>
@@ -560,39 +519,14 @@
             </div>
         </section>
         <!--Fin seccion opiniones-->
-
         <div class="space"></div>
-
         <!-- Sección de Contacto -->
         <section class="contacto-section" id="contacto">
             <h2 class="contacto-title">Contactanos</h2>
             <p class="contacto-paragraph">"¡Contáctanos y hagamos realidad tus proyectos de construcción! <br>Estamos
                 aquí para escucharte y brindarte un servicio personalizado de calidad."</p>
             <div class="contacto-container">
-                <div class="contacto-info">
-                    <div class="contacto-info-item">
-                        <span class="contacto-icon contacto-icon-ubicacion"></span>
-                        <div class="contacto-info-item-text">
-                            <strong>Ubicacion:</strong><br>
-                            Av. Chapultepec, Edif. 1385, <br>3A piso.
-                            Privadas del Pedregal, San Luis Potosí
-                        </div>
-                    </div>
-                    <div class="contacto-info-item">
-                        <span class="contacto-icon contacto-icon-correo"></span>
-                        <div class="contacto-info-item-text">
-                            <strong>Correo:</strong><br>
-                            direccion@thefuentescorp.com.mx
-                        </div>
-                    </div>
-                    <div class="contacto-info-item">
-                        <span class="contacto-icon contacto-icon-telefono"></span>
-                        <div class="contacto-info-item-text">
-                            <strong>Telefono:</strong><br>
-                            +52-961-2070662
-                        </div>
-                    </div>
-                </div>
+
                 <form class="contacto-form" id="contacto-form">
                     <div class="contacto-form-row">
                         <input type="text" name="nombre" placeholder="Nombre" required>
@@ -610,47 +544,33 @@
             </div>
         </section>
         <!-- Fin sección de Contacto -->
-
     </main>
 
-    <div class="container">
-        <div class="container-footer-text">
-            <img class="logo-footer" src="Imagenes/LogoHB.png" alt="Logo de The Fuentes Corporation">
-        </div>
-
-        <footer class="py-3 my-4">
-
-            <ul class="nav col-md-4 list-unstyled d-flex">
-
-                <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Facebook" width="24" height="24"
-                        aria-hidden="true"><img class="icon-footer" src="Imagenes/facebook.svg">
-                        <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Instagram" width="24" height="24"
-                        aria-hidden="true"><img class="icon-footer" src="Imagenes/instagram.svg">
-                        <use xlink:href="#instagram"></use>
-                        </svg>
-                    </a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Whatsapp" width="24" height="24"
-                        aria-hidden="true"><img class="icon-footer" src="Imagenes/whatsapp.svg">
-                        <use xlink:href="#whatsapp"></use>
-                        </svg>
-                    </a></li>
-            </ul>
-            <div class="col-md-4 d-flex align-items-center"> <a href="/"
-                    class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> </a>
-                <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2025 Company, Inc</span>
+    <!--Footer-->
+    <div class="container-footer">
+        <footer class="footer">
+            <div class="logo-container">
+                <img src="Imagenes/LogoHB.png" alt="The Fuentes Corp Logo" class="logo-footer">
+                <h3><strong>Direccion:</strong></h3>
+                <h4>Av. Chpultepec, Edifico 1385, 3A Piso. Privadas del Pedregal, San Luis Potosi</h4>
+                <h3><strong>Email:</strong></h3>
+                <h4>direccion@thefuentescorp.com.mx</h4>
             </div>
+
+            <ul class="nav justify-content-center border-bottom container-icons">
+                <img src="Imagenes/instagram.svg" alt="Instagram" class="icon-footer">
+                <img src="Imagenes/facebook.svg" alt="facebook" class="icon-footer">
+                <img src="Imagenes/whatsapp.svg" alt="whatsapp" class="icon-footer">
+            </ul>
+            <p class="text-center">&copy; 2025 The Fuentes Corporation</p>
         </footer>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-
     <div id="chat-icon" class="icon-float">
         <img src="Imagenes/iconBonito.png" alt="Chat Icon" class="icon">
     </div>
-
     <div id="chat-container" class="hidden">
         <div id="chat-header">
             <img src="Imagenes/iconBonito.png" alt="Bot Avatar">
@@ -660,51 +580,12 @@
             </div>
             <button id="minimize-btn">−</button>
         </div>
-
         <div id="chat-messages"></div>
-
         <div id="chat-input">
             <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
             <button id="send-btn">➤</button>
         </div>
     </div>
-    <!-- <script>
-        document.getElementById('contacto-form').addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const form = e.target;
-            const data = {
-                nombre: form.nombre.value,
-                apellido: form.apellido.value,
-                telefono: form.telefono.value,
-                correo: form.correo.value,
-                asunto: form.asunto.value,
-                mensaje: form.mensaje.value
-            };
-
-            const msgDiv = document.getElementById('contacto-form-msg');
-            msgDiv.textContent = 'Enviando...';
-
-            try {
-                const res = await fetch('http://localhost:3001/api/contacto', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-                const result = await res.json();
-                if (result.success) {
-                    msgDiv.textContent = '¡Mensaje enviado correctamente!';
-                    form.reset();
-                } else {
-                    msgDiv.textContent = result.error || 'Error al enviar el mensaje. Intenta de nuevo.';
-                }
-            } catch (err) {
-                msgDiv.textContent = 'Error de conexión. Intenta más tarde.';
-            }
-        });
-    </script>
-    -->
 </body>
 
 </html>
-
-<!--Falta arreglar seccion valores, ademas de seccion por que elegirnos, y terminar lo ultimo-->

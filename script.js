@@ -3,12 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const sidebarOverlay = document.getElementById('sidebarOverlay');
     const sidebarToggle = document.getElementById('sidebarToggle');
     const closeSidebar = document.getElementById('closeSidebar');
-
     // Alternar sidebar
     function toggleSidebar() {
         sidebar.classList.toggle('show');
         sidebarOverlay.classList.toggle('show');
-
         // Cambiar icono de hamburguesa a X
         const isOpen = sidebar.classList.contains('show');
         if (isOpen) {
@@ -19,26 +17,20 @@ document.addEventListener('DOMContentLoaded', function () {
             sidebarToggle.innerHTML = '<span class="navbar-toggler-icon"></span>';
         }
     }
-
     // Event listeners
     sidebarToggle.addEventListener('click', toggleSidebar);
     closeSidebar.addEventListener('click', toggleSidebar);
     sidebarOverlay.addEventListener('click', toggleSidebar);
-
     // Cerrar sidebar al hacer clic en un enlace (opcional)
     const navLinks = document.querySelectorAll('.sidebar .nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', toggleSidebar);
     });
-
-
-
     // Carrusel para la sección Nuestro Orgullo
     const slides = document.querySelectorAll('.orgullo-slide');
     const leftArrow = document.querySelector('.orgullo-arrow.left');
     const rightArrow = document.querySelector('.orgullo-arrow.right');
     let currentSlide = 0;
-
     function renderOrgulloIndicadores() {
         slides.forEach((slide, idx) => {
             const indicador = slide.querySelector('.orgullo-indicadores');
@@ -59,79 +51,64 @@ document.addEventListener('DOMContentLoaded', function () {
                 indicador.style.display = 'none';
             }
         });
-
     }
-
     function showSlide(index) {
         slides.forEach((slide, i) => {
             slide.classList.toggle('active', i === index);
         });
         renderOrgulloIndicadores();
     }
-
     if (leftArrow && rightArrow) {
         leftArrow.addEventListener('click', () => {
             currentSlide = (currentSlide - 1 + slides.length) % slides.length;
             showSlide(currentSlide);
         });
-
         rightArrow.addEventListener('click', () => {
             currentSlide = (currentSlide + 1) % slides.length;
             showSlide(currentSlide);
         });
-
         // Inicializar
         showSlide(currentSlide);
     }
-
     // Carrusel de opiniones
     const opinionSlides = document.querySelectorAll('.opiniones-slide');
     const opinionLeft = document.querySelector('.opiniones-arrow.left');
     const opinionRight = document.querySelector('.opiniones-arrow.right');
     let opinionIndex = 0;
     let opinionInterval;
-
     function showOpinion(index) {
         opinionSlides.forEach((slide, i) => {
             slide.classList.toggle('active', i === index);
         });
     }
-
     function nextOpinion() {
         opinionIndex = (opinionIndex + 1) % opinionSlides.length;
         showOpinion(opinionIndex);
     }
-
     function prevOpinion() {
         opinionIndex = (opinionIndex - 1 + opinionSlides.length) % opinionSlides.length;
         showOpinion(opinionIndex);
     }
-
     if (opinionLeft && opinionRight) {
         opinionLeft.addEventListener('click', () => {
             prevOpinion();
             resetOpinionInterval();
         });
-
         opinionRight.addEventListener('click', () => {
             nextOpinion();
             resetOpinionInterval();
         });
-
         function startOpinionInterval() {
             opinionInterval = setInterval(nextOpinion, 5000); // Cambia cada 5 segundos
         }
-
         function resetOpinionInterval() {
             clearInterval(opinionInterval);
             startOpinionInterval();
         }
-
         // Inicializar
         showOpinion(opinionIndex);
         startOpinionInterval();
     }
-
     // Valores acordeón autocerrable
     const valorMenus = document.querySelectorAll('.valor-menu');
     valorMenus.forEach(menu => {
@@ -148,14 +125,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (valorMenus.length) {
         valorMenus[0].classList.add('active');
     }
-
     // Efecto de aparición al hacer scroll
     const valorCards = document.querySelectorAll('.valor-card');
-
     const observerOptions = {
         threshold: 0.1
     };
-
     const observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -164,26 +138,22 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }, observerOptions);
-
     valorCards.forEach(card => {
         observer.observe(card);
         // Resetear la opacidad para que funcione la animación
         card.style.opacity = 0;
     });
-
     // Efecto hover para dispositivos táctiles
     valorCards.forEach(card => {
         card.addEventListener('touchstart', function () {
             this.classList.add('hover-effect');
         });
-
         card.addEventListener('touchend', function () {
             setTimeout(() => {
                 this.classList.remove('hover-effect');
             }, 300);
         });
     });
-
     // Selecciona todos los títulos principales
     const titles = document.querySelectorAll(
         '.about-title, .proyectos-title, .servicios-title, .misionvision-title, .mision-title, .vision-title, .aliados-title, .oficinas-title, .opiniones-title, .contacto-title');
@@ -204,7 +174,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, { threshold: 0.5 });
         observer.observe(title);
     });
-
     // Animación para todos los párrafos principales (fadeInUp al entrar/salir)
     const paragraphs = document.querySelectorAll(
         '.about-paragraph, .card-paragraph, .proyectos-paragraph, .proyectos-paragraph-two, .aliados-paragraph, .misionvision-paragraph, .contacto-paragraph'
@@ -226,7 +195,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, { threshold: 0.5 });
         observerParagraph.observe(paragraph);
     });
-
     const aboutImage = document.querySelector('.about-image img');
     if (aboutImage) {
         aboutImage.classList.remove('animate-image-fadeInRight');
@@ -245,7 +213,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, { threshold: 0.5 });
         observerImage.observe(aboutImage);
     }
-
     const sectionVideoFile = document.querySelector('.section-video-file');
     if (sectionVideoFile) {
         sectionVideoFile.classList.remove('animate-video-fadeInLeft');
@@ -264,7 +231,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, { threshold: 0.5 });
         observerVideo.observe(sectionVideoFile);
     }
-
     const heroContent = document.querySelector('.hero-content');
     if (heroContent) {
         heroContent.classList.remove('animate-hero-fadeInUp');
@@ -283,7 +249,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, { threshold: 0.5 });
         observerHero.observe(heroContent);
     }
-
     // Datos de los proyectos (podrías obtenerlos de una API en un caso real)
     const projectsData = {
         1: {
@@ -348,10 +313,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         }
     };
-
     // Seleccionar todos los botones de vista
     const viewButtons = document.querySelectorAll('.view-btn');
-
     // Configurar el modal de Bootstrap
     const projectModal = new bootstrap.Modal(document.getElementById('projectModal'));
     const modalTitle = document.getElementById('projectModalLabel');
@@ -360,54 +323,42 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalProjectDescription = document.getElementById('modalProjectDescription');
     const carouselInner = document.querySelector('#projectCarousel .carousel-inner');
     const carouselIndicators = document.querySelector('#projectCarousel .carousel-indicators');
-
     // Añadir evento click a cada botón
     viewButtons.forEach(button => {
         button.addEventListener('click', function () {
             const projectId = this.getAttribute('data-project');
             const projectTitle = this.getAttribute('data-title');
             const projectSubtitle = this.getAttribute('data-subtitle');
-
             // Actualizar la información del modal
             modalTitle.textContent = projectTitle;
             modalProjectTitle.textContent = projectTitle;
             modalProjectSubtitle.textContent = projectSubtitle;
-
             // Cargar las imágenes del proyecto seleccionado
             loadProjectImagenes(projectId);
-
             // Mostrar el modal
             projectModal.show();
         });
     });
-
     // Función para cargar las imágenes del proyecto
     function loadProjectImagenes(projectId) {
         // Limpiar carrusel existente
         carouselInner.innerHTML = '';
         carouselIndicators.innerHTML = '';
-
         const project = projectsData[projectId];
-
         if (!project) return;
-
         // Actualizar descripción
         modalProjectDescription.textContent = project.description;
-
         // Añadir imágenes al carrusel
         project.Imagenes.forEach((image, index) => {
             // Crear item del carrusel
             const carouselItem = document.createElement('div');
             carouselItem.className = `carousel-item ${index === 0 ? 'active' : ''}`;
-
             const img = document.createElement('img');
             img.src = image;
             img.className = 'd-block w-100';
             img.alt = `Imagen ${index + 1} del proyecto`;
-
             carouselItem.appendChild(img);
             carouselInner.appendChild(carouselItem);
-
             // Crear indicador
             const indicator = document.createElement('button');
             indicator.type = 'button';
@@ -415,14 +366,11 @@ document.addEventListener('DOMContentLoaded', function () {
             indicator.setAttribute('data-bs-slide-to', index);
             indicator.className = index === 0 ? 'active' : '';
             indicator.setAttribute('aria-label', `Slide ${index + 1}`);
-
             carouselIndicators.appendChild(indicator);
         });
-
         // Reiniciar el carrusel para asegurar que funcione correctamente
         const carousel = new bootstrap.Carousel(document.getElementById('projectCarousel'));
     }
-
     // Datos del chatbot
         const categorias = {
             "ubicacion": {
@@ -492,12 +440,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 ]
             }
         };
-
         // Variables de estado
         let currentCategory = null;
         let currentQuestion = null;
         const respuestas = {};
-
         // Elementos del DOM
         const chatIcon = document.getElementById('chat-icon');
         const chatContainer = document.getElementById('chat-container');
@@ -505,7 +451,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const userInput = document.getElementById('user-input');
         const sendBtn = document.getElementById('send-btn');
         const minimizeBtn = document.getElementById('minimize-btn');
-
         // Mostrar mensaje del bot
         function addBotMessage(text, isQuestion = false) {
             const messageDiv = document.createElement('div');
@@ -517,7 +462,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
-
         // Mostrar mensaje del usuario
         function addUserMessage(text) {
             const messageDiv = document.createElement('div');
@@ -526,12 +470,10 @@ document.addEventListener('DOMContentLoaded', function () {
             chatMessages.appendChild(messageDiv);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
-
         // Mostrar opciones de categorías principales
         function showMainOptions() {
             const optionsContainer = document.createElement('div');
             optionsContainer.classList.add('options-container');
-
             // Agregar botones para cada categoría
             Object.keys(categorias).forEach(key => {
                 const btn = document.createElement('button');
@@ -542,7 +484,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
                 optionsContainer.appendChild(btn);
             });
-
             // Botón de salir
             const exitBtn = document.createElement('button');
             exitBtn.classList.add('option-btn');
@@ -552,38 +493,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(() => toggleChat(), 2000);
             });
             optionsContainer.appendChild(exitBtn);
-
             chatMessages.appendChild(optionsContainer);
             chatMessages.scrollTop = 0;
-
             userInput.disabled = true; // bloquea el input hasta que se seleccione una categoría
-
         }
-
         // Mostrar preguntas de una categoría específica
         // Esta función muestra las preguntas de una categoría específica
         function showCategoryQuestions(categoryKey) {
             const category = categorias[categoryKey];
             const questions = category.preguntas;
-
             const optionsContainer = document.createElement('div');
             optionsContainer.classList.add('options-container');
-
             // Agregar todas las preguntas de la categoría con número
             questions.forEach((question, idx) => {
                 const btn = document.createElement('button');
                 btn.classList.add('option-btn');
                 btn.textContent = `${idx + 1}. ${question.texto}`;
-
                 btn.addEventListener('click', () => {
                     selectQuestion(question); // Al hacer clic, selecciona la pregunta
                 });
                 optionsContainer.appendChild(btn);
             })
-
             userInput.disabled = true; // Bloquea el input
             ;
-
             // Agregar la opción "Otra pregunta"
             const otraBtn = document.createElement('button');
             otraBtn.classList.add('option-btn');
@@ -603,30 +535,24 @@ document.addEventListener('DOMContentLoaded', function () {
             </a>`
                 );
                 currentQuestion = null; // No espera respuesta
-
             });
             optionsContainer.appendChild(otraBtn);
-
             // Agregar botón de volver
             const backBtn = document.createElement('button');
             backBtn.classList.add('option-btn');
             backBtn.textContent = "Volver al menú principal";
             backBtn.addEventListener('click', showMainMenu);
             optionsContainer.appendChild(backBtn);
-
             // Mostrar las opciones en el chat
             chatMessages.appendChild(optionsContainer);
             chatMessages.scrollTop = 0;
-
         }
-
         // Seleccionar categoría
         function selectCategory(categoryKey) {
             currentCategory = categoryKey;
             addUserMessage(categorias[categoryKey].nombre);
             showCategoryQuestions(categoryKey);
         }
-
         // Seleccionar pregunta
         function selectQuestion(question) {
             currentQuestion = question;
@@ -641,12 +567,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 askQuestion(question); // Solo si no hay respuesta fija
             }
         }
-
         // Hacer pregunta
         function askQuestion(question) {
             userInput.disabled = false; // Habilita el input
             addBotMessage(question.texto, true);
-
             // Mostrar formato esperado si es necesario
             if (question.tipo === "booleano") {
                 addBotMessage("(Por favor responde Sí o No)");
@@ -654,11 +578,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 addBotMessage("(Por favor ingresa un número)");
             }
         }
-
         // Validar respuesta
         function validateAnswer(answer, type) {
             if (!answer) return false;
-
             if (type === "numero") {
                 return !isNaN(answer);
             }
@@ -667,14 +589,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             return true;
         }
-
         // Procesar respuesta booleana
         function processBooleanAnswer(answer) {
             const lowerAnswer = answer.toLowerCase();
             return lowerAnswer === "sí" || lowerAnswer === "si";
         }
-
-
         // Mostrar menú principal
         function showMainMenu() {
             currentCategory = null;
@@ -682,7 +601,6 @@ document.addEventListener('DOMContentLoaded', function () {
             addBotMessage("¿En qué puedo ayudarte? Selecciona una categoría:");
             showMainOptions();
         };
-
         // Respuestas fijas para cada pregunta
         const respuestasFijas = {
             "ubicacion": `<strong>Nuestra sede principal</strong> se encuentra en <b>San Luis Potosí</b>.<br>
@@ -764,15 +682,12 @@ document.addEventListener('DOMContentLoaded', function () {
     </ul>`
             // Puedes agregar más claves y respuestas aquí
         };
-
         // Manejar respuesta del usuario
         function handleUserAnswer() {
             const answer = userInput.value.trim();
             if (!answer && currentQuestion?.tipo !== "texto") return;
-
             addUserMessage(answer);
             userInput.value = '';
-
             if (currentQuestion) {
                 if (validateAnswer(answer, currentQuestion.tipo)) {
                     // Procesar la respuesta según el tipo
@@ -782,12 +697,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     } else if (currentQuestion.tipo === "numero") {
                         processedAnswer = Number(answer);
                     }
-
                     respuestas[currentQuestion.clave] = processedAnswer;
                     addBotMessage("✓ Respuesta guardada");
                     // Mostrar respuesta fija si existe
                     if (respuestasFijas[currentQuestion.clave]) {
-
                         addBotMessage(respuestasFijas[currentQuestion.clave].replace(/\n/g, '<br>'));
                     }
                     setTimeout(() => showMainMenu(), 1000);
@@ -797,10 +710,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             } else {
                 addBotMessage("Por favor selecciona una opción del menú.");
-
             }
         }
-
         // Alternar visibilidad del chat
         function toggleChat() {
             if (chatContainer.classList.contains('hidden')) {
@@ -815,7 +726,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 chatIcon.classList.remove('hidden');
             }
         }
-
         // Event listeners
         chatIcon.addEventListener('click', toggleChat);
         minimizeBtn.addEventListener('click', toggleChat);
@@ -823,8 +733,4 @@ document.addEventListener('DOMContentLoaded', function () {
         userInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') handleUserAnswer();
         });
-
-
 });
-
-
