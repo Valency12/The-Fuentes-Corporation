@@ -537,7 +537,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         optionsContainer.appendChild(exitBtn);
         chatMessages.appendChild(optionsContainer);
-        chatMessages.scrollTop = 0;
         userInput.disabled = true; // bloquea el input hasta que se seleccione una categoría
     }
     // Mostrar preguntas de una categoría específica
@@ -588,7 +587,6 @@ document.addEventListener('DOMContentLoaded', function () {
         optionsContainer.appendChild(backBtn);
         // Mostrar las opciones en el chat
         chatMessages.appendChild(optionsContainer);
-        chatMessages.scrollTop = 0;
     }
     // Seleccionar categoría
     function selectCategory(categoryKey) {
@@ -601,7 +599,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentQuestion = question;
         // Si existe respuesta fija, mostrarla y regresar al menú principal
         addUserMessage(question.texto); // Imprime la pregunta como mensaje del usuario
-        chatMessages.scrollTop = chatMessages.scrollHeight; // <-- Desplaza al último mensaje
+        //chatMessages.scrollTop = chatMessages.scrollHeight; // <-- Desplaza al último mensaje
         if (respuestasFijas[question.clave]) {
             addBotMessage(respuestasFijas[question.clave].replace(/\n/g, '<br>'));
             setTimeout(() => showMainMenu(), 1500);
