@@ -155,26 +155,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     // Selecciona todos los títulos principales
-    /*const titles = document.querySelectorAll(
-        '.about-title, .proyectos-title, .servicios-title, .misionvision-title, .mision-title, .vision-title, .aliados-title, .oficinas-title, .opiniones-title, .contacto-title');
-    titles.forEach(title => {
-        title.classList.remove('animate-zoom');
-        title.style.opacity = "0";
-        title.style.transform = "scale(0.96)";
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    title.classList.add('animate-zoom');
-                } else {
-                    title.classList.remove('animate-zoom');
-                    title.style.opacity = "0";
-                    title.style.transform = "scale(0.96)";
-                }
-            });
-        }, { threshold: 0.5 });
-        observer.observe(title);
-    });*/
-    // Selecciona todos los títulos principales
     const titles = document.querySelectorAll(
         '.about-title, .proyectos-title, .servicios-title, .misionvision-title, .mision-title, .vision-title, .aliados-title, .oficinas-title, .opiniones-title, .contacto-title');
 

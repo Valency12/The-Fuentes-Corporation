@@ -18,26 +18,26 @@
 <body>
     <h1 class="visually-hidden">Headers examples</h1>
     <div class="header-container">
-    <div class="header-container-three">
-        <a href="/" class="d-flex align-items-center text-decoration-none">
-            <img src="Imagenes/LogoHB.png" alt="The Fuentes Corp Logo" width="150" height="auto" class="logo">
-        </a>
-        <button class="navbar-toggler d-lg-none" type="button" id="sidebarToggle">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="header-container-three">
+            <a href="/" class="d-flex align-items-center text-decoration-none">
+                <img src="Imagenes/LogoHB.png" alt="The Fuentes Corp Logo" width="150" height="auto" class="logo">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" id="sidebarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <nav class="d-none d-lg-block">
+            <ul class="nav nav-pills align-items-center">
+                <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li class="nav-item"><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <div class="sidebar-auth ms-3">
+                    <button href="#contacto" class="btn contactanos">Contáctanos</button>
+                    <button class="btn sign-in">Iniciar Sesión</button>
+                </div>
+            </ul>
+        </nav>
     </div>
-    <nav class="d-none d-lg-block">
-        <ul class="nav nav-pills align-items-center">
-            <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
-            <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
-            <li class="nav-item"><a href="#proyectos" class="nav-link">Proyectos</a></li>
-            <div class="sidebar-auth ms-3">
-                <button href="#contacto" class="btn contactanos">Contáctanos</button>
-                <button class="btn sign-in">Iniciar Sesión</button>
-            </div>
-        </ul>
-    </nav>
-</div>
 
     <!-- Sidebar móvil (oculto por defecto) -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -374,7 +374,8 @@
             <div class="planta-grid">
                 <!-- Fila 1 -->
                 <div class="planta-item planta-titulo">
-                    <h2 class="planta-titulo animate-zoom"> Tu proyecto. <span class="big-title-five-two">Nuestro Asfalto.</span></h2>
+                    <h2 class="planta-titulo animate-zoom"> Tu proyecto. <span class="big-title-five-two">Nuestro
+                            Asfalto.</span></h2>
                 </div>
                 <div class="planta-item planta-imagen-1 animate-image-fadeInRight">
                     <img src="Imagenes/plantaAsfalto/img1.jpeg" alt="Planta de asfalto moderna">
@@ -385,7 +386,8 @@
                     <img src="Imagenes/plantaAsfalto/img2.jpeg" alt="Proceso de producción de asfalto">
                 </div>
                 <div class="planta-item planta-texto">
-                    <p class="planta-text animate-zoom">Desde nuestra planta, <strong>suministramos asfalto con la máxima precisión y calidad</strong>.
+                    <p class="planta-text animate-zoom">Desde nuestra planta, <strong>suministramos asfalto con la
+                            máxima precisión y calidad</strong>.
                         Cada mezcla está
                         diseñada para ofrecer la <strong>durabilidad y estabilidad</strong> que tus obras merecen.</p>
                 </div>
@@ -517,30 +519,91 @@
             </div>
         </section>
         <!--Fin seccion opiniones-->
-        <div class="space"></div>
-        <!-- Sección de Contacto -->
-        <section class="contacto-section" id="contacto">
-            <h2 class="contacto-title">Contactanos</h2>
-            <p class="contacto-paragraph">"¡Contáctanos y hagamos realidad tus proyectos de construcción! <br>Estamos
-                aquí para escucharte y brindarte un servicio personalizado de calidad."</p>
-            <div class="contacto-container">
 
-                <form class="contacto-form" id="contacto-form">
-                    <div class="contacto-form-row">
-                        <input type="text" name="nombre" placeholder="Nombre" required>
-                        <input type="text" name="apellido" placeholder="Apellido" required>
-                    </div>
-                    <div class="contacto-form-row">
-                        <input type="text" name="telefono" placeholder="Telefono" required>
-                        <input type="email" name="correo" placeholder="Correo" required>
-                    </div>
-                    <input type="text" name="asunto" placeholder="Asunto" class="contacto-form-asunto" required>
-                    <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
-                    <button type="submit" class="contacto-form-btn">ENVIAR MENSAJE</button>
-                </form>
-                <div id="contacto-form-msg"></div>
+        <div class="space"></div>
+
+        <!-- Sección de Contacto -->
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+            // Inicialización (asegúrate que esta Public Key es correcta)
+            emailjs.init('mU3pR2OMBpG5Lgu6T');
+        </script>
+        <!-- Sección de Contacto -->
+        <section class="contacto-section">
+            <div class="contacto-container">
+                <div class="contacto-content">
+                    <h2 class="contacto-title">Contáctanos</h2>
+                    <p class="contacto-paragraph">"¡Contáctanos y hagamos realidad tus proyectos de
+                        construcción!<br>Estamos aquí para escucharte y brindarte un servicio personalizado de calidad."
+                    </p>
+
+                    <form id="contact-form" class="contacto-form">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="contacto-form-row">
+                            <input type="text" name="from_name" placeholder="Nombre completo" required
+                                class="contacto-form-input">
+                            <input type="email" name="reply_to" placeholder="Correo electrónico" required
+                                class="contacto-form-input">
+                        </div>
+                        <input type="text" name="asunto" placeholder="Asunto"
+                            class="contacto-form-input contacto-form-asunto">
+                        <textarea name="message" placeholder="Tu mensaje..." required
+                            class="contacto-form-textarea"></textarea>
+                        <button type="submit" class="contacto-form-btn">Enviar mensaje</button>
+                        <div id="contacto-form-msg" style="display: none;"></div>
+                    </form>
+                </div>
             </div>
         </section>
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const statusMsg = document.getElementById('contacto-form-msg');
+                // Ajusta el tiempo de visualización del mensaje según el dispositivo
+                const hideDelay = window.innerWidth < 768 ? 3000 : 5000;
+                setTimeout(() => { statusMsg.style.display = 'none'; }, hideDelay);
+
+                // Mostrar estado de carga
+                submitBtn.textContent = 'Enviando...';
+                submitBtn.disabled = true;
+                statusMsg.style.display = 'none';
+
+                // Asegúrate que estos IDs son correctos:
+                emailjs.sendForm(
+                    'service_z5ecn14',
+                    'template_vob3kfj',
+                    this
+                )
+                    .then(() => {
+                        // En el then() del envío exitoso:
+                        statusMsg.innerHTML = `<svg>[ícono de check]</svg><span>¡Mensaje enviado con éxito!</span>`;
+                        statusMsg.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
+                        statusMsg.style.color = '#004e98';
+                        statusMsg.style.display = 'block';
+                        this.reset();
+                    })
+                    .catch(err => {
+                        statusMsg.textContent = 'Error al enviar el mensaje. Por favor inténtalo nuevamente.';
+                        statusMsg.style.color = '#e63946';
+                        statusMsg.style.display = 'block';
+                        console.error('Error detallado:', err);
+
+                        // Muestra más detalles del error al usuario
+                        if (err.response) {
+                            statusMsg.textContent += ` (Error ${err.response.status}: ${err.response.text})`;
+                        }
+                    })
+                    .finally(() => {
+                        submitBtn.textContent = 'Enviar mensaje';
+                        submitBtn.disabled = false;
+                        setTimeout(() => { statusMsg.style.display = 'none'; }, 5000);
+                    });
+            });
+        </script>
+
+
         <!-- Fin sección de Contacto -->
     </main>
 
@@ -581,6 +644,14 @@
     <div id="chat-icon" class="icon-float">
         <img src="Imagenes/iconBonito.png" alt="Chat Icon" class="icon">
     </div>
+
+
+
+
+
+
+
+
     <div id="chat-container" class="hidden">
         <div id="chat-header">
             <img src="Imagenes/iconBonito.png" alt="Bot Avatar">
