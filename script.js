@@ -157,44 +157,36 @@ document.addEventListener('DOMContentLoaded', function () {
     // Selecciona todos los títulos principales
     const titles = document.querySelectorAll(
         '.about-title, .proyectos-title, .servicios-title, .misionvision-title, .mision-title, .vision-title, .aliados-title, .oficinas-title, .opiniones-title, .contacto-title');
-
     titles.forEach(title => {
         // Inicializa el estado
         title.classList.remove('animate-zoom');
         title.style.opacity = "0";
         title.style.transform = "scale(0.96)";
-
         // Bandera para controlar si ya se animó
         let hasAnimated = false;
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !hasAnimated) {
                     title.classList.add('animate-zoom');
                     hasAnimated = true; // Marca como animado
-
                     // Opcional: dejar de observar después de la animación
                     observer.unobserve(title);
                 }
                 // Eliminamos el else que quitaba la clase
             });
         }, { threshold: 0.5 });
-
         observer.observe(title);
     });
     // Selecciona todos los párrafos principales
     const paragraphs = document.querySelectorAll(
         '.about-paragraph, .card-paragraph, .proyectos-paragraph, .proyectos-paragraph-two, .aliados-paragraph, .misionvision-paragraph, .contacto-paragraph'
     );
-
     // Configura observadores para cada párrafo
     paragraphs.forEach(paragraph => {
         let hasAnimated = false; // Bandera de control
-
         paragraph.classList.remove('animate-paragraph-zoom');
         paragraph.style.opacity = "0";
         paragraph.style.transform = "translateY(60px)";
-
         const observerParagraph = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !hasAnimated) {
@@ -205,18 +197,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Eliminamos el else que reseteaba la animación
             });
         }, { threshold: 0.5 });
-
         observerParagraph.observe(paragraph);
     });
     // Animación para imágenes (fadeInRight)
     const aboutImages = document.querySelectorAll('.about-image img, .planta-imagen-1, .planta-imagen-2, .mapa-iframe');
     aboutImages.forEach(image => {
         let hasAnimated = false; // Control de animación única
-
         image.classList.remove('animate-image-fadeInRight');
         image.style.opacity = "0";
         image.style.transform = "translateX(60px)";
-
         const observerImage = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !hasAnimated) {
@@ -227,19 +216,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Eliminamos el else que reseteaba la animación
             });
         }, { threshold: 0.5 });
-
         observerImage.observe(image);
     });
-
     // Animación para mapa-frame (puedes usar fadeInUp, fadeIn, o cualquier otra)
     const mapaFrame = document.querySelector('.mapa-iframe');
     if (mapaFrame) {
         let hasAnimatedMap = false;
-
         mapaFrame.classList.remove('animate-map-fadeInRight');
         mapaFrame.style.opacity = "0";
         mapaFrame.style.transform = "translateY(40px)";
-
         const observerMap = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !hasAnimatedMap) {
@@ -249,18 +234,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         }, { threshold: 0.5 });
-
         observerMap.observe(mapaFrame);
     }
     // Animación para video (fadeInLeft)
     const sectionVideoFile = document.querySelector('.section-video-file');
     if (sectionVideoFile) {
         let hasAnimatedVideo = false;
-
         sectionVideoFile.classList.remove('animate-video-fadeInLeft');
         sectionVideoFile.style.opacity = "0";
         sectionVideoFile.style.transform = "translateX(-60px)";
-
         const observerVideo = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !hasAnimatedVideo) {
@@ -271,7 +253,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Eliminamos el else
             });
         }, { threshold: 0.5 });
-
         observerVideo.observe(sectionVideoFile);
     }
     const heroContent = document.querySelector('.hero-content');
@@ -307,9 +288,10 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         2: {
             Imagenes: [
-                'Imagenes/onepiece1.jpeg',
-                'Imagenes/onepiece2.jpeg',
-                'Imagenes/onepiece3.jpeg'
+                'Imagenes/tamazunchale/img1.jpeg',
+                'Imagenes/tamazunchale/img2.jpeg',
+                'Imagenes/tamazunchale/img3.jpeg',
+                'Imagenes/tamazunchale/img4.jpeg'
             ],
             description: 'Una aplicación móvil revolucionaria que cambia la forma en que interactúas con la tecnología. Diseño intuitivo y funcionalidades avanzadas.'
         },
