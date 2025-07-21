@@ -1,4 +1,3 @@
-/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -333,7 +332,6 @@ nav .nav {
 .animate-hero-fadeInUp {
     animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
-/* Ya tienes la animación fadeInUp definida */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -458,8 +456,6 @@ nav .nav {
     color: #222;
     text-align: justify;
 }
-/*.proyectos-paragraph-two {
-}*/
 .proyectos-title {
     font-size: clamp(2rem, 6vw, 4rem);
 }
@@ -679,7 +675,6 @@ nav .nav {
 /*Seccion planta asfalto*/
 .planta-asfalto {
     width: 100%;
-    /*padding: 4rem 0;*/
     background-color: #f8f9fa;
 }
 .planta-grid {
@@ -1307,7 +1302,6 @@ p {
     }
 }
 /*Seccion oficinas*/
-/* Sección Oficinas */
 .oficinas-section {
     background: var(--yellow-primary);
     padding: clamp(2rem, 5vw, 4rem) 0;

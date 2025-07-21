@@ -1,0 +1,23 @@
+{
+  "name": "the-fuentes-corporation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Valency12/The-Fuentes-Corporation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Valency12/The-Fuentes-Corporation/issues"
+  },
+  "homepage": "https://github.com/Valency12/The-Fuentes-Corporation#readme",
+  "devDependencies": {
+    "purgecss": "^7.0.2"
+  }
+}
