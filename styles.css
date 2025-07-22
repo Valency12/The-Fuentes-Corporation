@@ -1340,7 +1340,14 @@ p {
 }
 
 .oficinas-section-nueva{
-    padding: clamp(1rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem) !important;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem) !important;
+}
+.oficinas-section-nueva .oficinas-title-nueva {
+    margin-bottom: 1.2rem !important;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.2;
+    color: #222;
+    font-weight: 900;
 }
 /*.py-5{
     padding:  0;
@@ -1582,6 +1589,51 @@ p {
     max-height: 8.5em;
     overflow: hidden;
     text-align: left !important;
+}
+/* Cards SOLO para la sección oficinas nueva */
+.oficinas-section-nueva .card {
+    min-height: 380px;
+    max-height: 440px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+.oficinas-section-nueva .card-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.oficinas-section-nueva .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 1rem;
+}
+@media (max-width: 991.98px) {
+    .oficinas-section-nueva .card {
+        min-height: 320px;
+        max-height: 400px;
+    }
+    .oficinas-section-nueva .card-text {
+        -webkit-line-clamp: 6;
+    }
+}
+@media (max-width: 575.98px) {
+    .oficinas-section-nueva .card {
+        min-height: 220px;
+        max-height: 340px;
+    }
+    .oficinas-section-nueva .card-text {
+        -webkit-line-clamp: 8;
+    }
 }
 html,
 body {
