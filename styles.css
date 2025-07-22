@@ -463,9 +463,9 @@ nav .nav {
     font-weight: bold;
     font-size: 22px;
 }
-.py-5 {
+/*.py-5 {
     padding: 0 !important;
-}
+}*/
 .nav-scroller {
     position: relative;
     z-index: 2;
@@ -1258,9 +1258,9 @@ p {
     max-width: 90%;
 }
 .text-center {
-    padding: 1rem 0;
+    /*padding: 1rem 0;*/
     font-size: clamp(0.8rem, 2vw, 1rem);
-    margin: 0;
+    /*margin: 0;*/
 }
 .logo-container {
     display: flex;
@@ -1327,14 +1327,24 @@ p {
 .oficinas-title {
     font-size: clamp(1.8rem, 4vw, 3rem);
     line-height: 1.2;
-    margin-bottom: 1.5rem;
+    /*margin-bottom: 1.5rem;*/
     color: #222;
+}
+.mb-5{
+    margin: 2rem 0 !important;
 }
 .oficinas-subtitle {
     font-size: clamp(1rem, 2vw, 1.3rem);
     line-height: 1.5;
     color: #222;
 }
+
+.oficinas-section-nueva{
+    padding: clamp(1rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem) !important;
+}
+/*.py-5{
+    padding:  0;
+}*/
 .mapa-wrapper {
     flex: 1;
     min-width: 300px;
