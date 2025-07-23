@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <h1 class="visually-hidden">Headers examples</h1>
     <div class="header-container">
@@ -467,7 +469,7 @@
         <div class="space"></div>
         <section class="mision-vision-section">
             <p class="misionvision-title">Nuestros Cimientos</p>
-            <div class="container-mision" >
+            <div class="container-mision">
                 <div class="div-mision">
                     <h1 class="mision-title">Misión</h1>
                 </div>
@@ -519,17 +521,46 @@
             </div>
         </section>
         <div class="space"></div>
+        <!-- Sección Nuestros Alcances -->
+        <section class="alcances-section" style="padding: clamp(.5rem, 2vw, 2rem) clamp(1rem, 3vw, 2rem); background-color: #004e98; color: #fff">
+            <div class="container-fluid px-0">
+                <div class="row align-items-center flex-column-reverse flex-md-row g-0">
+                    <!-- Columna del mapa (full width) -->
+                    <div class="col-12 col-md-8">
+                        <div class="alcances-mapa-wrapper w-100">
+                            <iframe class="alcances-mapa-iframe" style="border-radius: 10px;"
+                                src="https://www.google.com/maps/d/embed?mid=1AinLcZc3o3auZFIZj0NGaG2DYG7q_HQ&ehbc=2E312F&noprof=1"
+                                width="100%" height="450" style="border:0; min-height:350px;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Columna del texto (con padding solo en esta columna) -->
+                    <div class="col-12 col-md-4 py-4 px-3 px-md-4">
+                        <div
+                            class="d-flex flex-column align-items-center align-items-md-start text-md-start">
+                            <h2 class="aliados-title mb-3" style="color: #fff; text-align: left;"><span class="big-title">Nuestros Alcances</span></h2>
+                            <p class="aliados-paragraph">Descubre el alcance geográfico de The Fuentes Corporation.
+                                Consulta en el mapa las regiones donde hemos dejado huella con nuestros proyectos y
+                                presencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="space"></div>
         <!-- Sección Oficinas -->
         <section class="oficinas-section-nueva">
             <div class="container">
-                <h2 class="oficinas-title-nueva text-center mb-5">Nuestras <span class="big-title">Oficinas</span></h2>
+                <h2 class="oficinas-title-nueva text-center mb-5" style="color: #004e98;"><span class="big-title">Nuestras Oficinas</span></h2>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
                         <div class="card h-100 shadow-sm">
                             <img src="Imagenes/oficinas/ofice1.png" class="card-img-top" alt="Oficina Chiapas">
                             <div class="card-body">
                                 <h5 class="card-title">Chiapas</h5>
-                                <p class="card-text">Boulevard (Blvd. ) 28 de Agosto, Col. Fovissste II, Jardín Corona, Tuxtla Gutiérrez, Chiapas México. C.p. 29024</p>
+                                <p class="card-text">Boulevard (Blvd. ) 28 de Agosto, Col. Fovissste II, Jardín Corona,
+                                    Tuxtla Gutiérrez, Chiapas México. C.p. 29024</p>
                             </div>
                         </div>
                     </div>
@@ -538,7 +569,8 @@
                             <img src="Imagenes/oficinas/office2.png" class="card-img-top" alt="Oficina CDMX">
                             <div class="card-body">
                                 <h5 class="card-title">San Luis Potosi</h5>
-                                <p class="card-text">Boulevard (Blvd.) Avenida Chapultepec No. 1385-3, Col. Privadas del Pedregal, San Luis Potosí, San Luis Potosí, México. C.p.  78295</p>
+                                <p class="card-text">Boulevard (Blvd.) Avenida Chapultepec No. 1385-3, Col. Privadas del
+                                    Pedregal, San Luis Potosí, San Luis Potosí, México. C.p. 78295</p>
                             </div>
                         </div>
                     </div>
@@ -547,7 +579,9 @@
                             <img src="Imagenes/oficinas/office3.png" class="card-img-top" alt="Oficina Sonora">
                             <div class="card-body">
                                 <h5 class="card-title">Sucursal en El Salvador </h5>
-                                <p class="card-text">Urbanización Madre Selva III, Calle llama del Bosque Poniente, edificio  Avante local No. 3-13, del municipio de Antiguo Cuscatlán, departamento de la Libertad, San Salvador, El Salvador
+                                <p class="card-text">Urbanización Madre Selva III, Calle llama del Bosque Poniente,
+                                    edificio Avante local No. 3-13, del municipio de Antiguo Cuscatlán, departamento de
+                                    la Libertad, San Salvador, El Salvador
                                 </p>
                             </div>
                         </div>
@@ -565,19 +599,19 @@
                     <p class="opinion-text"><span class="comillas">"</span>Superaron nuestras expectativas; el proyecto
                         se completó a tiempo y con una calidad excepcional. ¡Absolutamente recomendados!<span
                             class="comillas">"</span></p>
-                            <img class="opinion-avatar" src="Imagenes/Perfiles/perfil1.webp" alt="Foto de perfil">
+                    <img class="opinion-avatar" src="Imagenes/Perfiles/perfil1.webp" alt="Foto de perfil">
                     <span class="opinion-author">- Juan Pérez</span>
                     <span class="opinion-cargo">- Ingeniero Civil</span>
-                    
+
                 </div>
                 <div class="opiniones-slide">
                     <p class="opinion-text"><span class="comillas">"</span>Desde la planificación hasta la entrega, su
                         equipo mostró una profesionalidad increíble y una atención al detalle impecable.<span
                             class="comillas">"</span></p>
-                            <img class="opinion-avatar" src="Imagenes/Perfiles/perfil2.webp" alt="Foto de perfil">
+                    <img class="opinion-avatar" src="Imagenes/Perfiles/perfil2.webp" alt="Foto de perfil">
                     <span class="opinion-author">- María López</span>
                     <span class="opinion-cargo">- Ingeniera en Sistemas</span>
-                    
+
                 </div>
                 <div class="opiniones-slide">
                     <p class="opinion-text"><span class="comillas">"</span>Transformaron nuestra visión en realidad sin
@@ -586,7 +620,7 @@
                     <img class="opinion-avatar" src="Imagenes/Perfiles/perfil3.webp" alt="Foto de perfil">
                     <span class="opinion-author">- Carlos Ramírez</span>
                     <span class="opinion-cargo">- Arquitecto</span>
-                    
+
                 </div>
                 <div class="opiniones-slide">
                     <p class="opinion-text"><span class="comillas">"</span>Transformaron nuestra visión en realidad sin
@@ -595,7 +629,7 @@
                     <img class="opinion-avatar" src="Imagenes/Perfiles/perfil4.webp" alt="Foto de perfil">
                     <span class="opinion-author">- Carlos Ramírez</span>
                     <span class="opinion-cargo">- Arquitecto</span>
-                    
+
                 </div>
                 <div class="opiniones-slide">
                     <p class="opinion-text"><span class="comillas">"</span>Transformaron nuestra visión en realidad sin
@@ -604,7 +638,7 @@
                     <img class="opinion-avatar" src="Imagenes/Perfiles/perfil5.webp" alt="Foto de perfil">
                     <span class="opinion-author">- Carlos Ramírez</span>
                     <span class="opinion-cargo">- Arquitecto</span>
-                    
+
                 </div>
                 <div class="opiniones-slide">
                     <p class="opinion-text"><span class="comillas">"</span>Transformaron nuestra visión en realidad sin
@@ -613,7 +647,7 @@
                     <img class="opinion-avatar" src="Imagenes/Perfiles/perfil6.webp" alt="Foto de perfil">
                     <span class="opinion-author">- Carlos Ramírez</span>
                     <span class="opinion-cargo">- Arquitecto</span>
-                    
+
                 </div>
                 <div class="opiniones-slide">
                     <p class="opinion-text"><span class="comillas">"</span>Transformaron nuestra visión en realidad sin
@@ -622,7 +656,7 @@
                     <img class="opinion-avatar" src="Imagenes/toychiquito.jpg" alt="Foto de perfil">
                     <span class="opinion-author">- Carlos Ramírez</span>
                     <span class="opinion-cargo">- Arquitecto</span>
-                    
+
                 </div>
                 <button class="opiniones-arrow right" aria-label="Siguiente">&#8594;</button>
             </div>
@@ -746,4 +780,5 @@
         </div>
     </div>
 </body>
+
 </html>
