@@ -89,7 +89,6 @@ body {
 .contacto-paragraph,
 .planta-texto {
     font-size: clamp(1rem, 4vw, 1.3rem);
-    /*line-height: 1.6;*/
     font-weight: 400;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
