@@ -440,11 +440,14 @@ nav .nav {
     margin: clamp(2rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem) clamp(2rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 300px) {
     .about-minimal {
         flex-direction: column;
         align-items: flex-start;
     }
+    .hero-content {
+    padding-bottom: 4rem;
+}
 }
 
 .about-subtitle {
