@@ -826,7 +826,6 @@ nav .nav {
     font-weight: 900;
 }
 .container-mision {
-    background-image: url('Imagenes/extras/mision.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -842,7 +841,6 @@ nav .nav {
     border-right: transparent;
 }
 .container-vision {
-    background-image: url('Imagenes/extras/vision.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
