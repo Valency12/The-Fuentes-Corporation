@@ -1431,7 +1431,7 @@ p {
     padding: 2rem 1rem;
 }
 
-.footer::before {
+/*.footer::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1440,7 +1440,7 @@ p {
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
     z-index: 0;
-}
+}*/
 
 /*.footer::after {
     content: '';
@@ -1460,7 +1460,7 @@ p {
 }*/
 
 .container-icons {
-    padding: 0 0 1rem 0;
+    padding: 0 0 0.5rem 0 !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1486,7 +1486,7 @@ p {
 }
 
 .logo-footer {
-    margin: 1rem auto 0.5rem auto;
+    margin: 1rem auto 0.5rem auto !important;
     width: 100%;
     max-width: 200px;
     height: auto;

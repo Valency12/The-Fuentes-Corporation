@@ -1114,7 +1114,7 @@ p {
     z-index: 2;
 }*/
 .container-icons {
-    padding: 2rem 0;
+    padding: 0 0 0.5rem 0 !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1137,7 +1137,7 @@ p {
     margin: 0 auto;
 }
 .logo-footer {
-    margin: 1rem auto 2rem auto;
+    margin: 1rem auto 0.5rem auto !important;
     width: 100%;
     max-width: 200px;
     height: auto;
