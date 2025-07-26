@@ -826,7 +826,7 @@ nav .nav {
     font-weight: 900;
 }
 .container-mision {
-    background-image: url('Imagenes/mision.png');
+    background-image: url('Imagenes/extras/mision.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -842,7 +842,7 @@ nav .nav {
     border-right: transparent;
 }
 .container-vision {
-    background-image: url('Imagenes/vision.jpg');
+    background-image: url('Imagenes/extras/vision.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -933,7 +933,6 @@ p {
 /* Seccion opiniones */
 .opiniones-section {
     width: 100%;
-    background-image: url(Imagenes/fond0.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
