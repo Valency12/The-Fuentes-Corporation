@@ -428,7 +428,7 @@ nav .nav {
 /* Sección minimalista Sobre Nosotros */
 .about-minimal {
     padding: clamp(0.5rem, 2vw, 2rem) clamp(1rem, 3vw, 2rem) clamp(0.5rem, 2vw, 2rem) clamp(1rem, 3vw, 2rem);
-    display: flex;
+    display: column;
     align-items: center !important;
     justify-content: center !important;
     background: var(--white);
