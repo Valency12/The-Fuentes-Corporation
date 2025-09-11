@@ -7,7 +7,7 @@
     <meta name="description" content="Sitio web de The Fuentes Corp">
     <title>The Fuentes Corp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="purged-css/styles.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -58,7 +58,8 @@
     </aside>
     <main>
         <section class="hero" id="inicio">
-            <video class="hero-video" autoplay muted loop playsinline>
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" webkit-playsinline
+                crossorigin="anonymous">
                 <source src="Imagenes/extras/videoHero.mp4" type="video/mp4">
             </video>
             <div class="hero-content">
@@ -67,25 +68,46 @@
                 <a href="#nosotros" class="btn cta-button">Iniciar</a>
             </div>
         </section>
+
+        <!--estamos trabajando esta parte-->
         <section class="about-minimal" id="nosotros">
+
+            <div class="container-image-title">
+                 <div class="image-team">
+                    <img src="Imagenes/extras/equipo2.jpg" alt="Sobre nosotros" />
+                </div>
+                <div class="title-one">
+                    <h2><span class="mas-span">Más</span><br> que una <span class="constructora-span">Constructora</span></h2>
+                </div>
+               
+            </div>
+
             <div class="about-text">
-                <h2 class="about-title"><span class="big-title"> Más que una Constructora</span></h2>
-                <h3 class="about-subtitle">Nuestro Compromiso</h3>
                 <p class="about-paragraph">
-    <strong>The Fuentes Corporation</strong> fue fundada el <em>17 de julio de 2008</em> en <strong>Tuxtla Gutiérrez, Chiapas</strong>, como una empresa especializada en la <em>construcción de obras públicas y privadas</em>. Desde sus inicios, ha mantenido un compromiso con la <strong>calidad</strong>, la <strong>seguridad</strong> y la <em>generación de empleo</em>.
-    En 2014, la compañía vivió una <em>etapa de renovación</em> con la incorporación del <strong>ingeniero Juan Pablo</strong>, lo que marcó un punto de inflexión en su crecimiento. Bajo su liderazgo, la empresa tomó un nuevo impulso, guiada por una <strong>visión de excelencia operativa</strong> y la <em>expansión regional</em>.
-    Durante esos primeros años, <em>The Fuentes Corporation</em> ejecutó <strong>obras de menor escala</strong> en Chiapas, consolidando su <em>reputación</em> y <strong>experiencia en el sector</strong>.
-    Ese mismo año se estableció la <strong>primera sucursal en Chiapas</strong>, coordinando <em>proyectos locales y regionales</em>.
-    En <strong>2019</strong>, comenzó su <em>expansión internacional</em> con una sucursal en <strong>El Salvador</strong> y, en <strong>2023</strong>, abrió una sede en <strong>San Luis Potosí</strong>, desarrollando <em>proyectos de mayor escala y complejidad</em>.
-    Con más de <strong>16 años de trayectoria</strong>, <strong>The Fuentes Corporation</strong> se posiciona como una <em>empresa sólida</em>, en <strong>constante crecimiento</strong>, con presencia en el <em>sureste y centro de México</em> y <strong>Centroamérica</strong>.
-</p>
-
-
+                    <strong>The Fuentes Corporation</strong> fue fundada el <em>17 de julio de 2008</em> en
+                    <strong>Tuxtla Gutiérrez, Chiapas</strong>, como una empresa especializada en la <em>construcción de
+                        obras públicas y privadas</em>. Desde sus inicios, ha mantenido un compromiso con la
+                    <strong>calidad</strong>, la <strong>seguridad</strong> y la <em>generación de empleo</em>.
+                    En 2014, la compañía vivió una <em>etapa de renovación</em> con la incorporación del
+                    <strong>ingeniero Juan Pablo</strong>, lo que marcó un punto de inflexión en su crecimiento. Bajo su
+                    liderazgo, la empresa tomó un nuevo impulso, guiada por una <strong>visión de excelencia
+                        operativa</strong> y la <em>expansión regional</em>.
+                    Durante esos primeros años, <em>The Fuentes Corporation</em> ejecutó <strong>obras de menor
+                        escala</strong> en Chiapas, consolidando su <em>reputación</em> y <strong>experiencia en el
+                        sector</strong>.
+                    Ese mismo año se estableció la <strong>primera sucursal en Chiapas</strong>, coordinando
+                    <em>proyectos locales y regionales</em>.
+                    En <strong>2019</strong>, comenzó su <em>expansión internacional</em> con una sucursal en <strong>El
+                        Salvador</strong> y, en <strong>2023</strong>, abrió una sede en <strong>San Luis
+                        Potosí</strong>, desarrollando <em>proyectos de mayor escala y complejidad</em>.
+                    Con más de <strong>16 años de trayectoria</strong>, <strong>The Fuentes Corporation</strong> se
+                    posiciona como una <em>empresa sólida</em>, en <strong>constante crecimiento</strong>, con presencia
+                    en el <em>sureste y centro de México</em> y <strong>Centroamérica</strong>.
+                </p>
             </div>
-            <div class="about-image">
-                <img src="Imagenes/extras/equipo2.png" alt="Sobre nosotros" />
-            </div>
+
         </section>
+
         <div class="space"></div>
         <section class="section-proyectos" id="proyectos">
             <div class="proyectos-text">
@@ -293,7 +315,7 @@
         <section class="section-video">
             <div class="video-flex-container">
                 <div class="container-video">
-                    <video class="section-video-file" controls>
+                    <video class="section-video-file" controls preload="auto" crossorigin="anonymous">
                         <source src="Imagenes/extras/ahualulco.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -315,7 +337,8 @@
                             style="object-fit: contain;">
                         <div>
                             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Planificación</h3>
-                            <p>Desarrollamos la hoja de ruta completa, coordinando recursos, tiempos y presupuesto.</p>
+                            <p class="text-body-emphasis">Desarrollamos la hoja de ruta completa, coordinando recursos,
+                                tiempos y presupuesto.</p>
                         </div>
                     </div>
                     <div class="col d-flex align-items-start">
@@ -323,7 +346,8 @@
                             style="object-fit: contain;">
                         <div>
                             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Diseño</h3>
-                            <p>Creamos el concepto y los planos detallados de tu proyecto, visualizando tu futuro
+                            <p class="text-body-emphasis">Creamos el concepto y los planos detallados de tu proyecto,
+                                visualizando tu futuro
                                 espacio.</p>
                         </div>
                     </div>
@@ -332,7 +356,8 @@
                             style="object-fit: contain;">
                         <div>
                             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Construcción</h3>
-                            <p>Hacemos realidad tu proyecto desde cero, gestionando la obra con profesionalismo y
+                            <p class="text-body-emphasis">Hacemos realidad tu proyecto desde cero, gestionando la obra
+                                con profesionalismo y
                                 calidad.</p>
                         </div>
                     </div>
@@ -341,7 +366,8 @@
                             style="object-fit: contain;">
                         <div>
                             <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Remodelación</h3>
-                            <p>Transformamos espacios existentes, mejorando su funcionalidad, estética y valor.</p>
+                            <p class="text-body-emphasis">Transformamos espacios existentes, mejorando su funcionalidad,
+                                estética y valor.</p>
                         </div>
                     </div>
                 </div>
@@ -535,7 +561,8 @@
                 margin: 0 auto;
                 overflow: hidden;
             }
-            .section-title{
+
+            .section-title {
                 font-size: 2.5rem;
                 color: #fff !important;
                 font-family: "Roboto", sans-serif;
@@ -982,31 +1009,44 @@
         <script>
             emailjs.init('mU3pR2OMBpG5Lgu6T');
         </script>
-        <section class="contacto-section" id="contacto">
-            <div class="contacto-container">
-                <div class="contacto-content">
-                    <h2 class="contacto-title">Contáctanos</h2>
-                    <p class="contacto-paragraph">"¡Contáctanos y hagamos realidad tus proyectos de
-                        construcción!<br>Estamos aquí para escucharte y brindarte un servicio personalizado de calidad."
-                    </p>
-                    <form id="contact-form" class="contacto-form">
-                        <input type="text" name="_honey" style="display:none">
-                        <div class="contacto-form-row">
-                            <input type="text" name="from_name" placeholder="Nombre completo" required
-                                class="contacto-form-input">
-                            <input type="email" name="reply_to" placeholder="Correo electrónico" required
-                                class="contacto-form-input">
-                        </div>
-                        <input type="text" name="asunto" placeholder="Asunto"
-                            class="contacto-form-input contacto-form-asunto">
-                        <textarea name="message" placeholder="Tu mensaje..." required
-                            class="contacto-form-textarea"></textarea>
-                        <button type="submit" class="contacto-form-btn">Enviar mensaje</button>
-                        <div id="contacto-form-msg" style="display: none;"></div>
-                    </form>
-                </div>
-            </div>
-        </section>
+
+
+
+
+        <section class="contact-section" id="contacto">
+  <div class="contact-wrapper">
+    
+    <!-- Texto motivador -->
+    <div class="contact-text">
+      <h2><span class="highlight">Trabajemos</span> juntos para <span class="highlight-ideas"><br>tus ideas</span></h2>
+      <p class="contacto-paragraph">¡Contáctanos y hagamos realidad tus proyectos de construcción! Estamos aquí para escucharte y brindarte un servicio personalizado de calidad. </p>
+    </div>
+    
+    <!-- Formulario -->
+    <div class="contact-form-wrapper">
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="form-row">
+          <input type="text" name="from_name" placeholder="Nombre completo" required class="form-input">
+          <input type="email" name="reply_to" placeholder="Correo electrónico" required class="form-input">
+        </div>
+
+        <input type="text" name="asunto" placeholder="Asunto" class="form-input form-input-asunto">
+
+        <textarea name="message" placeholder="Tu mensaje..." required class="form-textarea"></textarea>
+
+        <button type="submit" class="form-btn">Enviar</button>
+        <div id="form-msg" style="display: none;"></div>
+      </form>
+    </div>
+    
+  </div>
+</section>
+
+
+
+
         <script>
             document.getElementById('contact-form').addEventListener('submit', function (e) {
                 e.preventDefault();
@@ -1046,7 +1086,7 @@
             });
         </script>
     </main>
-    <div class="container-footer">
+    <!--<div class="container-footer">
         <footer class="footer">
             <div class="logo-container">
                 <img src="Imagenes/Logos/LogoVerticalWhite.png" alt="The Fuentes Corp Logo" class="logo-footer">
@@ -1065,9 +1105,31 @@
             </ul>
             <p>&copy; 2025 The Fuentes Corporation</p>
         </footer>
-    </div>
+    </div>-->
+    <footer>
+        <div class="footer-container">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img class="logo" src="/Imagenes/Logos/LogoLight.png" alt="Logo Empresa">
+            </div>
+
+            <!-- Info -->
+            <div class="footer-info">
+                <p>📍 Ubicación: Ciudad de México, México</p>
+                <p>✉️ Correo: <a href="mailto:contacto@empresa.com">contacto@empresa.com</a></p>
+                <p>💬 WhatsApp: <a href="https://wa.me/5215512345678" target="_blank">+52 1 55 1234 5678</a></p>
+            </div>
+        </div>
+
+        <!-- Línea divisora + Derechos -->
+        <div class="footer-divider">
+            <p>© The Fuentes Corporation 2025 - Todos los derechos reservados</p>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="fix-videos.js"></script>
+    <!--
     <div id="chat-icon" class="icon-float">
         <img src="Imagenes/icons/iconBonito.png" alt="Chat Icon" class="icon">
     </div>
@@ -1086,6 +1148,7 @@
             <button id="send-btn">➤</button>
         </div>
     </div>
+    -->
 </body>
 
 </html>
