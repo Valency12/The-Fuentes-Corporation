@@ -1007,7 +1007,7 @@
         <div class="space"></div>
         <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
         <script>
-            emailjs.init('mU3pR2OMBpG5Lgu6T');
+            emailjs.init('QZnhW43ARCmURxD0g');
         </script>
 
 
@@ -1018,7 +1018,7 @@
     
     <!-- Texto motivador -->
     <div class="contact-text">
-      <h2><span class="highlight">Trabajemos</span> juntos para <span class="highlight-ideas"><br>tus ideas</span></h2>
+      <h2><span class="highlight">Trabajemos</span> <br>juntos para <span class="highlight-ideas"><br>tus ideas</span></h2>
       <p class="contacto-paragraph">¡Contáctanos y hagamos realidad tus proyectos de construcción! Estamos aquí para escucharte y brindarte un servicio personalizado de calidad. </p>
     </div>
     
@@ -1045,67 +1045,49 @@
 </section>
 
 
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const statusMsg = document.getElementById('form-msg'); // Cambiado a 'form-msg'
+        const hideDelay = window.innerWidth < 768 ? 3000 : 5000;
+        
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+        statusMsg.style.display = 'none';
+        
+        emailjs.sendForm(
+            'service_mhuza8k',
+            'template_rl5rrl6',
+            this
+        )
+        .then(() => {
+            statusMsg.innerHTML = `<svg>[ícono de check]</svg><span>¡Mensaje enviado con éxito!</span>`;
+            statusMsg.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
+            statusMsg.style.color = '#004e98';
+            statusMsg.style.display = 'block';
+            statusMsg.style.textAlign = 'center';
+            this.reset();
+        })
+        .catch(err => {
+            statusMsg.textContent = 'Error al enviar el mensaje. Por favor inténtalo nuevamente.';
+            statusMsg.style.color = '#e63946';
+            statusMsg.style.display = 'block';
+            console.error('Error detallado:', err);
+            if (err.response) {
+                statusMsg.textContent += ` (Error ${err.response.status}: ${err.response.text})`;
+            }
+        })
+        .finally(() => {
+            submitBtn.textContent = 'Enviar'; // Cambiado a 'Enviar' para coincidir con el HTML
+            submitBtn.disabled = false;
+            setTimeout(() => { statusMsg.style.display = 'none'; }, hideDelay);
+        });
+    });
+</script>
 
-
-        <script>
-            document.getElementById('contact-form').addEventListener('submit', function (e) {
-                e.preventDefault();
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const statusMsg = document.getElementById('contacto-form-msg');
-                const hideDelay = window.innerWidth < 768 ? 3000 : 5000;
-                setTimeout(() => { statusMsg.style.display = 'none'; }, hideDelay);
-                submitBtn.textContent = 'Enviando...';
-                submitBtn.disabled = true;
-                statusMsg.style.display = 'none';
-                emailjs.sendForm(
-                    'service_z5ecn14',
-                    'template_vob3kfj',
-                    this
-                )
-                    .then(() => {
-                        statusMsg.innerHTML = `<svg>[ícono de check]</svg><span>¡Mensaje enviado con éxito!</span>`;
-                        statusMsg.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
-                        statusMsg.style.color = '#004e98';
-                        statusMsg.style.display = 'block';
-                        this.reset();
-                    })
-                    .catch(err => {
-                        statusMsg.textContent = 'Error al enviar el mensaje. Por favor inténtalo nuevamente.';
-                        statusMsg.style.color = '#e63946';
-                        statusMsg.style.display = 'block';
-                        console.error('Error detallado:', err);
-                        if (err.response) {
-                            statusMsg.textContent += ` (Error ${err.response.status}: ${err.response.text})`;
-                        }
-                    })
-                    .finally(() => {
-                        submitBtn.textContent = 'Enviar mensaje';
-                        submitBtn.disabled = false;
-                        setTimeout(() => { statusMsg.style.display = 'none'; }, 5000);
-                    });
-            });
-        </script>
     </main>
-    <!--<div class="container-footer">
-        <footer class="footer">
-            <div class="logo-container">
-                <img src="Imagenes/Logos/LogoVerticalWhite.png" alt="The Fuentes Corp Logo" class="logo-footer">
-                <h3><strong>Direccion:</strong></h3>
-                <h4>Avenida Parque Chapultepec 1385, Piso 3, Privadas del Pedregal, San Luis Potosí CP 78295</h4>
-                <h3><strong>Email:</strong></h3>
-                <h4>direccion@thefuentescorp.com.mx</h4>
-            </div>
-            <ul class="nav justify-content-center border-bottom container-icons">
-                
-                <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20tengo%20una%20consulta%20sobre%20${category.nombre}" 
-            target="_blank" 
-            style="display:inline-block;padding:10px 20px;background:#25D366;color:white;border-radius:20px;text-decoration:none;font-weight:bold;">
-            WhatsApp
-            </a>
-            </ul>
-            <p>&copy; 2025 The Fuentes Corporation</p>
-        </footer>
-    </div>-->
+    
     <footer>
         <div class="footer-container">
             <!-- Logo -->
@@ -1115,8 +1097,8 @@
 
             <!-- Info -->
             <div class="footer-info">
-                <p>📍 Ubicación: Ciudad de México, México</p>
-                <p>✉️ Correo: <a href="mailto:contacto@empresa.com">contacto@empresa.com</a></p>
+                <p>📍 Ubicación: Av. Chapultepec, edif. 1385 3er Piso. <br>Privadas del Pedregal, San Luis Potosi </p>
+                <p>✉️ Correo: <a href="r.humanos@thefuentescorp.mx">r.humanos@thefuentescorp.mx</a></p>
                 <p>💬 WhatsApp: <a href="https://wa.me/5215512345678" target="_blank">+52 1 55 1234 5678</a></p>
             </div>
         </div>
@@ -1129,26 +1111,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="fix-videos.js"></script>
-    <!--
-    <div id="chat-icon" class="icon-float">
-        <img src="Imagenes/icons/iconBonito.png" alt="Chat Icon" class="icon">
-    </div>
-    <div id="chat-container" class="hidden">
-        <div id="chat-header">
-            <img src="Imagenes/icons/iconBonito.png" alt="Bot Avatar">
-            <div>
-                <h2>Direccion</h2>
-                <p>¡Hola! Soy Step, Bot de asistencia en The Fuentes Corporation</p>
-            </div>
-            <button id="minimize-btn">−</button>
-        </div>
-        <div id="chat-messages"></div>
-        <div id="chat-input">
-            <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
-            <button id="send-btn">➤</button>
-        </div>
-    </div>
-    -->
+    
 </body>
 
 </html>
