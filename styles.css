@@ -1016,6 +1016,171 @@ p {
 }
 /*Fin seccion Mision y Vision*/
 /* Seccion opiniones */
+.opiniones-container {
+                background-image: url("Imagenes/extras/img1.jpeg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                /*background-color: #f5f5f5;*/
+                padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+                color: #fff !important;
+                font-family: "Roboto", sans-serif;
+                font-weight: 700;
+            }
+
+            .section-title {
+                font-weight: 900;
+                text-align: center;
+                margin-bottom: 40px;
+                font-size: 2.5rem;
+                color: #333;
+                position: relative;
+            }
+
+            .section-title::after {
+                content: '';
+                display: block;
+                width: 80px;
+                height: 4px;
+                background: var(--yellow-primary);
+                margin: 15px auto;
+                border-radius: 2px;
+            }
+
+            .opiniones-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 30px;
+                margin-bottom: 40px;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .opinion-card {
+                background: white;
+                border-radius: 10px;
+                padding: 25px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.5s ease;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+            }
+
+            .opinion-card.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .opinion-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+
+            .profile-img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 15px;
+                border: 3px solid var(--yellow-primary);
+            }
+
+            .user-info {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .user-name {
+                font-weight: bold;
+                font-size: 1.1rem;
+                color: #333;
+                margin-bottom: 3px;
+            }
+
+            .user-title {
+                font-size: 0.85rem;
+                color: #777;
+                font-style: italic;
+            }
+
+            .opinion-text {
+                color: #555;
+                line-height: 1.6;
+                font-size: 0.95rem;
+            }
+
+            .controls {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .control-btn {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: var(--blue-primary);
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .control-btn.active {
+                background: var(--yellow-primary);
+                transform: scale(1.2);
+            }
+
+            @media (max-width: 768px) {
+                .opiniones-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .section-title {
+                    font-size: 2rem;
+                }
+            }
+
+            /* Animaciones personalizadas */
+            .opinion-card:nth-child(odd) {
+                transition-delay: 0.1s;
+            }
+
+            .opinion-card:nth-child(even) {
+                transition-delay: 0.3s;
+            }
+
+            .opinion-card:hover {
+                background: #ffe091;
+                transform: translateY(-5px) scale(1.02);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Clases para diferentes tamaños de opiniones */
+            .opinion-large .opinion-text {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+            .opinion-small .opinion-text {
+                font-size: 0.85rem;
+            }
+
+            .opinion-highlight {
+                border-left: 4px solid var(--yellow-primary);
+            }
+
+
 .opiniones-section {
     width: 100%;
     background-size: cover;
@@ -1883,4 +2048,234 @@ body {
 }
 .view-btn{
     border: solid 1px #444 !important;
+}
+.icon{
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            
+            /* Sombra estática inicial */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            
+            /* Aplicamos la animación directamente al icono */
+            animation: pulse-yellow 2s infinite;
+        }
+        
+        /* Animación de pulsación amarilla */
+@keyframes pulse-yellow {
+    0% {
+        box-shadow: 
+            0 4px 10px rgba(0, 0, 0, 0.2),
+            0 0 0 0 rgba(255, 204, 0, 0.4);
+    }
+    70% {
+        box-shadow: 
+            0 4px 10px rgba(0, 0, 0, 0.2),
+            0 0 0 15px rgba(255, 204, 0, 0);
+    }
+    100% {
+        box-shadow: 
+            0 4px 10px rgba(0, 0, 0, 0.2),
+            0 0 0 0 rgba(255, 204, 0, 0);
+    }
+}
+
+/* Efecto al pasar el mouse */
+.icon:hover {
+    transform: scale(1.05);
+}
+
+/* Efecto al hacer clic */
+.icon:active {
+    transform: scale(0.95);
+}
+
+
+        #chat-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        #chat-header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        #chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        #chat-header h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        #chat-header p {
+            margin: 5px 0 0;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        #chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            line-height: 1.4;
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .bot-message {
+            background-color: #e3f2fd;
+            color: #2c3e50;
+            border-bottom-left-radius: 5px;
+            align-self: flex-start;
+        }
+        
+        .user-message {
+            background-color: #2c3e50;
+            color: white;
+            border-bottom-right-radius: 5px;
+            margin-left: auto;
+        }
+        
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        
+        .option-btn {
+            background-color: white;
+            color: #2c3e50;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 8px 15px;
+            margin: 5px 0;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s;
+        }
+        
+        .option-btn:hover {
+            background-color: #f0f0f0;
+        }
+        
+        #chat-input {
+            display: flex;
+            padding: 10px;
+            background-color: white;
+            border-top: 1px solid #eee;
+        }
+        
+        #user-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        
+        #send-btn {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #minimize-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        #chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+/* Estilo para el botón de WhatsApp en el chat */
+.whatsapp-chat-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #25D366;
+    color: white !important;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+    margin: 10px 0;
+}
+
+.whatsapp-chat-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-chat-button:active {
+    transform: translateY(0);
 }

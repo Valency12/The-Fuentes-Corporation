@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Imagenes/nuevaForesta/img5.jpeg',
                 'Imagenes/nuevaForesta/img6.jpeg'
             ],
-            description: 'Explora las épicas travesías de Luffy y su tripulación en busca del tesoro más grande del mundo, el One Piece. Sumérgete en un mundo de piratas, batallas y amistades inolvidables.'
+            description: 'A través de la renovación de varias calles, hemos transformado caminos de tierra en vialidades modernas y duraderas. El trabajo incluyó la preparación del terreno y la instalación de una capa de concreto de alta resistencia, mejorando significativamente el acceso y la seguridad para peatones y vehículos. '
         },
         2: {
             Imagenes: [
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Imagenes/tamazunchale/img3.jpeg',
                 'Imagenes/tamazunchale/img4.jpeg'
             ],
-            description: 'Una aplicación móvil revolucionaria que cambia la forma en que interactúas con la tecnología. Diseño intuitivo y funcionalidades avanzadas.'
+            description: 'Este proyecto en Tamazunchale, un punto vital de la Huasteca Potosina, se enfoca en la ampliación y mejoramiento de una vialidad clave. Las obras consisten en el movimiento de tierra y la adecuación de la vía para expandir su capacidad y garantizar un flujo vehicular más ágil y seguro.'
         },
         3: {
             Imagenes: [
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Imagenes/nose/img5.jpeg',
                 'Imagenes/nose/img6.jpeg'
             ],
-            description: 'Un proyecto de construcción de carreteras que conecta comunidades y mejora el acceso a servicios esenciales.'
+            description: 'Este proyecto se centró en la habilitación y acabados interiores de una nueva sucursal, transformando un espacio en obra gris en una tienda moderna y completamente funcional. Las labores incluyeron la instalación de estructuras para plafones y muros de tabla roca, así como la colocación de un sistema de iluminación LED y la construcción de áreas de servicio. El trabajo finalizó con la integración de los elementos de diseño y mobiliario característicos de la marca, creando un ambiente ideal para la exhibición y venta de productos, listo para recibir a sus clientes.'
         },
         4: {
             Imagenes: [
@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Imagenes/cactus/img5.jpeg',
                 'Imagenes/cactus/img7.jpeg'
             ],
-            description: 'Un proyecto innovador para la construcción de vías públicas, mejorando la infraestructura urbana y la movilidad en las ciudades.'
+            description: 'En este proyecto se realizó una renovación urbana integral en la localidad de Cactus, combinando mejoras funcionales y estéticas. Por un lado, se instaló un colector pluvial y se pavimentaron las calles para prevenir inundaciones y mejorar la movilidad de los residentes. Por otro lado, se construyó un monumento moderno con la palabra "CACTUS" en una nueva plaza, sirviendo como un símbolo de identidad y progreso para la comunidad.'
         },
         6: {
             Imagenes: [
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Imagenes/matiasRomero/img5.jpeg',
                 'Imagenes/matiasRomero/img6.jpeg'
             ],
-            description: 'Un proyecto de construcción de carreteras que conecta comunidades y mejora el acceso a servicios esenciales.'
+            description: 'Este proyecto en Matías Romero, Oaxaca, se centra en la ampliación y construcción de nuevas vialidades para mejorar la conectividad y el flujo de tráfico en la zona.  El proyecto incluye la construcción de puentes y la adecuación de caminos, lo cual es fundamental para el progreso del sureste de México.'
         },
         9: {
             Imagenes: [
@@ -335,7 +335,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Imagenes/lasFlores/img3.jpeg',
                 'Imagenes/lasFlores/img4.jpeg',
                 'Imagenes/lasFlores/img5.jpeg'
-            ]
+            ],
+            description: 'Este proyecto en la colonia Las Flores se enfoca en la construcción de una nueva carretera de principio a fin. Las labores incluyeron la preparación del terreno con trabajos de movimiento de tierra y compactación para asegurar una base sólida. La obra avanzó con la instalación de tuberías y servicios de drenaje, seguido de la aplicación de capas de material de base.'
         }
     };
     // Seleccionar todos los botones de vista
@@ -397,236 +398,566 @@ document.addEventListener('DOMContentLoaded', function () {
         const carousel = new bootstrap.Carousel(document.getElementById('projectCarousel'));
     }
     // Datos del chatbot
-    const categorias = {
-        "ubicacion": {
-            nombre: "Ubicación",
-            preguntas: [
-                { texto: "¿Dónde se encuentran ubicados?", clave: "ubicacion", tipo: "texto" },
-                { texto: "¿Tienen sucursales en otras ciudades?", clave: "sucursales", tipo: "booleano" },
-                { texto: "¿En qué zonas trabajan?", clave: "zonas", tipo: "texto" }
-            ]
-        },
-        "experiencia": {
-            nombre: "Experiencia",
-            preguntas: [
-                { texto: "¿Cuántos años de experiencia tiene la empresa?", clave: "experiencia", tipo: "numero" },
-                { texto: "¿Cuántos empleados tiene la empresa?", clave: "empleados", tipo: "numero" },
-                { texto: "¿Pueden compartir referencias de clientes anteriores?", clave: "referencias", tipo: "booleano" }
-            ]
-        },
-        "servicios": {
-            nombre: "Servicios",
-            preguntas: [
-                { texto: "¿Ofrecen servicios de construcción residencial?", clave: "residencial", tipo: "booleano" },
-                { texto: "¿Ofrecen servicios de construcción comercial?", clave: "comercial", tipo: "booleano" },
-                { texto: "¿Ofrecen servicios de remodelación?", clave: "remodelacion", tipo: "booleano" },
-                { texto: "¿Se pueden personalizar los proyectos según las necesidades del cliente?", clave: "personalizacion", tipo: "booleano" },
-                { texto: "¿Qué tipo de proyectos han realizado anteriormente?", clave: "proyectos", tipo: "texto" },
-                { texto: "¿Cuáles son los principales materiales que utilizan?", clave: "materiales", tipo: "texto" }
-            ]
-        },
-        "contacto": {
-            nombre: "Contacto",
-            preguntas: [
-                { texto: "¿Cuál es el horario de atención?", clave: "horario", tipo: "texto" },
-                { texto: "¿Cómo puedo contactar con ustedes?", clave: "contacto", tipo: "texto" },
-                { texto: "¿Ofrecen atención post-venta o mantenimiento?", clave: "postventa", tipo: "booleano" }
-            ]
-        },
-        "horarios": {
-            nombre: "Horarios",
-            preguntas: [
-                { texto: "¿Cuál es el tiempo estimado de entrega de una obra?", clave: "tiempo_entrega", tipo: "texto" },
-                { texto: "¿Trabajan fines de semana o días festivos?", clave: "dias_especiales", tipo: "booleano" }
-            ]
-        },
-        "permisos": {
-            nombre: "Certificaciones",
-            preguntas: [
-                { texto: "¿Tienen certificaciones o licencias?", clave: "certificaciones", tipo: "booleano" },
-                { texto: "¿Ofrecen garantía en sus trabajos?", clave: "garantia", tipo: "booleano" },
-                { texto: "¿Cumplen con las normativas de seguridad y medio ambiente?", clave: "seguridad", tipo: "booleano" }
-            ]
-        },
-        "costos": {
-            nombre: "Costos",
-            preguntas: [
-                { texto: "¿Cuál es el proceso para solicitar un presupuesto?", clave: "presupuesto", tipo: "texto" },
-                { texto: "¿Aceptan pagos en cuotas?", clave: "cuotas", tipo: "booleano" },
-                { texto: "¿Cuáles son los métodos de pago disponibles?", clave: "metodos_pago", tipo: "texto" },
-                { texto: "¿El presupuesto incluye todos los materiales y mano de obra?", clave: "incluye_todo", tipo: "booleano" }
-            ]
-        },
-        "sostenibilidad": {
-            nombre: "Sostenibilidad",
-            preguntas: [
-                { texto: "¿Utilizan materiales sostenibles o ecológicos?", clave: "materiales_ecologicos", tipo: "booleano" },
-                { texto: "¿Tienen políticas de responsabilidad ambiental?", clave: "responsabilidad_ambiental", tipo: "booleano" }
-            ]
-        }
-    };
-    // Variables de estado
-    let currentCategory = null;
-    let currentQuestion = null;
-    const respuestas = {};
-    // Elementos del DOM
-    const chatIcon = document.getElementById('chat-icon');
-    const chatContainer = document.getElementById('chat-container');
-    const chatMessages = document.getElementById('chat-messages');
-    const userInput = document.getElementById('user-input');
-    const sendBtn = document.getElementById('send-btn');
-    const minimizeBtn = document.getElementById('minimize-btn');
-    // Mostrar mensaje del bot
-    function addBotMessage(text, isQuestion = false) {
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message', 'bot-message');
-        messageDiv.innerHTML = text;
-        chatMessages.appendChild(messageDiv);
-        if (isQuestion) {
-            userInput.focus();
-        }
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-    // Mostrar mensaje del usuario
-    function addUserMessage(text) {
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message', 'user-message');
-        messageDiv.textContent = text;
-        chatMessages.appendChild(messageDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-    // Mostrar opciones de categorías principales
-    function showMainOptions() {
-        const optionsContainer = document.createElement('div');
-        optionsContainer.classList.add('options-container');
-        // Agregar botones para cada categoría
-        Object.keys(categorias).forEach(key => {
-            const btn = document.createElement('button');
-            btn.classList.add('option-btn');
-            btn.textContent = categorias[key].nombre;
-            btn.addEventListener('click', () => {
-                selectCategory(key);
-            });
-            optionsContainer.appendChild(btn);
+});
+    
+ document.addEventListener('DOMContentLoaded', function () {
+                const opiniones = [
+                    {
+                        //yap
+                        nombre: "Jose Martin Tetumo",
+                        titulo: "Gerente de maquinaria",
+                        opinion: "Llevo laborando para esta gran empresa desde el 2013 y he visto cómo va evolucionando y creciendo laboralmente. De mi parte, como trabajador, he estado en las buenas y en las malas, porque así como hay días buenos, ¡los hay malos!. ¡Espero que, como empresa, se siga expandiendo más a diferentes partes de la República Mexicana!",
+                        img: "Imagenes/Perfiles/perfil2.webp",
+                        size: "medium",
+                        highlight: true
+                    },
+                    {
+                        //yap
+                        nombre: "Mauro Alberto Ramos",
+                        titulo: "Gerente de Sistemas",
+                        opinion: "En el tiempo que he trabajado en The Fuentes Corporation, me ha sido grato laborar en la empresa. He podido crecer profesionalmente basándome en proyectos y nuevos retos que se presentan en el día a día.",
+                        img: "Imagenes/icons/perfil1.png",
+                        size: "large"
+                    },
+                    {
+                        //yap
+                        nombre: "Mauro Sánchez López",
+                        titulo: "Gerente de Recursos Humanos",
+                        opinion: "Es una empresa que apoya el talento joven, con capacitaciones y enseñanza diaria, sobrepasando siempre los retos que se presentan y sobre todo siempre viendo hacia el futuro. Como toda empresa ha tenido sus altibajos, pero hoy en día se podría decir que es una empresa sólida que está en expansión y que tiene buenos proyectos, con la mira de seguir creciendo mucho más.",
+                        img: "Imagenes/Perfiles/perfil6.webp",
+                        size: "medium",
+                        highlight: true
+                    },
+                    {
+                        //yap
+                        nombre: "Luis Enrique Sanchez",
+                        titulo: "Jefe de producción plantas de asfalto",
+                        opinion: "Ha sido un constante aprendizaje a lo largo de estos meses en los que he desempeñado actividades en esta área por lo que puedo decir ha sido una gran experiencia laboral.",
+                        img: "Imagenes/icons/perfil1.png",
+                        size: "large"
+                    },
+                    {
+                        //yap
+                        nombre: "Thalía Arcelia Huerta",
+                        titulo: "Auxiliar de calidad",
+                        opinion: "El trato hacia mi persona siempre a sido excelente, siempre me han apoyado en dudas, económicamente y en cursos. Les estoy muy agraciada por la oportunidad. Considero que tiene muchas áreas de mejora y crecimiento, que con el apoyo ideal favorecerían mucho a la mejora continua ",
+                        img: "Imagenes/Perfiles/perfil7.jpg",
+                        size: "medium"
+                    },
+                    {
+                        //yap
+                        nombre: "Jose Socorro Roque",
+                        titulo: "Cliente corporativo",
+                        opinion: "Por el tiempo que llevo trabajando en esta empresa, me ha gustado el trabajo. Son puntuales en los pagos y hay buen ambiente laboral. La recomiendo para trabajar.",
+                        img: "Imagenes/icons/perfil1.png",
+                        size: "large"
+                    },
+                    {
+                        //yap
+                        nombre: "María del Carmen García",
+                        titulo: "Encargada de Estimaciones de Obra",
+                        opinion: "Trabajar en The Fuentes ha sido una experiencia enriquecedora tanto a nivel profesional como personal. La empresa ofrece un ambiente de trabajo colaborativo con oportunidades de crecimiento y aprendizaje constante. Sin embargo, también enfrentamos retos como mejorar la comunicación interna y la toma de decisiones. Considero este un lugar donde se puede construir una carrera sólida.",
+                        img: "Imagenes/Perfiles/perfil3.webp",
+                        size: "medium"
+                    },
+                    {
+                        //yap
+                        nombre: "Carlos Jonathan Zavaleta",
+                        titulo: "Residente",
+                        opinion: "Todo muy bien, buen ambiente laboral. Los gerentes apoyan mucho a todo el equipo de trabajo. Los campamentos están excelentes con excelentes servicios.",
+                        img: "Imagenes/icons/perfil1.png",
+                        size: "large",
+                        highlight: true
+                    },
+                    {
+                        //yap
+                        nombre: "Carrillo Cruz",
+                        titulo: "Auxiliar Administrativo",
+                        opinion: "Me siento bien en esta empresa, donde hay crecimiento profesional y cada día se presenta un reto en el que puedes aprender más y aportar ideas. Siempre se aprende algo nuevo, tanto de cada trabajador como de los compañeros. Es una empresa que te da la oportunidad de aprender más de lo poco que sabes.",
+                        img: "Imagenes/icons/perfil2.png",
+                        size: "medium"
+                    },
+                    {
+                        //yap
+                        nombre: "Juan Eduardo Loredo",
+                        titulo: "Velador",
+                        opinion: "Ha sido muy buena, sin ningún problema. Hasta ahora no he tenido problemas con ningún miembro de la compañía. Me ha gustado mucho ser miembro del equipo.",
+                        img: "Imagenes/icons/perfil1.png",
+                        size: "large"
+                    },
+                    {
+                        //yap
+                        nombre: "Wilfredo Argueta",
+                        titulo: "Gerente Administrativo",
+                        opinion: "La empresa ha tenido varios cambios desde que entré a laborar. Se han mejorado temas como los controles de insumos, comodidades en los campamentos, entre otros.",
+                        img: "Imagenes/Perfiles/perfil1.webp",
+                        size: "large",
+                        highlight: true
+                    },
+                    {
+                        //yap
+                        nombre: "Ricardo Linares",
+                        titulo: "Gerente de Obra",
+                        opinion: "La razón de ser líder conlleva una responsabilidad mayor. Es necesario predicar con el ejemplo y aplicar el conocimiento en las tareas programadas en la obra que se tiene a cargo. El deber ser es que las acciones laborales hablen por ti y te ayuden a crecer en tu vida laboral, agradeciendo siempre a la empresa por la oportunidad laboral hasta el momento.",
+                        img: "Imagenes/icons/perfil1.png",
+                        size: "medium"
+                    },
+                    {
+                        //yap
+                        nombre: "Maria De Jesus Ramos",
+                        titulo: "Auxiliar de Estimaciones",
+                        opinion: "Ha sido una experiencia agradable, ya que tenemos excelentes ingenieros de los cuales aprendemos más y contamos con un ambiente de trabajo agradable. Estamos en una buena empresa.",
+                        img: "Imagenes/icons/perfil2.png",
+                        size: "large"
+                    },
+                    {
+                        //yap
+                        nombre: "Jonny Daniel Xolo",
+                        titulo: "Analista de costos",
+                        opinion: "Una empresa que me ha dado mucho crecimiento profesional, muchas oportunidades de aprender cosas nuevas.",
+                        img: "Imagenes/icons/perfil1.png",
+                        size: "large"
+                    },
+                    {
+                        //yap
+                        nombre: "Luz Elena Pérez",
+                        titulo: "Auxiliar Recursos Humanos",
+                        opinion: "En mi experiencia en The Fuentes, participé en proyectos clave que me permitieron desarrollar nuevas habilidades y aportar valor en áreas estratégicas. Aunque el ambiente era generalmente positivo, en ocasiones surgían tensiones e incluso envidias entre colegas.",
+                        img: "Imagenes/icons/perfil1.png",
+                        size: "medium",
+                        highlight: true
+                    },
+                    {
+                        //yap
+                        nombre: "Pedro Emiliano Gómez",
+                        titulo: "Auxiliar jurídico",
+                        opinion: "En general, todo bien. Llevo apenas un mes y tanto he aprendido como he aportado. Espero seguir aprendiendo, creciendo y aportando a mediano y largo plazo.",
+                        img: "Imagenes/icons/perfil1.png",
+                        size: "large"
+                    },
+                    {
+                        //yap
+                        nombre: "Inmer Ernesto Moya",
+                        titulo: "Gerente de Control de Calidad",
+                        opinion: "Orgulloso de formar parte de la gran familia de la empresa y aportar mi granito de arena desde mi área formativa y aplicada, de tal forma que los proyectos ejecutados cumplan con la calidad deseada y contratada. La idea es seguir en la empresa muchos años más, continuar construyendo obras a lo largo de todo México, que la empresa sea reconocida a nivel nacional y se vuelva un referente. ",
+                        img: "Imagenes/icons/perfil1.png",
+                        size: "small",
+                        highlight: true
+                    },
+                    {
+                        //yap
+                        nombre: "Alondra Vázquez Gómez",
+                        titulo: "Auxiliar de Calidad",
+                        opinion: "Agradezco que me dieran la oportunidad de trabajar en esta empresa donde veo que sí se preocupan por sus trabajadores y valoran el esfuerzo que se hace para sacar adelante el trabajo. Me gusta lo que hago y espero seguir aportando y creciendo junto con esta empresa. Con los ingenieros, mis jefes inmediatos, no tengo ninguna queja; siempre me han ayudado y aportan conocimientos nuevos cada día.",
+                        img: "Imagenes/icons/perfil2.png",
+                        size: "small"
+                    },
+                ];
+
+                const opinionesGrid = document.getElementById('opinionesGrid');
+                const controlsContainer = document.getElementById('controls');
+
+                // Variables para el carrusel
+                let currentPage = 0;
+                const opinionsPerPage = 6;
+                const totalPages = Math.ceil(opiniones.length / opinionsPerPage);
+                let autoCarouselInterval;
+
+                // Función para renderizar opiniones
+                function renderOpinions(page) {
+                    opinionesGrid.innerHTML = '';
+                    const startIdx = page * opinionsPerPage;
+                    const endIdx = startIdx + opinionsPerPage;
+                    const currentOpinions = opiniones.slice(startIdx, endIdx);
+
+                    currentOpinions.forEach((opinion, idx) => {
+                        const opinionCard = document.createElement('div');
+                        let cardClasses = 'opinion-card';
+
+                        // Añadir clases según el tamaño y si es destacado
+                        if (opinion.size === 'large') cardClasses += ' opinion-large';
+                        if (opinion.size === 'small') cardClasses += ' opinion-small';
+                        if (opinion.highlight) cardClasses += ' opinion-highlight';
+
+                        opinionCard.className = cardClasses;
+                        opinionCard.innerHTML = `
+                        <div class="opinion-header">
+                            <img src="${opinion.img}" alt="${opinion.nombre}" class="profile-img">
+                            <div class="user-info">
+                                <span class="user-name">${opinion.nombre}</span>
+                                <span class="user-title">${opinion.titulo}</span>
+                            </div>
+                        </div>
+                        <p class="opinion-text">"${opinion.opinion}"</p>
+                    `;
+
+                        opinionesGrid.appendChild(opinionCard);
+
+                        // Activar animación después de un pequeño retraso
+                        setTimeout(() => {
+                            opinionCard.classList.add('visible');
+                        }, 100 * idx);
+                    });
+
+                    // Actualizar controles
+                    updateControls();
+                }
+
+                // Función para crear los controles
+                function createControls() {
+                    controlsContainer.innerHTML = '';
+                    for (let i = 0; i < totalPages; i++) {
+                        const btn = document.createElement('button');
+                        btn.className = `control-btn ${i === currentPage ? 'active' : ''}`;
+                        btn.addEventListener('click', () => {
+                            goToPage(i);
+                        });
+                        controlsContainer.appendChild(btn);
+                    }
+                }
+
+                // Función para actualizar los controles
+                function updateControls() {
+                    const buttons = document.querySelectorAll('.control-btn');
+                    buttons.forEach((btn, idx) => {
+                        if (idx === currentPage) {
+                            btn.classList.add('active');
+                        } else {
+                            btn.classList.remove('active');
+                        }
+                    });
+                }
+
+                // Función para ir a una página específica
+                function goToPage(page) {
+                    if (page < 0) page = totalPages - 1;
+                    if (page >= totalPages) page = 0;
+
+                    currentPage = page;
+                    renderOpinions(currentPage);
+                    resetAutoCarousel();
+                }
+
+                // Función para el carrusel automático
+                function startAutoCarousel() {
+                    autoCarouselInterval = setInterval(() => {
+                        goToPage((currentPage + 1) % totalPages);
+                    }, 8000); // Cambia cada 8 segundos
+                }
+
+                // Función para reiniciar el carrusel automático
+                function resetAutoCarousel() {
+                    clearInterval(autoCarouselInterval);
+                    startAutoCarousel();
+                }
+
+                // Inicializar
+                createControls();
+                renderOpinions(currentPage);
+                startAutoCarousel();
+
+                // Hacer que las cards sean visibles al cargar
+                setTimeout(() => {
+                    const cards = document.querySelectorAll('.opinion-card');
+                    cards.forEach(card => {
+                        card.classList.add('visible');
+                    });
+                }, 500);
+
+                // Pausar carrusel al hacer hover
+                opinionesGrid.addEventListener('mouseenter', () => {
+                    clearInterval(autoCarouselInterval);
+                });
+
+                // Reanudar carrusel al salir del hover
+                opinionesGrid.addEventListener('mouseleave', () => {
+                    resetAutoCarousel();
+                });
         });
-        // Botón de salir
-        const exitBtn = document.createElement('button');
-        exitBtn.classList.add('option-btn');
-        exitBtn.textContent = "Salir";
-        exitBtn.addEventListener('click', () => {
-            addBotMessage("¡Gracias por usar nuestro servicio! Hasta luego.");
-            setTimeout(() => toggleChat(), 2000);
-        });
-        optionsContainer.appendChild(exitBtn);
-        chatMessages.appendChild(optionsContainer);
-        userInput.disabled = true; // bloquea el input hasta que se seleccione una categoría
-    }
-    // Mostrar preguntas de una categoría específica
-    // Esta función muestra las preguntas de una categoría específica
-    function showCategoryQuestions(categoryKey) {
-        const category = categorias[categoryKey];
-        const questions = category.preguntas;
-        const optionsContainer = document.createElement('div');
-        optionsContainer.classList.add('options-container');
-        // Agregar todas las preguntas de la categoría con número
-        questions.forEach((question, idx) => {
-            const btn = document.createElement('button');
-            btn.classList.add('option-btn');
-            btn.textContent = `${idx + 1}. ${question.texto}`;
-            btn.addEventListener('click', () => {
-                selectQuestion(question); // Al hacer clic, selecciona la pregunta
-            });
-            optionsContainer.appendChild(btn);
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const statusMsg = document.getElementById('form-msg'); // Cambiado a 'form-msg'
+        const hideDelay = window.innerWidth < 768 ? 3000 : 5000;
+        
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+        statusMsg.style.display = 'none';
+        
+        emailjs.sendForm(
+            'service_mhuza8k',
+            'template_rl5rrl6',
+            this
+        )
+        .then(() => {
+            statusMsg.innerHTML = `<svg>[ícono de check]</svg><span>¡Mensaje enviado con éxito!</span>`;
+            statusMsg.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
+            statusMsg.style.color = '#004e98';
+            statusMsg.style.display = 'block';
+            statusMsg.style.textAlign = 'center';
+            this.reset();
         })
-        userInput.disabled = true; // Bloquea el input
-        ;
-        // Agregar la opción "Otra pregunta"
-        const otraBtn = document.createElement('button');
-        otraBtn.classList.add('option-btn');
-        otraBtn.textContent = `${questions.length + 1}. Otra pregunta`;
-        otraBtn.addEventListener('click', () => {
-            addUserMessage("Otra pregunta");
-            addBotMessage(
-                `<div style="margin-bottom:10px;">
-                <strong>¡Gracias por tu interés!</strong><br>
-                Nuestro equipo recibirá tu consulta y te contactará lo antes posible.<br>
-                Si prefieres atención inmediata, puedes escribirnos por WhatsApp:
-            </div>
-            <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20tengo%20una%20consulta%20sobre%20${category.nombre}" 
-            target="_blank" 
-            style="display:inline-block;padding:10px 20px;background:#25D366;color:white;border-radius:20px;text-decoration:none;font-weight:bold;">
-            WhatsApp
-            </a>`
-            );
-            currentQuestion = null; // No espera respuesta
+        .catch(err => {
+            statusMsg.textContent = 'Error al enviar el mensaje. Por favor inténtalo nuevamente.';
+            statusMsg.style.color = '#e63946';
+            statusMsg.style.display = 'block';
+            console.error('Error detallado:', err);
+            if (err.response) {
+                statusMsg.textContent += ` (Error ${err.response.status}: ${err.response.text})`;
+            }
+        })
+        .finally(() => {
+            submitBtn.textContent = 'Enviar'; // Cambiado a 'Enviar' para coincidir con el HTML
+            submitBtn.disabled = false;
+            setTimeout(() => { statusMsg.style.display = 'none'; }, hideDelay);
         });
-        optionsContainer.appendChild(otraBtn);
-        // Agregar botón de volver
-        const backBtn = document.createElement('button');
-        backBtn.classList.add('option-btn');
-        backBtn.textContent = "Volver al menú principal";
-        backBtn.addEventListener('click', showMainMenu);
-        optionsContainer.appendChild(backBtn);
-        // Mostrar las opciones en el chat
-        chatMessages.appendChild(optionsContainer);
-    }
-    // Seleccionar categoría
-    function selectCategory(categoryKey) {
-        currentCategory = categoryKey;
-        addUserMessage(categorias[categoryKey].nombre);
-        showCategoryQuestions(categoryKey);
-    }
-    // Seleccionar pregunta
-    function selectQuestion(question) {
-        currentQuestion = question;
-        // Si existe respuesta fija, mostrarla y regresar al menú principal
-        addUserMessage(question.texto); // Imprime la pregunta como mensaje del usuario
-        //chatMessages.scrollTop = chatMessages.scrollHeight; // <-- Desplaza al último mensaje
-        if (respuestasFijas[question.clave]) {
-            addBotMessage(respuestasFijas[question.clave].replace(/\n/g, '<br>'));
-            setTimeout(() => showMainMenu(), 1500);
-            userInput.disabled = true; // Bloquea el input
-        } else {
-            askQuestion(question); // Solo si no hay respuesta fija
+    });
+
+ document.addEventListener('DOMContentLoaded', function () {
+    // Datos del chatbot
+        const categorias = {
+            "ubicacion": {
+                nombre: "Ubicación",
+                preguntas: [
+                    { texto: "¿Dónde se encuentran ubicados?", clave: "ubicacion", tipo: "texto" },
+                    { texto: "¿Tienen sucursales en otras ciudades?", clave: "sucursales", tipo: "booleano" },
+                    { texto: "¿En qué zonas trabajan?", clave: "zonas", tipo: "texto" }
+                ]
+            },
+            "experiencia": {
+                nombre: "Experiencia",
+                preguntas: [
+                    { texto: "¿Cuántos años de experiencia tiene la empresa?", clave: "experiencia", tipo: "numero" },
+                    { texto: "¿Cuántos empleados tiene la empresa?", clave: "empleados", tipo: "numero" },
+                    { texto: "¿Pueden compartir referencias de clientes anteriores?", clave: "referencias", tipo: "booleano" }
+                ]
+            },
+            "servicios": {
+                nombre: "Servicios",
+                preguntas: [
+                    { texto: "¿Ofrecen servicios de construcción residencial?", clave: "residencial", tipo: "booleano" },
+                    { texto: "¿Ofrecen servicios de construcción comercial?", clave: "comercial", tipo: "booleano" },
+                    { texto: "¿Ofrecen servicios de remodelación?", clave: "remodelacion", tipo: "booleano" },
+                    { texto: "¿Se pueden personalizar los proyectos según las necesidades del cliente?", clave: "personalizacion", tipo: "booleano" },
+                    { texto: "¿Qué tipo de proyectos han realizado anteriormente?", clave: "proyectos", tipo: "texto" },
+                    { texto: "¿Cuáles son los principales materiales que utilizan?", clave: "materiales", tipo: "texto" }
+                ]
+            },
+            "contacto": {
+                nombre: "Contacto",
+                preguntas: [
+                    { texto: "¿Cuál es el horario de atención?", clave: "horario", tipo: "texto" },
+                    { texto: "¿Cómo puedo contactar con ustedes?", clave: "contacto", tipo: "texto" }
+                ]
+            }
+        };
+
+        // Variables de estado
+        let currentCategory = null;
+        let currentQuestion = null;
+        const respuestas = {};
+
+        // Elementos del DOM
+        const chatIcon = document.getElementById('chat-icon');
+        const chatContainer = document.getElementById('chat-container');
+        const chatMessages = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+        const minimizeBtn = document.getElementById('minimize-btn');
+
+        // Mostrar mensaje del bot
+        function addBotMessage(text, isQuestion = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', 'bot-message');
+            messageDiv.innerHTML = text;
+            chatMessages.appendChild(messageDiv);
+            
+            if (isQuestion) {
+                userInput.focus();
+            }
+            
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
-    }
-    // Hacer pregunta
-    function askQuestion(question) {
-        userInput.disabled = false; // Habilita el input
-        addBotMessage(question.texto, true);
-        // Mostrar formato esperado si es necesario
-        if (question.tipo === "booleano") {
-            addBotMessage("(Por favor responde Sí o No)");
-        } else if (question.tipo === "numero") {
-            addBotMessage("(Por favor ingresa un número)");
+
+        // Mostrar mensaje del usuario
+        function addUserMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', 'user-message');
+            messageDiv.textContent = text;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
-    }
-    // Validar respuesta
-    function validateAnswer(answer, type) {
-        if (!answer) return false;
-        if (type === "numero") {
-            return !isNaN(answer);
+
+        // Mostrar opciones de categorías principales
+        function showMainOptions() {
+            const optionsContainer = document.createElement('div');
+            optionsContainer.classList.add('options-container');
+            
+            // Agregar botones para cada categoría
+            Object.keys(categorias).forEach(key => {
+                const btn = document.createElement('button');
+                btn.classList.add('option-btn');
+                btn.textContent = categorias[key].nombre;
+                btn.addEventListener('click', () => {
+                    selectCategory(key);
+                });
+                optionsContainer.appendChild(btn);
+            });
+            
+            // Botón de salir
+            const exitBtn = document.createElement('button');
+            exitBtn.classList.add('option-btn');
+            exitBtn.textContent = "Salir";
+            exitBtn.addEventListener('click', () => {
+                addBotMessage("¡Gracias por usar nuestro servicio! Hasta luego.");
+                setTimeout(() => toggleChat(), 2000);
+            });
+            optionsContainer.appendChild(exitBtn);
+
+            chatMessages.appendChild(optionsContainer);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            userInput.disabled = true; // bloquea el input hasta que se seleccione una categoría
         }
-        if (type === "booleano") {
-            return ["sí", "si", "no"].includes(answer.toLowerCase());
+
+        // Mostrar preguntas de una categoría específica
+        // Esta función muestra las preguntas de una categoría específica
+    function showCategoryQuestions(categoryKey) {
+    const category = categorias[categoryKey];
+    const questions = category.preguntas;
+    
+    const optionsContainer = document.createElement('div');
+    optionsContainer.classList.add('options-container');
+    
+    // Agregar todas las preguntas de la categoría con número
+    questions.forEach((question, idx) => {
+        const btn = document.createElement('button');
+        btn.classList.add('option-btn');
+        btn.textContent = `${idx + 1}. ${question.texto}`;
+
+        btn.addEventListener('click', () => {
+            selectQuestion(question); // Al hacer clic, selecciona la pregunta
+        });
+        optionsContainer.appendChild(btn);
+    })
+
+    userInput.disabled = true; // Bloquea el input
+    ;
+    
+    // Agregar la opción "Otra pregunta"
+    const otraBtn = document.createElement('button');
+    otraBtn.classList.add('option-btn');
+    otraBtn.textContent = `${questions.length + 1}. Otra pregunta`;
+    // Reemplaza tu código actual con esta versión mejorada
+otraBtn.addEventListener('click', () => {
+    addUserMessage("Otra pregunta");
+    
+    // Obtener el número de WhatsApp (reemplaza con tu número real)
+    const whatsappNumber = "529612718786"; // Ejemplo: 52 (México) + 1234567890
+    const encodedMessage = encodeURIComponent(`¡Buen día! Me gustaría recibir información sobre sus servicios y proyectos. ¡Gracias!`);
+    
+    addBotMessage(
+        `<div style="margin-bottom:15px;">
+            <strong>¡Gracias por tu interés!</strong><br>
+            Nuestro equipo recibirá tu consulta y te contactará lo antes posible.<br>
+            Si prefieres atención inmediata, puedes escribirnos por WhatsApp:
+        </div>
+        <div style="text-align:center;">
+            <a href="https://wa.me/${whatsappNumber}?text=${encodedMessage}" 
+            target="_blank" 
+            class="whatsapp-chat-button" 
+            onclick="trackWhatsAppClick('${category.nombre}')">
+                💬 Escribir por WhatsApp
+            </a>
+        </div>
+        <div style="margin-top:15px; font-size:12px; color:#666;">
+            <i>Te redirigiremos a la aplicación de WhatsApp</i>
+        </div>`
+    );
+    
+    currentQuestion = null;
+    });
+    optionsContainer.appendChild(otraBtn);
+    
+    // Agregar botón de volver
+    const backBtn = document.createElement('button');
+    backBtn.classList.add('option-btn');
+    backBtn.textContent = "Volver al menú principal";
+    backBtn.addEventListener('click', showMainMenu);
+    optionsContainer.appendChild(backBtn);
+
+    // Mostrar las opciones en el chat
+    chatMessages.appendChild(optionsContainer);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    
+    }
+
+        // Seleccionar categoría
+        function selectCategory(categoryKey) {
+            currentCategory = categoryKey;
+            addUserMessage(categorias[categoryKey].nombre);
+            showCategoryQuestions(categoryKey);
         }
-        return true;
-    }
-    // Procesar respuesta booleana
-    function processBooleanAnswer(answer) {
-        const lowerAnswer = answer.toLowerCase();
-        return lowerAnswer === "sí" || lowerAnswer === "si";
-    }
-    // Mostrar menú principal
-    function showMainMenu() {
-        currentCategory = null;
-        currentQuestion = null;
-        addBotMessage("¿En qué puedo ayudarte? Selecciona una categoría:");
-        showMainOptions();
-    };
-    // Respuestas fijas para cada pregunta
-    const respuestasFijas = {
-        "ubicacion": `<strong>Nuestra sede principal</strong> se encuentra en <b>San Luis Potosí</b>.<br>
+
+        // Seleccionar pregunta
+        function selectQuestion(question) {
+            currentQuestion = question;
+            // Si existe respuesta fija, mostrarla y regresar al menú principal
+            addUserMessage(question.texto); // Imprime la pregunta como mensaje del usuario
+            if (respuestasFijas[question.clave]) {
+                addBotMessage(respuestasFijas[question.clave].replace(/\n/g, '<br>'));
+                setTimeout(() => showMainMenu(), 1500);
+                userInput.disabled = true; // Bloquea el input
+            } else {
+                askQuestion(question); // Solo si no hay respuesta fija
+            }
+        }
+
+        // Hacer pregunta
+        function askQuestion(question) {
+            userInput.disabled = false; // Habilita el input
+            addBotMessage(question.texto, true);
+            
+            // Mostrar formato esperado si es necesario
+            if (question.tipo === "booleano") {
+                addBotMessage("(Por favor responde Sí o No)");
+            } else if (question.tipo === "numero") {
+                addBotMessage("(Por favor ingresa un número)");
+            }
+        }
+
+        // Validar respuesta
+        function validateAnswer(answer, type) {
+            if (!answer) return false;
+            
+            if (type === "numero") {
+                return !isNaN(answer);
+            }
+            if (type === "booleano") {
+                return ["sí", "si", "no"].includes(answer.toLowerCase());
+            }
+            return true;
+        }
+
+        // Procesar respuesta booleana
+        function processBooleanAnswer(answer) {
+            const lowerAnswer = answer.toLowerCase();
+            return lowerAnswer === "sí" || lowerAnswer === "si";
+        }
+
+        
+        // Mostrar menú principal
+        function showMainMenu() {
+            currentCategory = null;
+            currentQuestion = null;
+            addBotMessage("¿En qué puedo ayudarte? Selecciona una categoría:");
+            showMainOptions();
+        };
+        
+        // Respuestas fijas para cada pregunta
+        const respuestasFijas = {
+            "ubicacion": `<strong>Nuestra sede principal</strong> se encuentra en <b>San Luis Potosí</b>.<br>
     <u>Sucursales:</u>
     <ul>
     <li><b>Ciudad de México</b></li>
@@ -635,126 +966,120 @@ document.addEventListener('DOMContentLoaded', function () {
     <li><b>Tuxtla Gutiérrez, Chiapas</b></li>
     </ul>
     <i>Para detalles y direcciones, visita la sección de contacto en nuestra página web oficial.</i>`,
-        "sucursales": `<strong>Sí, contamos con sucursales en:</strong><br>
+    "sucursales": `<strong>Sí, contamos con sucursales en:</strong><br>
     <b>Ciudad de México</b>, <b>San Salvador (El Salvador)</b>, <b>Hermosillo (Sonora)</b> y <b>Tuxtla Gutiérrez (Chiapas)</b>.`,
-        "zonas": `<strong>Operamos en diversas zonas del país</strong>, adaptándonos a la ubicación de cada proyecto.<br>
+    "zonas": `<strong>Operamos en diversas zonas del país</strong>, adaptándonos a la ubicación de cada proyecto.<br>
     Hemos realizado obras en localidades como <b>Cactus</b>, <b>Ahualulco</b>, <b>Acapulco</b> y <b>Matías Romero</b>.`,
-        "experiencia": `Contamos con <strong>17 años de experiencia</strong> en el sector de la construcción.<br>
+    "experiencia": `Contamos con <strong>17 años de experiencia</strong> en el sector de la construcción.<br>
     <i>Nuestra filosofía es construir con calidad y confianza.</i>`,
-        "empleados": `Nuestra empresa cuenta con un equipo de más de <strong>200 empleados</strong>, incluyendo <b>arquitectos</b>, <b>ingenieros</b> y <b>obreros especializados</b>.`,
-        "referencias": `<strong>Sí, podemos proporcionar referencias</strong> de clientes anteriores para tu tranquilidad.`,
-        "residencial": `<strong>Sí, ofrecemos servicios de construcción residencial</strong>, incluyendo <b>casas unifamiliares</b>, <b>departamentos</b> y <b>remodelaciones</b>.`,
-        "comercial": `<strong>Sí, también ofrecemos servicios de construcción comercial</strong>, abarcando <b>oficinas</b>, <b>locales comerciales</b> y <b>edificios corporativos</b>.`,
-        "remodelacion": `<strong>Sí, realizamos remodelaciones de todo tipo</strong>, desde <b>pequeñas reformas</b> hasta <b>grandes renovaciones</b> de espacios.`,
-        "personalizacion": `<strong>Todos nuestros proyectos son personalizados</strong> según las <b>necesidades</b> y <b>preferencias</b> del cliente.`,
-        "proyectos": `<strong>Hemos realizado una amplia variedad de proyectos:</strong><br>
+    "empleados": `Nuestra empresa cuenta con un equipo de más de <strong>200 empleados</strong>, incluyendo <b>arquitectos</b>, <b>ingenieros</b> y <b>obreros especializados</b>.`,
+    "referencias": `<strong>Sí, podemos proporcionar referencias</strong> de clientes anteriores para tu tranquilidad.`,
+    "residencial": `<strong>Sí, ofrecemos servicios de construcción residencial</strong>, incluyendo <b>casas unifamiliares</b>, <b>departamentos</b> y <b>remodelaciones</b>.`,
+    "comercial": `<strong>Sí, también ofrecemos servicios de construcción comercial</strong>, abarcando <b>oficinas</b>, <b>locales comerciales</b> y <b>edificios corporativos</b>.`,
+    "remodelacion": `<strong>Sí, realizamos remodelaciones de todo tipo</strong>, desde <b>pequeñas reformas</b> hasta <b>grandes renovaciones</b> de espacios.`,
+    "personalizacion": `<strong>Todos nuestros proyectos son personalizados</strong> según las <b>necesidades</b> y <b>preferencias</b> del cliente.`,
+    "proyectos": `<strong>Hemos realizado una amplia variedad de proyectos:</strong><br>
     <ul>
     <li>Construcción de <b>viviendas unifamiliares</b></li>
     <li><b>Edificios comerciales</b> y <b>oficinas</b></li>
     <li>Remodelaciones de <b>espacios residenciales</b> y <b>comerciales</b></li>
     <li>Proyectos de <b>infraestructura pública</b></li>
     </ul>`,
-        "materiales": `<strong>Utilizamos materiales de alta calidad</strong>, incluyendo:<br>
+    "materiales": `<strong>Utilizamos materiales de alta calidad</strong>, incluyendo:<br>
     <ul>
     <li><b>Concreto</b> y <b>acero</b> para estructuras</li>
     <li><b>Madera</b> y <b>acabados</b> para interiores</li>
     <li><b>Materiales sostenibles</b> y ecológicos cuando es posible</li>
     </ul>`,
-        "horario": `<strong>Horario de atención:</strong><br>
+    "horario": `<strong>Horario de atención:</strong><br>
     <b>Lunes a viernes:</b> 7:30am a 06:00pm<br>
     <b>Sábados:</b> 7:30am a 2:00pm<br>
     <i>También ofrecemos atención personalizada previa cita los fines de semana.</i>`,
-        "contacto": `<strong>Puedes contactarnos a través de los siguientes medios:</strong><br>
+    "contacto": `<strong>Puedes contactarnos a través de los siguientes medios:</strong><br>
     <b>Teléfono:</b> +52 123 456 7890<br>
     <b>Correo electrónico:</b> direccion@thefuentescorp.com.mx`,
-        "postventa": `<strong>Sí, ofrecemos atención post-venta</strong> y <b>servicios de mantenimiento</b> para asegurar la satisfacción continua de nuestros clientes.`,
-        "tiempo_entrega": `<strong>El tiempo estimado de entrega</strong> varía según el tipo y tamaño del proyecto.<br>
+    "postventa": `<strong>Sí, ofrecemos atención post-venta</strong> y <b>servicios de mantenimiento</b> para asegurar la satisfacción continua de nuestros clientes.`,
+    "tiempo_entrega": `<strong>El tiempo estimado de entrega</strong> varía según el tipo y tamaño del proyecto.<br>
     Generalmente oscila entre <b>3 a 12 meses</b>. Para proyectos más grandes, como edificios comerciales, puede extenderse hasta <b>24 meses</b>.`,
-        "dias_especiales": `<strong>Sí, trabajamos los fines de semana y días festivos</strong> según las necesidades del proyecto.<br>
+    "dias_especiales": `<strong>Sí, trabajamos los fines de semana y días festivos</strong> según las necesidades del proyecto.<br>
     <i>Recomendamos coordinar con anticipación para asegurar la disponibilidad de nuestro equipo.</i>`,
-        "certificaciones": `<strong>Sí, contamos con certificaciones y licencias</strong> necesarias para operar en el sector de la construcción.<br>
+    "certificaciones": `<strong>Sí, contamos con certificaciones y licencias</strong> necesarias para operar en el sector de la construcción.<br>
     <i>Estamos registrados ante las autoridades locales y cumplimos con todas las normativas vigentes.</i>`,
-        "garantia": `<strong>Sí, ofrecemos garantía en nuestros trabajos.</strong><br>
+    "garantia": `<strong>Sí, ofrecemos garantía en nuestros trabajos.</strong><br>
     La duración varía según el tipo de proyecto, pero generalmente es de <b>1 a 5 años</b> dependiendo de la obra realizada.`,
-        "seguridad": `<strong>Cumplimos con todas las normativas de seguridad y medio ambiente.</strong><br>
+    "seguridad": `<strong>Cumplimos con todas las normativas de seguridad y medio ambiente.</strong><br>
     <i>Implementamos medidas de seguridad en todos nuestros proyectos y trabajamos para minimizar el impacto ambiental.</i>`,
-        "presupuesto": `<strong>Para solicitar un presupuesto</strong>, puedes contactarnos a través de nuestro sitio web o por teléfono.<br>
+    "presupuesto": `<strong>Para solicitar un presupuesto</strong>, puedes contactarnos a través de nuestro sitio web o por teléfono.<br>
     <i>Necesitaremos detalles sobre el proyecto, como ubicación, tipo de construcción y especificaciones.</i><br>
-    Una vez recibida la información, te proporcionaremos un presupuesto detallado en un plazo de <b>5 a 7 días hábiles</b>.`,
-        "cuotas": `<strong>Sí, aceptamos pagos en cuotas.</strong><br>
-    Ofrecemos <b>planes de financiamiento flexibles</b> para adaptarnos a las necesidades de nuestros clientes.<br>
-    Puedes consultar las opciones de financiamiento con nuestro equipo de ventas.`,
-        "metodos_pago": `<strong>Aceptamos diversos métodos de pago:</strong><br>
-    <ul>
-    <li>Transferencias bancarias</li>
-    <li>Tarjetas de crédito y débito</li>
-    <li>Efectivo</li>
-    <li>Cheques</li>
-    <li>Pagos en línea a través de nuestra plataforma segura</li>
-    </ul>`,
-        "incluye_todo": `<strong>Sí, el presupuesto incluye todos los materiales y mano de obra</strong> necesarios para completar el proyecto.<br>
-    <i>Nos aseguramos de que no haya costos ocultos y que el cliente tenga claridad sobre lo que está pagando.</i>`,
-        "materiales_ecologicos": `<strong>Sí, utilizamos materiales sostenibles y ecológicos</strong> siempre que es posible.<br>
-    <i>Buscamos minimizar el impacto ambiental de nuestros proyectos y promover prácticas de construcción responsables.</i>`,
-        "responsabilidad_ambiental": `<strong>Sí, tenemos políticas de responsabilidad ambiental</strong> que incluyen:<br>
-    <ul>
-    <li>Uso de materiales sostenibles</li>
-    <li>Reducción de residuos en el sitio de construcción</li>
-    <li>Implementación de prácticas de reciclaje</li>
-    <li>Cumplimiento de normativas ambientales locales e internacionales</li>
-    </ul>`
-        // Puedes agregar más claves y respuestas aquí
-    };
-    // Manejar respuesta del usuario
-    function handleUserAnswer() {
-        const answer = userInput.value.trim();
-        if (!answer && currentQuestion?.tipo !== "texto") return;
-        addUserMessage(answer);
-        userInput.value = '';
-        if (currentQuestion) {
-            if (validateAnswer(answer, currentQuestion.tipo)) {
-                // Procesar la respuesta según el tipo
-                let processedAnswer = answer;
-                if (currentQuestion.tipo === "booleano") {
-                    processedAnswer = processBooleanAnswer(answer);
-                } else if (currentQuestion.tipo === "numero") {
-                    processedAnswer = Number(answer);
+    Una vez recibida la información, te proporcionaremos un presupuesto detallado en un plazo de <b>5 a 7 días hábiles</b>.`
+        
+            // Puedes agregar más claves y respuestas aquí
+        };
+
+        // Manejar respuesta del usuario
+        function handleUserAnswer() {
+            const answer = userInput.value.trim();
+            if (!answer && currentQuestion?.tipo !== "texto") return;
+            
+            addUserMessage(answer);
+            userInput.value = '';
+            
+            if (currentQuestion) {
+                if (validateAnswer(answer, currentQuestion.tipo)) {
+                    // Procesar la respuesta según el tipo
+                    let processedAnswer = answer;
+                    if (currentQuestion.tipo === "booleano") {
+                        processedAnswer = processBooleanAnswer(answer);
+                    } else if (currentQuestion.tipo === "numero") {
+                        processedAnswer = Number(answer);
+                    }
+                    
+                    respuestas[currentQuestion.clave] = processedAnswer;
+                    addBotMessage("✓ Respuesta guardada");
+                    // Mostrar respuesta fija si existe
+                    if (respuestasFijas[currentQuestion.clave]) {
+
+                        addBotMessage(respuestasFijas[currentQuestion.clave].replace(/\n/g, '<br>'));
+                    }
+                    setTimeout(() => showMainMenu(), 1000);
+                } else {
+                    addBotMessage("❌ Respuesta no válida. Por favor intenta de nuevo.");
+                    askQuestion(currentQuestion);
                 }
-                respuestas[currentQuestion.clave] = processedAnswer;
-                addBotMessage("✓ Respuesta guardada");
-                // Mostrar respuesta fija si existe
-                if (respuestasFijas[currentQuestion.clave]) {
-                    addBotMessage(respuestasFijas[currentQuestion.clave].replace(/\n/g, '<br>'));
-                }
-                setTimeout(() => showMainMenu(), 1000);
             } else {
-                addBotMessage("❌ Respuesta no válida. Por favor intenta de nuevo.");
-                askQuestion(currentQuestion);
+                addBotMessage("Por favor selecciona una opción del menú.");
+               
             }
-        } else {
-            addBotMessage("Por favor selecciona una opción del menú.");
         }
-    }
-    // Alternar visibilidad del chat
-    function toggleChat() {
-        if (chatContainer.classList.contains('hidden')) {
-            chatContainer.classList.remove('hidden');
+
+        // Alternar visibilidad del chat
+        function toggleChat() {
+            if (chatContainer.classList.contains('hidden')) {
+                chatContainer.classList.remove('hidden');
+                chatIcon.classList.add('hidden');
+                // Limpiar el chat y mostrar menú principal al abrir
+                chatMessages.innerHTML = '';
+                addBotMessage("¡Hola! Soy Step, el asistente virtual de The Fuentes Corporation.");
+                showMainMenu();
+            } else {
+                chatContainer.classList.add('hidden');
+                chatIcon.classList.remove('hidden');
+            }
+        }
+
+        // Event listeners
+        chatIcon.addEventListener('click', toggleChat);
+        minimizeBtn.addEventListener('click', toggleChat);
+        sendBtn.addEventListener('click', handleUserAnswer);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleUserAnswer();
+        });
+
+        // Iniciar chat
+        setTimeout(() => {
             chatIcon.classList.add('hidden');
-            // Limpiar el chat y mostrar menú principal al abrir
-            chatMessages.innerHTML = '';
+            chatContainer.classList.remove('hidden');
             addBotMessage("¡Hola! Soy Step, el asistente virtual de The Fuentes Corporation.");
             showMainMenu();
-        } else {
-            chatContainer.classList.add('hidden');
-            chatIcon.classList.remove('hidden');
-        }
-    }
-    // Event listeners
-    chatIcon.addEventListener('click', toggleChat);
-    minimizeBtn.addEventListener('click', toggleChat);
-    sendBtn.addEventListener('click', handleUserAnswer);
-    userInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') handleUserAnswer();
-    });
+        }, 1000);
 });
-
